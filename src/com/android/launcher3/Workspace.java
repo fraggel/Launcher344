@@ -45,7 +45,6 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.IBinder;
 import android.os.Parcelable;
-//import android.support.v4.view.ViewCompat;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.util.SparseArray;
@@ -54,10 +53,7 @@ import android.view.Display;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.View.OnClickListener;
-import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityManager;
-import android.view.accessibility.AccessibilityNodeInfo;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.Interpolator;
 import android.widget.TextView;
@@ -70,6 +66,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+
+//import android.support.v4.view.ViewCompat;
 
 /**
  * The workspace is a wide area with a wallpaper and a finite number of pages.
@@ -2540,6 +2538,13 @@ public class Workspace extends SmoothPagedView
                             hotseat.getOrderInHotseat(mTargetCell[0], mTargetCell[1]))) {
                         return false;
                     }
+                    if (d.dragInfo instanceof PendingAddWidgetInfo) {
+                        PendingAddWidgetInfo info = (PendingAddWidgetInfo) d.dragInfo;
+                        if (searchIMTKWidget(this, info.componentName.getClassName()) != null) {
+                            mLauncher.showOnlyOneWidgetMessage(info);
+                            return false;
+                        }
+                    }
                 }
 
                 mLauncher.showOutOfSpaceMessage(isHotseat);
@@ -3875,6 +3880,9 @@ public class Workspace extends SmoothPagedView
                 && mDragInfo.cell != null) {
             mDragInfo.cell.setVisibility(VISIBLE);
         }
+        stopDragAppWidget(mCurrentPage);
+        mDragOutline = null;
+        mDragInfo = null;
         mDragOutline = null;
         mDragInfo = null;
     }

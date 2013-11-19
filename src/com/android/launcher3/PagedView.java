@@ -23,6 +23,7 @@ import android.animation.ObjectAnimator;
 import android.animation.TimeInterpolator;
 import android.animation.ValueAnimator;
 import android.animation.ValueAnimator.AnimatorUpdateListener;
+import android.appwidget.AppWidgetProviderInfo;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -32,7 +33,6 @@ import android.graphics.Rect;
 import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
-//import android.support.v4.view.accessibility.AccessibilityEventCompat;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.util.Log;
@@ -51,9 +51,12 @@ import android.view.animation.AnimationUtils;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
+import android.widget.IMTKWidget;
 import android.widget.Scroller;
 
 import java.util.ArrayList;
+
+//import android.support.v4.view.accessibility.AccessibilityEventCompat;
 
 interface Page {
     public int getPageChildCount();
@@ -199,6 +202,10 @@ public abstract class PagedView extends ViewGroup implements ViewGroup.OnHierarc
     // (SmoothPagedView does this)
     protected boolean mDeferScrollUpdate = false;
     protected boolean mDeferLoadAssociatedPagesUntilScrollCompletes = false;
+
+    private static boolean sCanSendMessage = true;
+
+    private static boolean sCanCallEnterAppWidget = true;
 
     protected boolean mIsPageMoving = false;
 
@@ -2814,5 +2821,221 @@ public abstract class PagedView extends ViewGroup implements ViewGroup.OnHierarc
     @Override
     public boolean onHoverEvent(android.view.MotionEvent event) {
         return true;
+    }
+    /**
+     * M: Call the "enterAppWidgetScreen" callback for the IMTKWidget on the given page when slide into the given page.
+     *
+     * @param page
+     */
+    public void enterAppWidget(final int page) {
+        final View mtkWidgetView = getMTKWidgetView(page);
+        if (mtkWidgetView != null) {
+            ((IMTKWidget) mtkWidgetView).enterAppwidgetScreen();
+
+        }
+    }
+
+    /**
+     * M: Call the "leaveAppwidgetScreen" callback for the IMTKWidget on the given page when slide out the given page.
+     *
+     * @param page
+     */
+    public void leaveAppWidget(final int page) {
+        final View mtkWidgetView = getMTKWidgetView(page);
+        if (mtkWidgetView != null) {
+            ((IMTKWidget) mtkWidgetView).leaveAppwidgetScreen();
+
+        }
+    }
+
+    /**
+     * M: Call the "startDragAppWidget" callback for the IMTKWidget on the given page when long click and begin to drag
+     * appWidget.
+     *
+     * @param page
+     */
+    public void startDragAppWidget(final int page) {
+        final View mtkWidgetView = getMTKWidgetView(page);
+        if (mtkWidgetView != null) {
+            ((IMTKWidget) mtkWidgetView).startDrag();
+
+        }
+    }
+
+    /**
+     * M: Call the "stopDragAppWidget" callback for the IMTKWidget on the given page when release your finger and drop
+     * appWidget on home screen.
+     *
+     * @param page
+     */
+    public void stopDragAppWidget(final int page) {
+        final View mtkWidgetView = getMTKWidgetView(page);
+        if (mtkWidgetView != null) {
+            ((IMTKWidget) mtkWidgetView).setScreen(page);
+            ((IMTKWidget) mtkWidgetView).stopDrag();
+
+        }
+    }
+
+    /**
+     * M: Call the "moveInAppWidget" callback for the IMTKWidget on the given page.
+     *
+     * @param page
+     */
+    public void moveInAppWidget(final int page) {
+        final View mtkWidgetView = getMTKWidgetView(page);
+        if (mtkWidgetView != null) {
+            ((IMTKWidget) mtkWidgetView).moveIn(page);
+            sCanSendMessage = true;
+
+        }
+    }
+
+    /**
+     * M: Call the "moveOutAppWidget" callback for the IMTKWidget on the given page.
+     *
+     * @param page
+     * @return
+     */
+    public boolean moveOutAppWidget(final int page) {
+        boolean result = true;
+        final View mtkWidgetView = getMTKWidgetView(page);
+        if (mtkWidgetView != null) {
+
+            sCanSendMessage = false;
+            result = ((IMTKWidget) mtkWidgetView).moveOut(mCurrentPage);
+            return result;
+        }
+        return result;
+    }
+
+    /**
+     * M: Call the "startCovered" callback for the IMTKWidget on the given page when enter all apps list.
+     *
+     * @param page
+     */
+    public void startCovered(final int page) {
+        final View mtkWidgetView = getMTKWidgetView(page);
+        if (mtkWidgetView != null) {
+            ((IMTKWidget) mtkWidgetView).startCovered(page);
+
+        }
+    }
+
+    /**
+     * M: Call the "stopCovered" callback for the IMTKWidget on the given page when leave all apps list.
+     *
+     * @param page
+     */
+    public void stopCovered(int page) {
+        final View mtkWidgetView = getMTKWidgetView(page);
+        if (mtkWidgetView != null) {
+            ((IMTKWidget) mtkWidgetView).stopCovered(page);
+
+        }
+    }
+
+    /**
+     * M: Call the "onPauseWhenShown" callback for the IMTKWidget on the given page when the activity is paused.
+     *
+     * @param page
+     */
+    public void onPauseWhenShown(int page) {
+        final View mtkWidgetView = getMTKWidgetView(page);
+        if (mtkWidgetView != null) {
+            ((IMTKWidget) mtkWidgetView).onPauseWhenShown(page);
+
+        }
+    }
+
+    /**
+     * M: Call the "onResumeWhenShown" callback for the IMTKWidget on the given page when the activity is resumed.
+     *
+     * @param page
+     */
+    public void onResumeWhenShown(int page) {
+        final View mtkWidgetView = getMTKWidgetView(page);
+        if (mtkWidgetView != null) {
+            ((IMTKWidget) mtkWidgetView).onResumeWhenShown(page);
+
+        }
+    }
+
+    /**
+     * M: Call the "setAppWidgetIdAndScreen" callback for the IMTKWidget on the given page, set the appWidgetId and page to
+     * the appWidget
+     *
+     * @param hostView the view host the IMTKWidget
+     * @param page
+     * @param appWidgetId
+     */
+    public void setAppWidgetIdAndScreen(View hostView, int page, int appWidgetId) {
+        final View mtkWidgetView = searchIMTKWidget(hostView);
+        if (mtkWidgetView != null) {
+            ((IMTKWidget) mtkWidgetView).setScreen(page);
+            ((IMTKWidget) mtkWidgetView).setWidgetId(appWidgetId);
+        }
+    }
+
+    /**
+     * M: Find the IMTKWiget View on the given page.
+     *
+     * @param page
+     * @return the IMTKWidget view on the given page
+     */
+    public View getMTKWidgetView(int page) {
+        final View whichHostView = getChildAt(page);
+        final View mtkWidgetView = searchIMTKWidget(whichHostView);
+        return mtkWidgetView;
+    }
+
+    /**
+     * M: Find the IMTKWidget View which providerName equals the given providerName.
+     *
+     * @param hostView
+     * @param providerName
+     * @return
+     */
+    public View searchIMTKWidget(View hostView, String providerName) {
+        if (hostView instanceof IMTKWidget) {
+            return hostView;
+        } else if (hostView instanceof ViewGroup) {
+            int childCount = ((ViewGroup) hostView).getChildCount();
+            for (int i = 0; i < childCount; i++) {
+                View mtkWidgetView = searchIMTKWidget(((ViewGroup) hostView).getChildAt(i), providerName);
+                if (mtkWidgetView != null) {
+                    View v = (View) mtkWidgetView.getParent();
+                    if (v instanceof LauncherAppWidgetHostView) {
+                        LauncherAppWidgetHostView parent = (LauncherAppWidgetHostView) v;
+                        AppWidgetProviderInfo info = (AppWidgetProviderInfo) parent.getAppWidgetInfo();
+                        if (info.provider.getClassName().equals(providerName)) {
+                            return mtkWidgetView;
+                        }
+                    }
+                }
+            }
+        }
+        return null;
+    }
+
+    /**
+     * M: Find the IMTKWidget view.
+     *
+     * @param hostView
+     * @return
+     */
+    private View searchIMTKWidget(View hostView) {
+        if (hostView instanceof IMTKWidget) {
+            return hostView;
+        } else if (hostView instanceof ViewGroup) {
+            int childCount = ((ViewGroup) hostView).getChildCount();
+            for (int i = 0; i < childCount; i++) {
+                View mtkWidgetView = searchIMTKWidget(((ViewGroup) hostView).getChildAt(i));
+                if (mtkWidgetView != null) {
+                    return mtkWidgetView;
+                }
+            }
+        }
+        return null;
     }
 }

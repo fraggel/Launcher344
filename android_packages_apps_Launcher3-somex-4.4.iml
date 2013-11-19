@@ -12,6 +12,7 @@
       <sourceFolder url="file://$MODULE_DIR$/util" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/gen" isTestSource="false" />
     </content>
+    <orderEntry type="module" module-name="ext" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

@@ -96,6 +96,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.IMTKWidget;
 
 import com.android.launcher3.DropTarget.DragObject;
 
@@ -832,7 +833,7 @@ public class Launcher extends Activity
             Log.v(TAG, "Launcher.onResume()");
         }
         super.onResume();
-
+        mWorkspace.onResumeWhenShown(mWorkspace.getCurrentPage());
         // Restore the previous launcher state
         if (mOnResumeState == State.WORKSPACE) {
             showWorkspace(false);
@@ -921,6 +922,7 @@ public class Launcher extends Activity
             }
         }
         mWorkspace.updateInteractionForState();
+
         mWorkspace.onResume();
     }
 
@@ -4489,6 +4491,23 @@ public class Launcher extends Activity
             }.start();
         }
     }
+    /**
+     * M: Pop up message allows to you add only one IMTKWidget for the given AppWidgetInfo.
+     *
+     * @param info The information of the IMTKWidget.
+     */
+    void showOnlyOneWidgetMessage(PendingAddWidgetInfo info) {
+        try {
+            PackageManager pm = getPackageManager();
+            String label = pm.getApplicationLabel(pm.getApplicationInfo(info.componentName.getPackageName(), 0)).toString();
+            Toast.makeText(this, getString(R.string.one_video_widget, label), Toast.LENGTH_SHORT).show();
+        } catch (PackageManager.NameNotFoundException e) {
+
+        }
+        // Exit spring loaded mode if necessary after adding the widget.
+        exitSpringLoadedDragModeDelayed(false, false, null);
+    }
+
 }
 
 interface LauncherTransitionable {

@@ -873,6 +873,12 @@ public class AppsCustomizePagedView extends PagedViewWithDraggableItems implemen
                     showOutOfSpaceMessage =
                             !layout.findCellForSpan(null, itemInfo.spanX, itemInfo.spanY);
                 }
+                if (d.dragInfo instanceof PendingAddWidgetInfo) {
+                    PendingAddWidgetInfo info = (PendingAddWidgetInfo) d.dragInfo;
+                    if (workspace.searchIMTKWidget(workspace, info.componentName.getClassName()) != null) {
+                        mLauncher.showOnlyOneWidgetMessage(info);
+                    }
+                }
             }
             if (showOutOfSpaceMessage) {
                 mLauncher.showOutOfSpaceMessage(false);
