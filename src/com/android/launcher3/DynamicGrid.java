@@ -51,7 +51,7 @@ class DeviceProfileQuery {
     }
 }
 
-class DeviceProfile {
+ class DeviceProfile {
     String name;
     float minWidthDps;
     float minHeightDps;
@@ -479,7 +479,7 @@ class DeviceProfile {
 }
 
 public class DynamicGrid {
-    @SuppressWarnings("unused")
+
     private static final String TAG = "DynamicGrid";
 
     private DeviceProfile mProfile;
