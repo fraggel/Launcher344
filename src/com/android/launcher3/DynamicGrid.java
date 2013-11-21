@@ -95,7 +95,14 @@ class DeviceProfileQuery {
     int searchBarSpaceHeightPx;
     int searchBarHeightPx;
     int pageIndicatorHeightPx;
+    public void setNumRows(float rows){
+         this.numRows=rows;
 
+     }
+     public void setNumCols(float cols){
+         this.numColumns=cols;
+
+     }
     DeviceProfile(String n, float w, float h, float r, float c,
                   float is, float its, float hs, float his) {
         // Ensure that we have an odd number of hotseat items (since we need to place all apps)
@@ -369,50 +376,51 @@ class DeviceProfileQuery {
         boolean hasVerticalBarLayout = isVerticalBarLayout();
 
         // Layout the search bar space
-        View searchBar = launcher.getSearchBar();
-        lp = (FrameLayout.LayoutParams) searchBar.getLayoutParams();
-        if (hasVerticalBarLayout) {
-            // Vertical search bar
-            lp.gravity = Gravity.TOP | Gravity.LEFT;
-            lp.width = searchBarSpaceHeightPx;
-            lp.height = LayoutParams.MATCH_PARENT;
-            searchBar.setPadding(
-                    0, 2 * edgeMarginPx, 0,
-                    2 * edgeMarginPx);
-        } else {
-            // Horizontal search bar
-            lp.gravity = Gravity.TOP | Gravity.CENTER_HORIZONTAL;
-            lp.width = searchBarSpaceWidthPx;
-            lp.height = searchBarSpaceHeightPx;
-            searchBar.setPadding(
-                    2 * edgeMarginPx,
-                    2 * edgeMarginPx,
-                    2 * edgeMarginPx, 0);
-        }
-        searchBar.setLayoutParams(lp);
-
-        // Layout the search bar
-        View qsbBar = launcher.getQsbBar();
-        LayoutParams vglp = qsbBar.getLayoutParams();
-        vglp.width = LayoutParams.MATCH_PARENT;
-        vglp.height = LayoutParams.MATCH_PARENT;
-        qsbBar.setLayoutParams(vglp);
-
-        // Layout the voice proxy
-        View voiceButtonProxy = launcher.findViewById(R.id.voice_button_proxy);
-        if (voiceButtonProxy != null) {
+            View searchBar = launcher.getSearchBar();
+            lp = (FrameLayout.LayoutParams) searchBar.getLayoutParams();
             if (hasVerticalBarLayout) {
-                // TODO: MOVE THIS INTO SEARCH BAR MEASURE
+                // Vertical search bar
+                lp.gravity = Gravity.TOP | Gravity.LEFT;
+                lp.width = searchBarSpaceHeightPx;
+                lp.height = LayoutParams.MATCH_PARENT;
+                searchBar.setPadding(
+                        0, 2 * edgeMarginPx, 0,
+                        2 * edgeMarginPx);
             } else {
-                lp = (FrameLayout.LayoutParams) voiceButtonProxy.getLayoutParams();
-                lp.gravity = Gravity.TOP | Gravity.END;
-                lp.width = (widthPx - searchBarSpaceWidthPx) / 2 +
-                        2 * iconSizePx;
+                // Horizontal search bar
+                lp.gravity = Gravity.TOP | Gravity.CENTER_HORIZONTAL;
+                lp.width = searchBarSpaceWidthPx;
                 lp.height = searchBarSpaceHeightPx;
+                searchBar.setPadding(
+                        2 * edgeMarginPx,
+                        2 * edgeMarginPx,
+                        2 * edgeMarginPx, 0);
             }
-        }
+            searchBar.setLayoutParams(lp);
 
+            // Layout the search bar
+
+            View qsbBar = launcher.getQsbBar();
+            LayoutParams vglp = qsbBar.getLayoutParams();
+            vglp.width = LayoutParams.MATCH_PARENT;
+            vglp.height = LayoutParams.MATCH_PARENT;
+            qsbBar.setLayoutParams(vglp);
+
+            // Layout the voice proxy
+            View voiceButtonProxy = launcher.findViewById(R.id.voice_button_proxy);
+            if (voiceButtonProxy != null) {
+                if (hasVerticalBarLayout) {
+                    // TODO: MOVE THIS INTO SEARCH BAR MEASURE
+                } else {
+                    lp = (FrameLayout.LayoutParams) voiceButtonProxy.getLayoutParams();
+                    lp.gravity = Gravity.TOP | Gravity.END;
+                    lp.width = (widthPx - searchBarSpaceWidthPx) / 2 +
+                            2 * iconSizePx;
+                    lp.height = searchBarSpaceHeightPx;
+                }
+            }
         // Layout the workspace
+
         View workspace = launcher.findViewById(R.id.workspace);
         lp = (FrameLayout.LayoutParams) workspace.getLayoutParams();
         lp.gravity = Gravity.CENTER;
@@ -557,4 +565,5 @@ public class DynamicGrid {
                 ", cw: " + mProfile.cellWidthPx + ", ch: " + mProfile.cellHeightPx +
                 ", hc: " + mProfile.numHotseatIcons + ", his: " + mProfile.hotseatIconSizePx + "]";
     }
+
 }

@@ -397,7 +397,8 @@ public class Launcher extends Activity
                 Math.min(largestSize.x, largestSize.y),
                 realSize.x, realSize.y,
                 dm.widthPixels, dm.heightPixels);
-
+        //FRAGGEL
+        asignarPropiedades(grid);
         // the LauncherApplication should call this, but in case of Instrumentation it might not be present yet
         mSharedPrefs = getSharedPreferences(LauncherAppState.getSharedPreferencesKey(),
                 Context.MODE_PRIVATE);
@@ -470,9 +471,19 @@ public class Launcher extends Activity
         updateGlobalIcons();
 
         // On large interfaces, we want the screen to auto-rotate based on the current orientation
-        unlockScreenOrientation(true);
+        unlockScreenOrientation(false);
 
         showFirstRunCling();
+    }
+
+    private void asignarPropiedades(DeviceProfile grid) {
+        grid.numRows=Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_rows", 4);
+        grid.numColumns=Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_cols", 4);
+        //workspace_numbers.setProgress(Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_numbers", 1));
+        //grid.hotseatIconSize=Utils.getSharedPreferencesInt(getApplicationContext(), "hotseat_icons", 2);
+        //grid.iconSize=Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_icons", 2);
+        //allow_rotation.setChecked(Utils.getSharedPreferencesBoolean(getApplicationContext(), "allow_rotation", false));
+        //show_google_bar.setChecked(Utils.getSharedPreferencesBoolean(getApplicationContext(), "show_google_bar", true));
     }
 
     protected void onUserLeaveHint() {
@@ -833,9 +844,12 @@ public class Launcher extends Activity
             Log.v(TAG, "Launcher.onResume()");
         }
         super.onResume();
+
         mWorkspace.onResumeWhenShown(mWorkspace.getCurrentPage());
+
         // Restore the previous launcher state
         if (mOnResumeState == State.WORKSPACE) {
+
             showWorkspace(false);
         } else if (mOnResumeState == State.APPS_CUSTOMIZE) {
             showAllApps(false, AppsCustomizePagedView.ContentType.Applications, false);
@@ -908,6 +922,7 @@ public class Launcher extends Activity
 
         // Again, as with the above scenario, it's possible that one or more of the global icons
         // were updated in the wrong orientation.
+
         updateGlobalIcons();
         if (DEBUG_RESUME_TIME) {
             Log.d(TAG, "Time spent in onResume: " + (System.currentTimeMillis() - startTime));
@@ -921,6 +936,8 @@ public class Launcher extends Activity
                 mWorkspace.getCustomContentCallbacks().onShow();
             }
         }
+
+
         mWorkspace.updateInteractionForState();
 
         mWorkspace.onResume();
@@ -1152,6 +1169,8 @@ public class Launcher extends Activity
         final DragController dragController = mDragController;
 
         mLauncherView = findViewById(R.id.launcher);
+
+
         mDragLayer = (DragLayer) findViewById(R.id.drag_layer);
         mWorkspace = (Workspace) mDragLayer.findViewById(R.id.workspace);
 
@@ -1218,6 +1237,7 @@ public class Launcher extends Activity
         dragController.setScrollView(mDragLayer);
         dragController.setMoveTarget(mWorkspace);
         dragController.addDropTarget(mWorkspace);
+
         if (mSearchDropTargetBar != null) {
             mSearchDropTargetBar.setup(this, dragController);
         }
@@ -4070,8 +4090,9 @@ public class Launcher extends Activity
     }
 
     public boolean isRotationEnabled() {
-        boolean enableRotation = sForceEnableRotation ||
-                getResources().getBoolean(R.bool.allow_rotation);
+        /*boolean enableRotation = sForceEnableRotation ||
+                getResources().getBoolean(R.bool.allow_rotation);*/
+        boolean enableRotation=Utils.getSharedPreferencesBoolean(getApplicationContext(), "allow_rotation", false);
         return enableRotation;
     }
     public void lockScreenOrientation() {
@@ -4088,6 +4109,16 @@ public class Launcher extends Activity
                 mHandler.postDelayed(new Runnable() {
                     public void run() {
                         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
+                    }
+                }, mRestoreScreenOrientationDelay);
+            }
+        }else{
+            if (immediate) {
+                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+            } else {
+                mHandler.postDelayed(new Runnable() {
+                    public void run() {
+                        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                     }
                 }, mRestoreScreenOrientationDelay);
             }
@@ -4509,7 +4540,7 @@ public class Launcher extends Activity
         try {
             PackageManager pm = getPackageManager();
             String label = pm.getApplicationLabel(pm.getApplicationInfo(info.componentName.getPackageName(), 0)).toString();
-            Toast.makeText(this, getString(R.string.one_video_widget, label), Toast.LENGTH_SHORT).show();
+
         } catch (PackageManager.NameNotFoundException e) {
 
         }

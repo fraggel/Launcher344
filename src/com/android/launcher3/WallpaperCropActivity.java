@@ -37,7 +37,6 @@ import android.graphics.RectF;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.FloatMath;
 import android.util.Log;
 import android.view.Display;
 import android.view.View;
@@ -114,7 +113,9 @@ public class WallpaperCropActivity extends Activity {
     }
 
     public boolean enableRotation() {
-        return getResources().getBoolean(R.bool.allow_rotation);
+        boolean rotation=false;
+        rotation= com.android.launcher3.Utils.getSharedPreferencesBoolean(getApplicationContext(), "allow_rotation", false);
+        return rotation;
     }
 
     public static String getSharedPreferencesKey() {
