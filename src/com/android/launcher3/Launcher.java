@@ -980,13 +980,22 @@ public class Launcher extends Activity
     }
 
     protected void startSettings() {
-       Intent i = new Intent(android.provider.Settings.ACTION_SETTINGS);
+       Intent i = new Intent(getApplicationContext(),jiayuLauncherConfig.class);
        startActivity(i);
        if (mWorkspace.isInOverviewMode()) {
            mWorkspace.exitOverviewMode(false);
        }
-    }
 
+    }
+    protected void startGoogleNow(){
+        PackageManager pm = this.getPackageManager();
+        Intent i = new Intent();
+        i = pm.getLaunchIntentForPackage("com.google.android.googlequicksearchbox");
+        startActivity(i);
+        if (mWorkspace.isInOverviewMode()) {
+            mWorkspace.exitOverviewMode(false);
+        }
+    }
     public interface QSBScroller {
         public void setScrollY(int scrollY);
     }

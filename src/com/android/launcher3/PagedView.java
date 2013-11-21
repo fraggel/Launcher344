@@ -311,6 +311,7 @@ public abstract class PagedView extends ViewGroup implements ViewGroup.OnHierarc
         mPageLayoutHeightGap = a.getDimensionPixelSize(
                 R.styleable.PagedView_pageLayoutHeightGap, 0);
         mPageIndicatorViewId = a.getResourceId(R.styleable.PagedView_pageIndicator, -1);
+        mPageLayoutPaddingLeft=0;
         a.recycle();
 
         setHapticFeedbackEnabled(false);
