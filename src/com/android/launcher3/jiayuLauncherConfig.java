@@ -47,6 +47,9 @@ public class jiayuLauncherConfig extends Activity implements SeekBar.OnSeekBarCh
         workspace_cols.setOnSeekBarChangeListener(this);
         workspace_numbers.setOnSeekBarChangeListener(this);
         workspace_numbers.setOnSeekBarChangeListener(this);
+        hotseat_icons.setOnSeekBarChangeListener(this);
+        workspace_icons.setOnSeekBarChangeListener(this);
+
         allow_rotation.setOnCheckedChangeListener(this);
         show_google_bar.setOnCheckedChangeListener(this);
 
@@ -73,9 +76,9 @@ public class jiayuLauncherConfig extends Activity implements SeekBar.OnSeekBarCh
             workspace_numbers.setProgress(Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_numbers", 1));
             workspace_numbers_text.setText(String.valueOf(workspace_numbers.getProgress()));
             hotseat_icons.setProgress(Utils.getSharedPreferencesInt(getApplicationContext(), "hotseat_icons", 2));
-            hotseat_icons_text.setText(String.valueOf(hotseat_icons.getProgress()));
+            hotseat_icons_text.setText(calcularPercentString(hotseat_icons.getProgress()));
             workspace_icons.setProgress(Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_icons", 2));
-            workspace_icons_text.setText(String.valueOf(workspace_icons.getProgress()));
+            workspace_icons_text.setText(calcularPercentString(workspace_icons.getProgress()));
             allow_rotation.setChecked(Utils.getSharedPreferencesBoolean(getApplicationContext(), "allow_rotation", false));
             show_google_bar.setChecked(Utils.getSharedPreferencesBoolean(getApplicationContext(), "show_google_bar", true));
 
@@ -94,44 +97,11 @@ public class jiayuLauncherConfig extends Activity implements SeekBar.OnSeekBarCh
                 Utils.setSharedPreferencesInt(getApplicationContext(), "workspace_cols", progress);
                 workspace_cols_text.setText(String.valueOf(progress));
             }else if(seekBar.getId()==R.id.workspace_icons){
-                int percent=0;
-                if(progress==0){
-                    percent=50;
-                }
-                if(progress==1){
-                    percent=75;
-                }
-                if(progress==2){
-                    percent=100;
-                }
-                if(progress==3){
-                    percent=125;
-                }
-                if(progress==4){
-                    percent=150;
-                }
                 Utils.setSharedPreferencesInt(getApplicationContext(), "workspace_icons", progress);
-                workspace_icons_text.setText(String.valueOf(percent)+"%");
-
+                workspace_icons_text.setText(calcularPercentString(progress));
             }else if(seekBar.getId()==R.id.hotseat_icons){
-                int percent=0;
-                if(progress==0){
-                    percent=50;
-                }
-                if(progress==1){
-                    percent=75;
-                }
-                if(progress==2){
-                    percent=100;
-                }
-                if(progress==3){
-                    percent=125;
-                }
-                if(progress==4){
-                    percent=150;
-                }
                 Utils.setSharedPreferencesInt(getApplicationContext(), "hotseat_icons", progress);
-                hotseat_icons_text.setText(String.valueOf(percent)+"%");
+                hotseat_icons_text.setText(calcularPercentString(progress));
 
             }else if(seekBar.getId()==R.id.workspace_numbers){
                 workspace_numbers_text.setText(String.valueOf(progress));
@@ -189,5 +159,43 @@ public class jiayuLauncherConfig extends Activity implements SeekBar.OnSeekBarCh
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+    }
+    public String calcularPercentString(int progress){
+        int percent=0;
+        if(progress==0){
+            percent=50;
+        }
+        if(progress==1){
+            percent=75;
+        }
+        if(progress==2){
+            percent=100;
+        }
+        if(progress==3){
+            percent=125;
+        }
+        if(progress==4){
+            percent=150;
+        }
+        return String.valueOf(percent)+"%";
+    }
+    public static int calcularPercentFormula(int progress){
+        int percent=0;
+        if(progress==0){
+            percent=50;
+        }
+        if(progress==1){
+            percent=75;
+        }
+        if(progress==2){
+            percent=100;
+        }
+        if(progress==3){
+            percent=125;
+        }
+        if(progress==4){
+            percent=150;
+        }
+        return percent;
     }
 }

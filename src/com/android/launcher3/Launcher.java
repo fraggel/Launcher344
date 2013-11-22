@@ -45,7 +45,6 @@ import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
-import android.content.pm.ResolveInfo;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.database.ContentObserver;
@@ -96,7 +95,6 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.IMTKWidget;
 
 import com.android.launcher3.DropTarget.DragObject;
 
@@ -479,11 +477,17 @@ public class Launcher extends Activity
     private void asignarPropiedades(DeviceProfile grid) {
         grid.numRows=Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_rows", 4);
         grid.numColumns=Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_cols", 4);
-        //workspace_numbers.setProgress(Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_numbers", 1));
-        //grid.hotseatIconSize=Utils.getSharedPreferencesInt(getApplicationContext(), "hotseat_icons", 2);
-        //grid.iconSize=Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_icons", 2);
-        //allow_rotation.setChecked(Utils.getSharedPreferencesBoolean(getApplicationContext(), "allow_rotation", false));
-        //show_google_bar.setChecked(Utils.getSharedPreferencesBoolean(getApplicationContext(), "show_google_bar", true));
+        double calc2=jiayuLauncherConfig.calcularPercentFormula(Utils.getSharedPreferencesInt(getApplicationContext(), "hotseat_icons", 2));
+        calc2=calc2/100;
+        int hotseatIconSize=(int)(grid.hotseatIconSize*calc2);
+        grid.hotseatIconSize=hotseatIconSize;
+        grid.hotseatIconSizePx=(int)(grid.hotseatIconSizePx*calc2);
+
+        double calc=jiayuLauncherConfig.calcularPercentFormula(Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_icons", 2));
+        calc=calc/100;
+        int iconSize=(int)(grid.work*calc);
+        grid.allAppsNumRows=Utils.getSharedPreferencesInt(getApplicationContext(), "all_apps_rows", 5);
+        grid.allAppsNumCols=Utils.getSharedPreferencesInt(getApplicationContext(), "all_apps_cols", 4);
     }
 
     protected void onUserLeaveHint() {

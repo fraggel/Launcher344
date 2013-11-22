@@ -203,7 +203,7 @@ class DeviceProfileQuery {
 
         // At this point, if the cells do not fit into the available height, then we need
         // to shrink the icon size
-        /*
+
         Rect padding = getWorkspacePadding(isLandscape ?
                 CellLayout.LANDSCAPE : CellLayout.PORTRAIT);
         int h = (int) (numRows * cellHeightPx) + padding.top + padding.bottom;
@@ -215,7 +215,7 @@ class DeviceProfileQuery {
             cellWidthPx = iconSizePx;
             cellHeightPx = iconSizePx + (int) Math.ceil(fm.bottom - fm.top);
         }
-        */
+
 
         // Hotseat
         hotseatBarHeightPx = iconSizePx + 4 * edgeMarginPx;

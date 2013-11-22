@@ -293,7 +293,6 @@ final class Utilities {
         final Resources resources = context.getResources();
         final DisplayMetrics metrics = resources.getDisplayMetrics();
         final float density = metrics.density;
-
         sIconWidth = sIconHeight = (int) resources.getDimension(R.dimen.app_icon_size);
         sIconTextureWidth = sIconTextureHeight = sIconWidth;
 
