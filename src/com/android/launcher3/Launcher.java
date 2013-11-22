@@ -414,7 +414,7 @@ public class Launcher extends Activity
 
         mAppWidgetHost = new LauncherAppWidgetHost(this, APPWIDGET_HOST_ID);
         mAppWidgetHost.startListening();
-
+        List<AppWidgetProviderInfo> infos = mAppWidgetManager.getInstalledProviders();
         // If we are getting an onCreate, we can actually preempt onResume and unset mPaused here,
         // this also ensures that any synchronous binding below doesn't re-trigger another
         // LauncherModel load.
