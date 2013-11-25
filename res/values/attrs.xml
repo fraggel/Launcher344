@@ -157,4 +157,30 @@
     </declare-styleable>
     <declare-styleable name="CustomClingText">
     </declare-styleable>
+    <declare-styleable name="TopPackage">
+        <attr name="topPackageName" format="string" />
+        <attr name="topClassName" format="string" />
+        <attr name="topOrder" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="Scene">
+        <attr name="scene" format="string"  />
+    </declare-styleable>
+
+    <declare-styleable name="Wallpaper">
+        <attr name="wallpaper" format="string"  />
+    </declare-styleable>
+    <declare-styleable name="UnreadShortcut">
+        <attr name="unreadPackageName" format="string" />
+        <attr name="unreadClassName" format="string" />
+        <attr name="unreadKey" format="string" />
+        <attr name="unreadType" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="MotaUpdate">
+        <attr name="oldPackageName" format="string" />
+        <attr name="oldClassName" format="string" />
+        <attr name="newPackageName" format="string" />
+        <attr name="newClassName" format="string" />
+    </declare-styleable>
 </resources>
