@@ -13,188 +13,14 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="weather" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25c6fd96-9691-4356-a157-a2ad0904d627" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/ic_newevents_numberindication.9.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/wallpaper_picker_preview.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/android/launcher2/MTKAppIcon.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/android/launcher2/MTKShortcut.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/android/launcher2/MTKUnreadLoader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/arrays.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/xml/default_toppackage.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values/extra_wallpapers.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/xml/mota_update.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout-land/mtk_application.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout-port/mtk_application.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout-land/mtk_apps_customize_application.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout-port/mtk_apps_customize_application.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/layout/mtk_unread_text_layout.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/xml/unread_support_shortcuts.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/xml/wallpaper_picker_preview.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/xml/work.xml" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\gen\com\android\launcher3\BuildConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\gen\com\android\launcher3\Manifest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\gen\com\android\launcher3\R.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\AccessibleTabView.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\AddAdapter.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\Alarm.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\AllAppsList.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\AppFilter.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\AppInfo.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\AppWidgetResizeFrame.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\AppsCustomizeCellLayout.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\AppsCustomizePagedView.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\AppsCustomizeTabHost.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\BubbleTextView.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\ButtonDropTarget.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\CellLayout.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\CheckLongPressHelper.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\CheckableFrameLayout.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\Cling.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\CropView.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\DeferredHandler.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\DeleteDropTarget.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\DragController.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\DragLayer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\DragScroller.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\DragSource.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\DragView.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\DrawableStateProxyView.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\DropTarget.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\DynamicGrid.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\FastBitmapDrawable.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\FirstFrameAnimatorHelper.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\FocusHelper.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\FocusOnlyTabWidget.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\Folder.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\FolderAutoScrollHelper.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\FolderEditText.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\FolderIcon.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\FolderInfo.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\HideFromAccessibilityHelper.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\HolographicImageView.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\HolographicLinearLayout.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\HolographicOutlineHelper.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\HolographicViewHelper.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\Hotseat.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\IconCache.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\InfoDropTarget.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\Insettable.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\InstallShortcutReceiver.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\InstallWidgetReceiver.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\InterruptibleInOutAnimator.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\ItemInfo.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\Launcher.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\LauncherAnimUtils.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\LauncherAnimatorUpdateListener.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\LauncherAppState.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\LauncherAppWidgetHost.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\LauncherAppWidgetHostView.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\LauncherAppWidgetInfo.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\LauncherApplication.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\LauncherBackupAgentHelper.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\LauncherBackupHelper.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\LauncherModel.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\LauncherProvider.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\LauncherSettings.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\LauncherViewPropertyAnimator.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\LiveWallpaperListAdapter.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\MemoryDumpActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\MemoryTracker.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\PackageChangedReceiver.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\PageIndicator.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\PageIndicatorMarker.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\PagedView.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\PagedViewCellLayout.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\PagedViewCellLayoutChildren.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\PagedViewGridLayout.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\PagedViewIcon.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\PagedViewIconCache.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\PagedViewWidget.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\PagedViewWidgetImageView.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\PagedViewWithDraggableItems.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\PendingAddItemInfo.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\PreloadReceiver.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\RampUpScroller.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\SavedWallpaperImages.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\ScrimView.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\SearchDropTargetBar.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\ShortcutAndWidgetContainer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\ShortcutInfo.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\SmoothPagedView.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\SpringLoadedDragController.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\Stats.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\ThirdPartyWallpaperPickerListAdapter.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\ToggleWeightWatcher.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\UninstallShortcutReceiver.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\UserInitializeReceiver.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\Utilities.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\Utils.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\WallpaperCropActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\WallpaperPickerActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\WallpaperRootView.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\WeightWatcher.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\WidgetAdder.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\WidgetPreviewLoader.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\Workspace.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\config\ProviderConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\jiayuLauncherConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\tests\stress\src\com\android\launcher3\stress\LauncherRotationStressTest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\util\com\android\launcher3\DecoderRing.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/android/launcher/Manifest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gen/com/android/launcher/R.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/stress/AndroidManifest.xml" afterPath="$PROJECT_DIR$/tests/stress/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-land/all_apps_cling.xml" afterPath="$PROJECT_DIR$/res/layout-land/all_apps_cling.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-port/all_apps_cling.xml" afterPath="$PROJECT_DIR$/res/layout-port/all_apps_cling.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-sw600dp-port/all_apps_cling.xml" afterPath="$PROJECT_DIR$/res/layout-sw600dp-port/all_apps_cling.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-sw720dp/all_apps_cling.xml" afterPath="$PROJECT_DIR$/res/layout-sw720dp/all_apps_cling.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/application.xml" afterPath="$PROJECT_DIR$/res/layout/application.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/apps_customize_application.xml" afterPath="$PROJECT_DIR$/res/layout/apps_customize_application.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/apps_customize_pane.xml" afterPath="$PROJECT_DIR$/res/layout/apps_customize_pane.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/apps_customize_widget.xml" afterPath="$PROJECT_DIR$/res/layout/apps_customize_widget.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/attrs.xml" afterPath="$PROJECT_DIR$/res/values/attrs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protos/backup.proto" afterPath="$PROJECT_DIR$/protos/backup.proto" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/config.xml" afterPath="$PROJECT_DIR$/res/values/config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/custom_content_page_indicator_marker.xml" afterPath="$PROJECT_DIR$/res/layout/custom_content_page_indicator_marker.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/custom_workspace_cling.xml" afterPath="$PROJECT_DIR$/res/layout/custom_workspace_cling.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml/default_workspace.xml" afterPath="$PROJECT_DIR$/res/xml/default_workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml-sw600dp/default_workspace.xml" afterPath="$PROJECT_DIR$/res/xml-sw600dp/default_workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml-sw720dp/default_workspace.xml" afterPath="$PROJECT_DIR$/res/xml-sw720dp/default_workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/dimens.xml" afterPath="$PROJECT_DIR$/res/values/dimens.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/drop_target_bar.xml" afterPath="$PROJECT_DIR$/res/layout/drop_target_bar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-land/first_run_cling.xml" afterPath="$PROJECT_DIR$/res/layout-land/first_run_cling.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-port/first_run_cling.xml" afterPath="$PROJECT_DIR$/res/layout-port/first_run_cling.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-land/folder_cling.xml" afterPath="$PROJECT_DIR$/res/layout-land/folder_cling.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-port/folder_cling.xml" afterPath="$PROJECT_DIR$/res/layout-port/folder_cling.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-sw600dp-port/folder_cling.xml" afterPath="$PROJECT_DIR$/res/layout-sw600dp-port/folder_cling.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-sw720dp-port/folder_cling.xml" afterPath="$PROJECT_DIR$/res/layout-sw720dp-port/folder_cling.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/folder_icon.xml" afterPath="$PROJECT_DIR$/res/layout/folder_icon.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/hotseat.xml" afterPath="$PROJECT_DIR$/res/layout/hotseat.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-land/launcher.xml" afterPath="$PROJECT_DIR$/res/layout-land/launcher.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-port/launcher.xml" afterPath="$PROJECT_DIR$/res/layout-port/launcher.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-sw720dp/launcher.xml" afterPath="$PROJECT_DIR$/res/layout-sw720dp/launcher.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/page_indicator.xml" afterPath="$PROJECT_DIR$/res/layout/page_indicator.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/page_indicator_marker.xml" afterPath="$PROJECT_DIR$/res/layout/page_indicator_marker.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/proguard.flags" afterPath="$PROJECT_DIR$/proguard.flags" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/qsb_bar.xml" afterPath="$PROJECT_DIR$/res/layout/qsb_bar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-land/search_bar.xml" afterPath="$PROJECT_DIR$/res/layout-land/search_bar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-port/search_bar.xml" afterPath="$PROJECT_DIR$/res/layout-port/search_bar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-sw720dp/search_bar.xml" afterPath="$PROJECT_DIR$/res/layout-sw720dp/search_bar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/styles.xml" afterPath="$PROJECT_DIR$/res/values/styles.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/tab_widget_indicator.xml" afterPath="$PROJECT_DIR$/res/layout/tab_widget_indicator.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml/update_workspace.xml" afterPath="$PROJECT_DIR$/res/xml/update_workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/user_folder.xml" afterPath="$PROJECT_DIR$/res/layout/user_folder.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/wallpaper_cropper.xml" afterPath="$PROJECT_DIR$/res/layout/wallpaper_cropper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/wallpaper_picker.xml" afterPath="$PROJECT_DIR$/res/layout/wallpaper_picker.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/wallpaper_picker_image_picker_item.xml" afterPath="$PROJECT_DIR$/res/layout/wallpaper_picker_image_picker_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/wallpaper_picker_item.xml" afterPath="$PROJECT_DIR$/res/layout/wallpaper_picker_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/wallpaper_picker_live_wallpaper_item.xml" afterPath="$PROJECT_DIR$/res/layout/wallpaper_picker_live_wallpaper_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/wallpaper_picker_third_party_item.xml" afterPath="$PROJECT_DIR$/res/layout/wallpaper_picker_third_party_item.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-land/workspace_cling.xml" afterPath="$PROJECT_DIR$/res/layout-land/workspace_cling.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-port/workspace_cling.xml" afterPath="$PROJECT_DIR$/res/layout-port/workspace_cling.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/workspace_screen.xml" afterPath="$PROJECT_DIR$/res/layout/workspace_screen.xml" />
     </list>
     <ignored path="android_packages_apps_Launcher3-somex-4.4.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -337,7 +163,7 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="3" selection-start="665" selection-end="665" vertical-scroll-proportion="0.5964912" vertical-offset="0" max-vertical-offset="3791">
+            <state line="153" column="0" selection-start="7365" selection-end="7365" vertical-scroll-proportion="0.20773931" vertical-offset="2499" max-vertical-offset="3791">
               <folding />
             </state>
           </provider>
@@ -349,6 +175,11 @@
     <FindUsagesManager>
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="KEY_STORE_PATH" value="D:\Programacion\androidsuiteworkspace\keystoreJiayu" />
+    <option name="KEY_ALIAS" value="jiayu" />
+    <option name="REMEMBER_PASSWORDS" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -387,10 +218,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="y" value="4" />
-    <option name="width" value="1280" />
-    <option name="height" value="946" />
+    <option name="x" value="-4" />
+    <option name="y" value="-4" />
+    <option name="width" value="1288" />
+    <option name="height" value="954" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -451,72 +282,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android_packages_apps_Launcher3-somex-4.4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Launcher344" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="launcher2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android_packages_apps_Launcher3-somex-4.4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Launcher344" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="launcher2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="PagedView.java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android_packages_apps_Launcher3-somex-4.4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Launcher344" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -531,10 +296,6 @@
               <option name="myItemId" value="gen" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="launcher" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -542,17 +303,19 @@
   </component>
   <component name="PropertiesComponent">
     <property name="GenerateAntBuildDialog.generateIdeaHomeProperty" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="recentsLimit" value="5" />
+    <property name="ExportedApkPath" value="D:\Programacion\androidsuiteworkspace\Launcher344\Launcher3.apk" />
     <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ext" />
+    <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="ExportedModule" value="android_packages_apps_Launcher3-somex-4.4" />
     <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
-    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="android_packages_apps_launcher3-somex-4.4" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../keystoreJiayu" />
     <property name="DEBUGGABLE_DEVICE" value="0123456789ABCDEF" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="android_packages_apps_launcher3-somex-4.4" />
     <property name="DEBUGGABLE_PROCESS" value="com.android.launcher3" />
     <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -565,6 +328,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="AndroidRunProguardForReleaseBuild" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
     <property name="options.searchVisible" value="true" />
@@ -752,7 +516,15 @@
       <created>1385127430105</created>
       <updated>1385127430105</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Version mod 1 primer intento de añadir el widget mediatek">
+      <created>1385378426312</created>
+      <updated>1385378426312</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Version mod 1 primer intento de añadir el widget mediatek">
+      <created>1385378450782</created>
+      <updated>1385378450782</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -776,11 +548,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="4" width="1280" height="946" extended-state="0" />
-    <editor active="false" />
+    <frame x="-4" y="-4" width="1288" height="954" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32625" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32625" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39975247" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -794,18 +566,46 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24796085" sideWeight="0.67375" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33125" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2471637" sideWeight="0.6720297" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3279703" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6720297" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3279703" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32625" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3279703" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24796085" sideWeight="0.515" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33125" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6720297" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3279703" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39975247" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3275" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.485" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USERS">
@@ -983,7 +783,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="3" selection-start="665" selection-end="665" vertical-scroll-proportion="0.5964912" vertical-offset="0" max-vertical-offset="3791">
+        <state line="153" column="0" selection-start="7365" selection-end="7365" vertical-scroll-proportion="0.20773931" vertical-offset="2499" max-vertical-offset="3791">
           <folding />
         </state>
       </provider>

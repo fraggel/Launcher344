@@ -19,41 +19,44 @@
 -->
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.launcher">
+    package="com.android.launcher"
+        android:versionCode="1"
+        android:versionName="1.0">
     <original-package android:name="com.android.launcher2" />
 
     <permission
-            android:name="com.android.launcher.permission.PRELOAD_WORKSPACE"
-            android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
-            android:protectionLevel="system|signature" />
+        android:name="com.android.launcher2.permission.PRELOAD_WORKSPACE"
+        android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
+        android:protectionLevel="system|signature" />
     <permission
-            android:name="com.android.launcher.permission.INSTALL_SHORTCUT"
-            android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
-            android:protectionLevel="dangerous"
-            android:label="@string/permlab_install_shortcut"
-            android:description="@string/permdesc_install_shortcut" />
+        android:name="com.android.launcher2.permission.INSTALL_SHORTCUT"
+        android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
+        android:protectionLevel="dangerous"
+        android:label="@string/permlab_install_shortcut"
+        android:description="@string/permdesc_install_shortcut" />
     <permission
-            android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT"
-            android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
-            android:protectionLevel="dangerous"
-            android:label="@string/permlab_uninstall_shortcut"
-            android:description="@string/permdesc_uninstall_shortcut"/>
+        android:name="com.android.launcher2.permission.UNINSTALL_SHORTCUT"
+        android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
+        android:protectionLevel="dangerous"
+        android:label="@string/permlab_uninstall_shortcut"
+        android:description="@string/permdesc_uninstall_shortcut"/>
     <permission
-            android:name="com.android.launcher.permission.READ_SETTINGS"
-            android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
-            android:protectionLevel="normal"
-            android:label="@string/permlab_read_settings"
-            android:description="@string/permdesc_read_settings"/>
+        android:name="com.android.launcher2.permission.READ_SETTINGS"
+        android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
+        android:protectionLevel="normal"
+        android:label="@string/permlab_read_settings"
+        android:description="@string/permdesc_read_settings"/>
     <permission
-            android:name="com.android.launcher.permission.WRITE_SETTINGS"
-            android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
-            android:protectionLevel="normal"
-            android:label="@string/permlab_write_settings"
-            android:description="@string/permdesc_write_settings"/>
+        android:name="com.android.launcher2.permission.WRITE_SETTINGS"
+        android:permissionGroup="android.permission-group.SYSTEM_TOOLS"
+        android:protectionLevel="normal"
+        android:label="@string/permlab_write_settings"
+        android:description="@string/permdesc_write_settings"/>
+
     <permission
-            android:name="com.android.launcher.permission.RECEIVE_LAUNCH_BROADCASTS"
-            android:protectionLevel="signature"
-            />
+        android:name="com.android.launcher2.permission.RECEIVE_LAUNCH_BROADCASTS"
+        android:protectionLevel="signature"
+        />
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
@@ -63,14 +66,12 @@
     <uses-permission android:name="android.permission.ADVANCED_WIDGET_API"/>
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
-    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />
-    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
-    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />
-    <uses-permission android:name="com.android.launcher.permission.RECEIVE_LAUNCH_BROADCASTS" />
-    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"/>
-    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
-
+    <uses-permission android:name="com.android.launcher2.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher2.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.android.launcher2.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher2.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="com.android.launcher2.permission.RECEIVE_LAUNCH_BROADCASTS" />
+    <uses-permission android:name="com.android.launcher2.permission.RECEIVE_LAUNCH_BROADCASTS" />
     <uses-sdk android:minSdkVersion="17" android:targetSdkVersion="19"></uses-sdk>
     <application
         android:name="com.android.launcher2.LauncherApplication"
@@ -152,14 +153,13 @@
         </activity>
 
         <service android:name="com.android.launcher2.MemoryTracker"
-            android:enabled="@bool/debug_memory_enabled"
-            >
+            android:enabled="@bool/debug_memory_enabled">
         </service>
 
         <!-- Intent received used to prepopulate the default workspace. -->
         <receiver
             android:name="com.android.launcher2.PreloadReceiver"
-            android:permission="com.android.launcher.permission.PRELOAD_WORKSPACE">
+            android:permission="com.android.launcher2.permission.PRELOAD_WORKSPACE">
             <intent-filter>
                 <action android:name="com.android.launcher2.action.PRELOAD_WORKSPACE" />
             </intent-filter>
