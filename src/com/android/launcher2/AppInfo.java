@@ -32,7 +32,7 @@ import java.util.HashMap;
  * Represents an app in AllAppsView.
  */
 class AppInfo extends ItemInfo {
-    private static final String TAG = "Launcher3.AppInfo";
+    private static final String TAG = "Launcher2.AppInfo";
 
     /**
      * The intent used to start the application.

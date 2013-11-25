@@ -147,7 +147,7 @@ public class AppsCustomizePagedView extends PagedViewWithDraggableItems implemen
         PagedViewIcon.PressedCallback, PagedViewWidget.ShortPressListener,
         LauncherTransitionable {
     static final String TAG = "AppsCustomizePagedView";
-
+    private boolean mAppsHasSet = false;
     /**
      * The different content types that this paged view can show.
      */
@@ -493,7 +493,9 @@ public class AppsCustomizePagedView extends PagedViewWithDraggableItems implemen
         // When we have exited all apps or are in transition, disregard clicks
         if (!mLauncher.isAllAppsVisible() ||
                 mLauncher.getWorkspace().isSwitchingState()) return;
-
+        if (v instanceof MTKAppIcon) {
+            v = ((MTKAppIcon)v).mAppIcon;
+        }
         if (v instanceof PagedViewIcon) {
             // Animate some feedback to the click
             final AppInfo appInfo = (AppInfo) v.getTag();

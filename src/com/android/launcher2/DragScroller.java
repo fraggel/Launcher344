@@ -37,4 +37,5 @@ public interface DragScroller {
      * NOTE: This may not be called, if a drop occurs inside the scroll area.
      */
     boolean onExitScrollArea();
+
 }

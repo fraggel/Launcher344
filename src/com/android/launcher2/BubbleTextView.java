@@ -88,6 +88,13 @@ public class BubbleTextView extends TextView {
         DeviceProfile grid = app.getDynamicGrid().getDeviceProfile();
         setTextSize(TypedValue.COMPLEX_UNIT_SP, grid.iconTextSize);
         setTextColor(getResources().getColor(R.color.workspace_icon_text_color));
+        final Resources res = getContext().getResources();
+        //mPressedGlowColor = Launcher.getThemeColor(res, android.R.color.holo_blue_light);
+        mFocusedOutlineColor = mPressedGlowColor;
+        mFocusedGlowColor = mPressedGlowColor;
+        mPressedOutlineColor = mPressedGlowColor;
+
+        setShadowLayer(SHADOW_LARGE_RADIUS, 0.0f, SHADOW_Y_OFFSET, SHADOW_LARGE_COLOUR);
     }
 
     private void init() {

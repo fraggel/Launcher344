@@ -17,11 +17,9 @@
 ** limitations under the License.
 */
 -->
-<manifest
+<manifest android:versionCode="1" android:versionName="1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.launcher"
-        android:versionCode="1"
-        android:versionName="1.0">
+    package="com.android.launcher">
     <original-package android:name="com.android.launcher2" />
 
     <permission
@@ -72,7 +70,7 @@
     <uses-permission android:name="com.android.launcher2.permission.WRITE_SETTINGS" />
     <uses-permission android:name="com.android.launcher2.permission.RECEIVE_LAUNCH_BROADCASTS" />
     <uses-permission android:name="com.android.launcher2.permission.RECEIVE_LAUNCH_BROADCASTS" />
-    <uses-sdk android:minSdkVersion="17" android:targetSdkVersion="19"></uses-sdk>
+    <uses-sdk android:minSdkVersion="17" android:targetSdkVersion="17"></uses-sdk>
     <application
         android:name="com.android.launcher2.LauncherApplication"
         android:label="@string/application_name"
@@ -212,6 +210,6 @@
 
         <meta-data android:name="android.nfc.disable_beam_default"
                        android:value="true" />
-        <activity android:name="com.android.launcher2.jiayuLauncherConfig" />
+        <activity android:name="com.jiayu.config.jiayuLauncherConfig" />
     </application>
 </manifest>

@@ -1,4 +1,4 @@
-package com.android.launcher2;
+package com.jiayu.config;
 
 import android.app.Activity;
 import android.app.TaskStackBuilder;
@@ -9,6 +9,8 @@ import android.widget.SeekBar;
 import android.widget.Switch;
 import android.widget.TextView;
 import com.android.launcher.R;
+import com.android.launcher2.*;
+
 /**
  * Created by Fraggel on 16/11/13.
  */
@@ -69,18 +71,18 @@ public class jiayuLauncherConfig extends Activity implements SeekBar.OnSeekBarCh
 
     private void initValues() {
         try {
-            workspace_rows.setProgress(Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_rows", 4));
+            workspace_rows.setProgress(com.android.launcher2.Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_rows", 4));
             workspace_rows_text.setText(String.valueOf(workspace_rows.getProgress()));
-            workspace_cols.setProgress(Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_cols", 4));
+            workspace_cols.setProgress(com.android.launcher2.Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_cols", 4));
             workspace_cols_text.setText(String.valueOf(workspace_cols.getProgress()));
-            workspace_numbers.setProgress(Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_numbers", 1));
+            workspace_numbers.setProgress(com.android.launcher2.Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_numbers", 1));
             workspace_numbers_text.setText(String.valueOf(workspace_numbers.getProgress()));
-            hotseat_icons.setProgress(Utils.getSharedPreferencesInt(getApplicationContext(), "hotseat_icons", 2));
+            hotseat_icons.setProgress(com.android.launcher2.Utils.getSharedPreferencesInt(getApplicationContext(), "hotseat_icons", 2));
             hotseat_icons_text.setText(calcularPercentString(hotseat_icons.getProgress()));
-            workspace_icons.setProgress(Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_icons", 2));
+            workspace_icons.setProgress(com.android.launcher2.Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_icons", 2));
             workspace_icons_text.setText(calcularPercentString(workspace_icons.getProgress()));
-            allow_rotation.setChecked(Utils.getSharedPreferencesBoolean(getApplicationContext(), "allow_rotation", false));
-            show_google_bar.setChecked(Utils.getSharedPreferencesBoolean(getApplicationContext(), "show_google_bar", true));
+            allow_rotation.setChecked(com.android.launcher2.Utils.getSharedPreferencesBoolean(getApplicationContext(), "allow_rotation", false));
+            show_google_bar.setChecked(com.android.launcher2.Utils.getSharedPreferencesBoolean(getApplicationContext(), "show_google_bar", true));
 
         }catch(Exception e){
 
@@ -91,16 +93,16 @@ public class jiayuLauncherConfig extends Activity implements SeekBar.OnSeekBarCh
     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 
             if(seekBar.getId()==R.id.workspace_rows){
-                Utils.setSharedPreferencesInt(getApplicationContext(), "workspace_rows", progress);
+                com.android.launcher2.Utils.setSharedPreferencesInt(getApplicationContext(), "workspace_rows", progress);
                 workspace_rows_text.setText(String.valueOf(progress));
             }else if(seekBar.getId()==R.id.workspace_cols){
-                Utils.setSharedPreferencesInt(getApplicationContext(), "workspace_cols", progress);
+                com.android.launcher2.Utils.setSharedPreferencesInt(getApplicationContext(), "workspace_cols", progress);
                 workspace_cols_text.setText(String.valueOf(progress));
             }else if(seekBar.getId()==R.id.workspace_icons){
-                Utils.setSharedPreferencesInt(getApplicationContext(), "workspace_icons", progress);
+                com.android.launcher2.Utils.setSharedPreferencesInt(getApplicationContext(), "workspace_icons", progress);
                 workspace_icons_text.setText(calcularPercentString(progress));
             }else if(seekBar.getId()==R.id.hotseat_icons){
-                Utils.setSharedPreferencesInt(getApplicationContext(), "hotseat_icons", progress);
+                com.android.launcher2.Utils.setSharedPreferencesInt(getApplicationContext(), "hotseat_icons", progress);
                 hotseat_icons_text.setText(calcularPercentString(progress));
 
             }else if(seekBar.getId()==R.id.workspace_numbers){
@@ -128,19 +130,19 @@ public class jiayuLauncherConfig extends Activity implements SeekBar.OnSeekBarCh
         if(buttonView.getId()==R.id.allow_rotation){
             if(isChecked){
                 allow_rotation.setChecked(true);
-                Utils.setSharedPreferencesBoolean(getApplicationContext(), "allow_rotation", true);
+                com.android.launcher2.Utils.setSharedPreferencesBoolean(getApplicationContext(), "allow_rotation", true);
             }else{
                 allow_rotation.setChecked(false);
-                Utils.setSharedPreferencesBoolean(getApplicationContext(), "allow_rotation", false);
+                com.android.launcher2.Utils.setSharedPreferencesBoolean(getApplicationContext(), "allow_rotation", false);
             }
 
         }else if(buttonView.getId()==R.id.show_google_bar){
             if(isChecked){
                 show_google_bar.setChecked(true);
-                Utils.setSharedPreferencesBoolean(getApplicationContext(), "show_google_bar", true);
+                com.android.launcher2.Utils.setSharedPreferencesBoolean(getApplicationContext(), "show_google_bar", true);
             }else{
                 show_google_bar.setChecked(false);
-                Utils.setSharedPreferencesBoolean(getApplicationContext(), "show_google_bar", false);
+                com.android.launcher2.Utils.setSharedPreferencesBoolean(getApplicationContext(), "show_google_bar", false);
             }
         }
 

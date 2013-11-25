@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.android.launcher2.jiayuLauncherConfig">
+    tools:context="com.jiayu.config.jiayuLauncherConfig">
 
 
     <TextView
@@ -13,6 +13,13 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Tamaño cuadrícula"
         android:id="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Filas"
+        android:id="@+id/textView3" />
 
     <SeekBar
         android:layout_width="fill_parent"
@@ -29,6 +36,13 @@
         android:text="Small Text"
         android:id="@+id/workspace_rows_text"
         android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Columnas"
+        android:id="@+id/textView4" />
 
     <SeekBar
         android:layout_width="fill_parent"

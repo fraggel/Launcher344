@@ -113,6 +113,8 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import com.android.launcher.R;
+import com.jiayu.config.jiayuLauncherConfig;
+
 /**
  * Default launcher application.
  */
@@ -478,7 +480,7 @@ public class Launcher extends Activity
     private void asignarPropiedades(DeviceProfile grid) {
         grid.numRows=Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_rows", 4);
         grid.numColumns=Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_cols", 4);
-        double calc2=jiayuLauncherConfig.calcularPercentFormula(Utils.getSharedPreferencesInt(getApplicationContext(), "hotseat_icons", 2));
+        double calc2= jiayuLauncherConfig.calcularPercentFormula(Utils.getSharedPreferencesInt(getApplicationContext(), "hotseat_icons", 2));
         calc2=calc2/100;
         int hotseatIconSize=(int)(grid.hotseatIconSize*calc2);
         grid.hotseatIconSize=hotseatIconSize;
@@ -1002,11 +1004,11 @@ public class Launcher extends Activity
     }
 
     protected void startSettings() {
-       Intent i = new Intent(getApplicationContext(),jiayuLauncherConfig.class);
+       /*Intent i = new Intent(getApplicationContext(),jiayuLauncherConfig.class);
        startActivity(i);
        if (mWorkspace.isInOverviewMode()) {
            mWorkspace.exitOverviewMode(false);
-       }
+       }*/
 
     }
     protected void startGoogleNow(){
@@ -1216,7 +1218,8 @@ public class Launcher extends Activity
         settingsButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                startSettings();
+                startGoogleNow();
+                //startSettings();
             }
         });
         settingsButton.setOnTouchListener(getHapticFeedbackTouchListener());

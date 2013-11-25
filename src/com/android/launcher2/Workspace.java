@@ -4477,7 +4477,7 @@ public class Workspace extends SmoothPagedView
     }
 
     protected String getPageIndicatorDescription() {
-        String settings = getResources().getString(R.string.settings_button_text);
+        String settings = getResources().getString(R.string.settings_button_text2);
         return getCurrentPageDescription() + ", " + settings;
     }
 

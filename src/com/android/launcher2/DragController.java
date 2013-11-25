@@ -767,7 +767,9 @@ public class DragController {
             mVelocityTracker = null;
         }
     }
-
+    public void resetDropTarget() {
+        mDropTargets.clear();
+    }
     /**
      * Set which view scrolls for touch events near the edge of the screen.
      */
@@ -807,5 +809,6 @@ public class DragController {
         void setDirection(int direction) {
             mDirection = direction;
         }
+
     }
 }

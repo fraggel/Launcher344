@@ -16,6 +16,7 @@
 
 package com.android.launcher2;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,12 +26,66 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.content.res.TypedArray;
+import android.content.res.XmlResourceParser;
+import android.os.SystemClock;
+import android.util.AttributeSet;
+import android.util.Xml;
+
+import com.android.internal.util.XmlUtils;
+import com.android.launcher.R;
+
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
 
 
 /**
  * Stores the list of all applications for the all apps view.
  */
 class AllAppsList {
+    private static final String TAG_TOPPACKAGES = "toppackages";
+    private static final String WIFI_SETTINGPKGNAME = "com.android.settings";
+    private static final String WIFI_SETTINGCLASSNAME = "com.android.settings.Settings$WifiSettingsActivity";
+
+    /// M: add for Wifi Settings {@
+    private boolean mRemovedWifiSettings = false;
+    /// M: @}
+
+    private static final boolean DEBUG_LOADERS_REORDER = false;
+    /**
+     * M: The list of appWidget that have been removed since the last notify()
+     * call.
+     */
+    public ArrayList<String> appwidgetRemoved = new ArrayList<String>();
+
+    /// M: add for top packages.
+    static ArrayList<TopPackage> sTopPackages = null;
+
+    static class TopPackage {
+        public TopPackage(String pkgName, String clsName, int index) {
+            packageName = pkgName;
+            className = clsName;
+            order = index;
+        }
+
+        String packageName;
+        String className;
+        int order;
+    }
+
+    /**
+     * Boring constructor.
+     */
+    public AllAppsList(IconCache iconCache) {
+        mIconCache = iconCache;
+    }
+
+    /**
+     * Add the supplied ApplicationInfo objects to the list, and enqueue it into the
+     * list to broadcast when notify() is called.
+     *
+     * If the app is already in the list, doesn't add it.
+     */
     public static final int DEFAULT_APPLICATIONS_NUMBER = 42;
     
     /** The list off all apps. */
@@ -79,6 +134,11 @@ class AllAppsList {
         added.clear();
         removed.clear();
         modified.clear();
+        /// M: clear appWidgetRemoved.
+        appwidgetRemoved.clear();
+
+        /// M: remove extra icons
+        mRemovedWifiSettings = false;
     }
 
     public int size() {
@@ -165,6 +225,9 @@ class AllAppsList {
                     mIconCache.remove(component);
                     data.remove(i);
                 }
+                if (removed.size() == 0) {
+                    appwidgetRemoved.add(packageName);
+                }
             }
         }
     }
@@ -223,5 +286,207 @@ class AllAppsList {
             }
         }
         return null;
+    }
+    static boolean loadTopPackage(final Context context) {
+        boolean bRet = false;
+        if (sTopPackages != null) {
+            return bRet;
+        }
+
+        sTopPackages = new ArrayList<TopPackage>();
+
+        try {
+            XmlResourceParser parser = context.getResources().getXml(R.xml.default_toppackage);
+            AttributeSet attrs = Xml.asAttributeSet(parser);
+            XmlUtils.beginDocument(parser, TAG_TOPPACKAGES);
+
+            final int depth = parser.getDepth();
+
+            int type = -1;
+            while (((type = parser.next()) != XmlPullParser.END_TAG || parser.getDepth() > depth)
+                    && type != XmlPullParser.END_DOCUMENT) {
+
+                if (type != XmlPullParser.START_TAG) {
+                    continue;
+                }
+
+                TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.TopPackage);
+
+                sTopPackages.add(new TopPackage(a.getString(R.styleable.TopPackage_topPackageName),
+                        a.getString(R.styleable.TopPackage_topClassName), a.getInt(
+                        R.styleable.TopPackage_topOrder, 0)));
+
+
+                a.recycle();
+            }
+        } catch (XmlPullParserException e) {
+
+        } catch (IOException e) {
+
+        }
+
+        return bRet;
+    }
+
+    /**
+     * M: Get the index for the given appInfo in the top packages.
+     *
+     * @param appInfo
+     * @return the index of the given appInfo.
+     */
+    static int getTopPackageIndex(final AppInfo appInfo) {
+        int retIndex = -1;
+        if (sTopPackages == null || sTopPackages.isEmpty() || appInfo == null) {
+            return retIndex;
+        }
+
+        for (TopPackage tp : sTopPackages) {
+            if (appInfo.componentName.getPackageName().equals(tp.packageName)
+                    && appInfo.componentName.getClassName().equals(tp.className)) {
+                retIndex = tp.order;
+                break;
+            }
+        }
+
+        return retIndex;
+    }
+
+    /**
+     * M: Reorder all apps index according to TopPackages.
+     */
+    void reorderApplist() {
+        final long sortTime = DEBUG_LOADERS_REORDER ? SystemClock.uptimeMillis() : 0;
+
+        if (sTopPackages == null || sTopPackages.isEmpty()) {
+            return;
+        }
+        ensureTopPackageOrdered();
+
+        final ArrayList<AppInfo> dataReorder = new ArrayList<AppInfo>(
+                DEFAULT_APPLICATIONS_NUMBER);
+
+        for (TopPackage tp : sTopPackages) {
+            int loop = 0;
+            for (AppInfo ai : added) {
+
+
+                if (ai.componentName.getPackageName().equals(tp.packageName)
+                        && ai.componentName.getClassName().equals(tp.className)) {
+
+                    data.remove(ai);
+                    dataReorder.add(ai);
+                    dumpData();
+                    break;
+                }
+                loop++;
+            }
+        }
+
+        for (TopPackage tp : sTopPackages) {
+            int loop = 0;
+            int newIndex = 0;
+            for (AppInfo ai : dataReorder) {
+
+
+                if (ai.componentName.getPackageName().equals(tp.packageName)
+                        && ai.componentName.getClassName().equals(tp.className)) {
+                    newIndex = Math.min(Math.max(tp.order, 0), added.size());
+
+                    /// M: make sure the array list not out of bound
+                    if (newIndex < data.size()) {
+                        data.add(newIndex, ai);
+                    } else {
+                        data.add(ai);
+                    }
+                    dumpData();
+                    break;
+                }
+                loop++;
+            }
+        }
+
+        if (added.size() == data.size()) {
+            added = (ArrayList<AppInfo>) data.clone();
+
+        }
+    }
+
+    /**
+     * Dump application informations in data.
+     */
+    void dumpData() {
+        int loop2 = 0;
+        for (AppInfo ai : data) {
+            loop2++;
+        }
+    }
+
+    /**
+     * M: Remove wifisettings in apps list.
+     */
+    void removeWifiSettings() {
+        if (!mRemovedWifiSettings) {
+            mRemovedWifiSettings = removeSpecificApp(WIFI_SETTINGPKGNAME, WIFI_SETTINGCLASSNAME);
+        }
+    }
+
+    private boolean removeSpecificApp(final String packageName, final String className) {
+        AppInfo appInfo = null;
+        for (AppInfo ai : added) {
+            if (ai.componentName.getPackageName().equalsIgnoreCase(packageName)
+                    && ai.componentName.getClassName().equalsIgnoreCase(className)) {
+                appInfo = ai;
+                break;
+            }
+        }
+
+        if (appInfo != null) {
+            data.remove(appInfo);
+            added.remove(appInfo);
+            return true;
+        }
+        return false;
+    }
+
+    /*
+     * M: ensure the items from top_package.xml is in order,
+     * for some special case of top_package.xml will make the arraylist out of bound.
+     */
+
+    static void ensureTopPackageOrdered() {
+        ArrayList<TopPackage> tpOrderList = new ArrayList<TopPackage>(DEFAULT_APPLICATIONS_NUMBER);
+        boolean bFirst = true;
+        for (TopPackage tp : sTopPackages) {
+            if (bFirst) {
+                tpOrderList.add(tp);
+                bFirst = false;
+            } else {
+                for (int i = tpOrderList.size() - 1; i >= 0; i--) {
+                    TopPackage tpItor = tpOrderList.get(i);
+                    if (0 == i) {
+                        if (tp.order < tpOrderList.get(0).order) {
+                            tpOrderList.add(0, tp);
+                        } else {
+                            tpOrderList.add(1, tp);
+                        }
+                        break;
+                    }
+
+                    if ((tp.order < tpOrderList.get(i).order)
+                            && (tp.order >= tpOrderList.get(i - 1).order)) {
+                        tpOrderList.add(i, tp);
+                        break;
+                    } else if (tp.order > tpOrderList.get(i).order) {
+                        tpOrderList.add(i + 1, tp);
+                        break;
+                    }
+                }
+            }
+        }
+
+        if (sTopPackages.size() == tpOrderList.size()) {
+            sTopPackages = (ArrayList<TopPackage>) tpOrderList.clone();
+            tpOrderList = null;
+        }
     }
 }
