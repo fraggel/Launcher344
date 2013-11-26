@@ -3158,8 +3158,10 @@ public class Launcher extends Activity
 
             // Show the search bar (only animate if we were showing the drop target bar in spring
             // loaded mode)
-            if (mSearchDropTargetBar != null) {
-                mSearchDropTargetBar.showSearchBar(animated && wasInSpringLoadedMode);
+            if(!Utils.getSharedPreferencesBoolean(getApplicationContext(), "show_google_bar", true)){
+                mSearchDropTargetBar.hideSearchBar(false);
+            }else{
+                mSearchDropTargetBar.showSearchBar(false);
             }
 
             // Set focus to the AppsCustomize button
@@ -4501,7 +4503,11 @@ public class Launcher extends Activity
                 DISMISS_CLING_DURATION, true);
 
         // Fade in the search bar
-        mSearchDropTargetBar.showSearchBar(true);
+        if(!Utils.getSharedPreferencesBoolean(getApplicationContext(), "show_google_bar", true)){
+            mSearchDropTargetBar.hideSearchBar(false);
+        }else{
+            mSearchDropTargetBar.showSearchBar(false);
+        }
     }
     public void dismissFolderCling(View v) {
         Cling cling = (Cling) findViewById(R.id.folder_cling);
