@@ -87,7 +87,23 @@ public class LauncherModel extends BroadcastReceiver {
     // clear all queued binding runnables when the Launcher activity is destroyed.
     private static final int MAIN_THREAD_NORMAL_RUNNABLE = 0;
     private static final int MAIN_THREAD_BINDING_RUNNABLE = 1;
+    protected int mPreviousConfigMnc;
+    protected int mPreviousOrientation;
 
+    /// M: Flag to record whether we need to flush icon cache and label cache.
+    private boolean mForceFlushCache;
+
+    /// M: added for scene feature. @{
+    static final String SWITCH_SCENE_ACTION = "com.mediatek.intent.action.SWITCH_SCENE";
+    private static final String SYSTEM_SCENE_WORK = "work";
+    private static final String SYSTEM_SCENE_DEFAULT = "default";
+    static final String[] SYSTEM_SCENE_NAMES = {
+            SYSTEM_SCENE_DEFAULT, SYSTEM_SCENE_WORK
+    };
+    /// @}
+
+    /// M: mPreviousSkin is used to save the previous skin.
+    protected String mPreviousSkin;
 
     private static final HandlerThread sWorkerThread = new HandlerThread("launcher-loader");
     static {
@@ -1112,7 +1128,7 @@ public class LauncherModel extends BroadcastReceiver {
         }
     }
 
-    private void forceReload() {
+    public void forceReload() {
         resetLoadedState(true, true);
 
         // Do this here because if the launcher activity is running it will be restarted.
@@ -3178,5 +3194,84 @@ public class LauncherModel extends BroadcastReceiver {
         } else {
             Log.d(TAG, "mLoaderTask=null");
         }
+    }
+    /**
+     * M: Set flush cache.
+     */
+    synchronized void setFlushCache() {
+
+        mForceFlushCache = true;
+    }
+
+    /**
+     * M: Flush icon cache and label cache if locale has been changed.
+     *
+     * @param labelCache label cache.
+     */
+    synchronized void flushCacheIfNeeded(HashMap<Object, CharSequence> labelCache) {
+
+        if (mForceFlushCache) {
+            labelCache.clear();
+            mIconCache.flush();
+            mForceFlushCache = false;
+        }
+    }
+
+    public AllAppsList getAllAppsList() {
+        return mBgAllAppsList;
+    }
+
+    /**
+     * M: delete scene if exists.
+     *
+     * @param sceneName The name of the scene will be deleted.
+     */
+    public static void resetScene(final Context context, final String sceneName) {
+        final ContentResolver contentResolver = context.getContentResolver();
+
+        contentResolver.delete(LauncherSettings.Favorites.CONTENT_URI, LauncherSettings.Favorites.SCENE + " = '" + sceneName
+                + "'", null);
+    }
+
+    /**
+     * M: Judge the specified scene whether exists or not.
+     *
+     * @param context
+     * @param sceneName The name of the scene if exists or not.
+     */
+    public static boolean exists(final Context context, final String sceneName) {
+        final ContentResolver contentResolver = context.getContentResolver();
+
+        final Cursor c = contentResolver.query(LauncherSettings.Favorites.CONTENT_URI,
+                new String[] {
+                        "scene"
+                }, null, null, null);
+
+        try {
+            final int sceneColumnIndex = c.getColumnIndexOrThrow(LauncherSettings.Favorites.SCENE);
+            while (c.moveToNext()) {
+                String sceneNameTemp = c.getString(sceneColumnIndex);
+                if (sceneName.equalsIgnoreCase(sceneNameTemp)) {
+                    return true;
+                }
+            }
+        } finally {
+            c.close();
+        }
+        return false;
+    }
+    static ArrayList<ItemInfo> getWorkspaceShortcutItemInfosWithIntent(Intent intent) {
+        ArrayList<ItemInfo> items = new ArrayList<ItemInfo>();
+        synchronized (sBgLock) {
+            for (ItemInfo info : sBgWorkspaceItems) {
+                if (info instanceof ShortcutInfo) {
+                    ShortcutInfo shortcut = (ShortcutInfo) info;
+                    if (shortcut.intent.toUri(0).equals(intent.toUri(0))) {
+                        items.add(shortcut);
+                    }
+                }
+            }
+        }
+        return items;
     }
 }

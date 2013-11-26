@@ -37,4 +37,6 @@
     <color name="outline_color">#FFFFFFFF</color>
     
     <color name="first_run_cling_circle_background_color">#64b1ea</color>
+    <color name="folder_text_color">#FF33b5e5</color>
+    <color name="cling_title_text_color">#FF49C0EC</color>
 </resources>

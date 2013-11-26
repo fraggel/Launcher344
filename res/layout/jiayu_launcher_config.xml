@@ -46,26 +46,12 @@
         android:layout_gravity="center_horizontal" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Numero de escritorios"
-        android:id="@+id/textView5" />
-
-    <SeekBar
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/workspace_numbers"
-        android:max="7"
-        android:progress="5" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Small Text"
-        android:id="@+id/workspace_numbers_text"
-        android:layout_gravity="center_horizontal" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Tamaño iconos escritorio"
+            android:id="@+id/textView3"
+            android:layout_gravity="left|center_vertical"/>
 
     <SeekBar
             android:layout_width="fill_parent"
@@ -88,19 +74,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Rotación"
-        android:id="@+id/allow_rotation" />
+        android:id="@+id/allow_rotation"
+        android:layout_gravity="center_vertical|left"/>
 
     <Switch
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Barra búsqueda"
-        android:id="@+id/show_google_bar" />
+        android:text="Mostrar Barra búsqueda"
+        android:id="@+id/show_google_bar"
+        android:layout_gravity="center_vertical|left"/>
+
+    <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Custom content"
+            android:id="@+id/show_customcontent"
+            android:layout_gravity="left|center_vertical"
+            android:checked="false"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Tamaño iconos hotset"
+        android:text="Tamaño iconos inferiores"
         android:id="@+id/textView2" />
 
     <SeekBar

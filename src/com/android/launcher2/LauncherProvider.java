@@ -49,6 +49,8 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.util.Xml;
 
+import com.android.internal.util.XmlUtils;
+import com.android.launcher.R;
 import com.android.launcher2.LauncherSettings.Favorites;
 import com.android.launcher2.config.ProviderConfig;
 
@@ -59,10 +61,17 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
-import com.android.launcher.R;
 public class LauncherProvider extends ContentProvider {
     private static final String TAG = "Launcher.LauncherProvider";
     private static final boolean LOGD = false;
+    private static final String TAG_SCENE = "scene";
+    private static final String TAG_WALLPAPER = "wallpaper";
+    private static DatabaseHelper sOpenHelper;
+    /// M: Indicate whether the device is Tablet or not
+    private static boolean sIsTablet = ("tablet".equals(System.getProperty("ro.build.characteristics")));
+    private long mMaxId = -1;
+
+    /// M: added for scene feature.
 
     private static final String DATABASE_NAME = "launcher.db";
 
@@ -94,7 +103,12 @@ public class LauncherProvider extends ContentProvider {
 
     private DatabaseHelper mOpenHelper;
     private static boolean sJustLoadedFromOldDb;
-
+    /**
+     * M: Add for scene feature.
+     */
+    public static DatabaseHelper getOpenHelper() {
+        return sOpenHelper;
+    }
     @Override
     public boolean onCreate() {
         final Context context = getContext();
@@ -287,7 +301,7 @@ public class LauncherProvider extends ContentProvider {
         public void onRow(ContentValues values);
     }
 
-    private static class DatabaseHelper extends SQLiteOpenHelper {
+    static class DatabaseHelper extends SQLiteOpenHelper {
         private static final String TAG_FAVORITES = "favorites";
         private static final String TAG_FAVORITE = "favorite";
         private static final String TAG_CLOCK = "clock";
@@ -297,7 +311,11 @@ public class LauncherProvider extends ContentProvider {
         private static final String TAG_FOLDER = "folder";
         private static final String TAG_EXTRA = "extra";
         private static final String TAG_INCLUDE = "include";
-
+        private static final String TAG_SCENE = "scene";
+        private static final String TAG_WALLPAPER = "wallpaper";
+        public static final int[] PRESCENES = new int[] {
+                R.xml.default_workspace, R.xml.work
+        };
         private final Context mContext;
         private final AppWidgetHost mAppWidgetHost;
         private long mMaxItemId = -1;
@@ -1000,14 +1018,68 @@ public class LauncherProvider extends ContentProvider {
                         ", expected " + firstElementName);
             }
         }
+        public void loadScene(SQLiteDatabase db, int workspaceResourceId) {
 
+            try {
+                XmlResourceParser parser = mContext.getResources().getXml(workspaceResourceId);
+                AttributeSet attrs = Xml.asAttributeSet(parser);
+                XmlUtils.beginDocument(parser, TAG_FAVORITES);
+
+                int type = -1;
+                final int depth = parser.getDepth();
+                String sceneOfXml = "default";
+                String wallpaper = "";
+                String name = "";
+
+                while (((type = parser.next()) != XmlPullParser.END_TAG ||
+                        parser.getDepth() > depth) && type != XmlPullParser.END_DOCUMENT) {
+
+                    if (type != XmlPullParser.START_TAG) {
+                        continue;
+                    }
+
+                    name = parser.getName();
+
+                    if (name.equals(new String(TAG_SCENE))) {
+                        TypedArray b = mContext.obtainStyledAttributes(attrs, R.styleable.Scene);
+                        sceneOfXml = b.getString(R.styleable.Scene_scene);
+
+                    }
+
+                    db.beginTransaction();
+                    try {
+                        // update column for scene
+                        db.execSQL("UPDATE favorites " + "SET scene = '" + sceneOfXml
+                                + "' WHERE scene IS NULL;");
+                        db.setTransactionSuccessful();
+                    } catch (SQLException e) {
+
+                    } finally {
+                        db.endTransaction();
+                    }
+
+                    if (name.equals(new String(TAG_WALLPAPER))) {
+                        TypedArray b = mContext
+                                .obtainStyledAttributes(attrs, R.styleable.Wallpaper);
+                        wallpaper = b.getString(R.styleable.Wallpaper_wallpaper);
+
+                        Launcher.SCENE_WALLPAPER.put(sceneOfXml, wallpaper);
+                        break;
+                    }
+                }
+            } catch (XmlPullParserException e) {
+
+            } catch (IOException e) {
+
+            }
+        }
         /**
          * Loads the default set of favorite packages from an xml file.
          *
          * @param db The database to write the values into
          * @param filterContainerId The specific container id of items to load
          */
-        private int loadFavorites(SQLiteDatabase db, int workspaceResourceId) {
+        public int loadFavorites(SQLiteDatabase db, int workspaceResourceId) {
             Intent intent = new Intent(Intent.ACTION_MAIN, null);
             intent.addCategory(Intent.CATEGORY_LAUNCHER);
             ContentValues values = new ContentValues();

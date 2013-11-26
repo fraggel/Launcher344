@@ -16,15 +16,15 @@
 
 package com.android.launcher2;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -47,7 +47,19 @@ class AllAppsList {
     private IconCache mIconCache;
 
     private AppFilter mAppFilter;
+    static ArrayList<TopPackage> sTopPackages = null;
 
+    static class TopPackage {
+        public TopPackage(String pkgName, String clsName, int index) {
+            packageName = pkgName;
+            className = clsName;
+            order = index;
+        }
+
+        String packageName;
+        String className;
+        int order;
+    }
     /**
      * Boring constructor.
      */

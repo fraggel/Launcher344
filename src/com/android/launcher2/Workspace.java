@@ -58,15 +58,18 @@ import android.view.animation.DecelerateInterpolator;
 import android.view.animation.Interpolator;
 import android.widget.TextView;
 
+import com.android.launcher.R;
 import com.android.launcher2.FolderIcon.FolderRingAnimator;
 import com.android.launcher2.Launcher.CustomContentCallbacks;
 import com.android.launcher2.LauncherSettings.Favorites;
 
+import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
-import com.android.launcher.R;
+import java.util.Set;
 //import android.support.v4.view.ViewCompat;
 
 /**
@@ -272,7 +275,12 @@ public class Workspace extends SmoothPagedView
             mLauncher.getModel().bindRemainingSynchronousPages();
         }
     };
+    /// M: for unread events feature, margin right of unread text.
+    private int mHotseatUnreadMarginRight = 0;
+    private int mWorkspaceUnreadMarginRight = 0;
 
+    /// M: added for scene feature, the string of the default wallpaper.
+    private static final String DEFAULT_WALLPAPER = "default_wallpaper";
     /**
      * Used to inflate the Workspace from XML.
      *
@@ -567,6 +575,7 @@ public class Workspace extends SmoothPagedView
         } else {
             setCurrentPage(getCurrentPage() + 1);
         }
+
     }
 
     public void removeCustomContentPage() {
@@ -1025,6 +1034,7 @@ public class Workspace extends SmoothPagedView
                 ((CellLayout) getPageAt(i)).setShortcutAndWidgetAlpha(1f);
             }
         }
+
     }
 
     protected void onPageEndMoving() {
@@ -1063,10 +1073,11 @@ public class Workspace extends SmoothPagedView
             mStripScreensOnPageStopMoving = false;
         }
     }
-
+    int tmpPage=-1;
     @Override
     protected void notifyPageSwitchListener() {
         super.notifyPageSwitchListener();
+
         Launcher.setScreen(mCurrentPage);
 
         if (hasCustomContent() && getNextPage() == 0 && !mCustomContentShowing) {
@@ -1559,6 +1570,7 @@ public class Workspace extends SmoothPagedView
         AccessibilityManager am = (AccessibilityManager)
                 getContext().getSystemService(Context.ACCESSIBILITY_SERVICE);
         sAccessibilityEnabled = am.isEnabled();
+
     }
 
     @Override
@@ -4272,7 +4284,141 @@ public class Workspace extends SmoothPagedView
             }
         }
     }
+    void removeItems(final ArrayList<String> packages) {
+        final HashSet<String> packageNames = new HashSet<String>();
+        packageNames.addAll(packages);
 
+
+
+        ArrayList<CellLayout> cellLayouts = getWorkspaceAndHotseatCellLayouts();
+        for (final CellLayout layoutParent: cellLayouts) {
+            final ViewGroup layout = layoutParent.getShortcutsAndWidgets();
+
+            // Avoid ANRs by treating each screen separately
+            post(new Runnable() {
+                public void run() {
+                    final ArrayList<View> childrenToRemove = new ArrayList<View>();
+                    childrenToRemove.clear();
+                    /// M: added for remove folder.
+                    final ArrayList<FolderInfo> delayToRemoveFromFolder = new ArrayList<FolderInfo>();
+                    delayToRemoveFromFolder.clear();
+
+                    int childCount = layout.getChildCount();
+                    for (int j = 0; j < childCount; j++) {
+                        final View view = layout.getChildAt(j);
+                        Object tag = view.getTag();
+
+                        if (tag instanceof ShortcutInfo) {
+                            final ShortcutInfo info = (ShortcutInfo) tag;
+                            final Intent intent = info.intent;
+                            final ComponentName name = intent.getComponent();
+
+                            if (name != null) {
+                                if (packageNames.contains(name.getPackageName())) {
+                                    /// M: we only remove items whose component is in disable state,
+                                    /// this is add to deal the case that there are more than one
+                                    /// activities with LAUNCHER category, and one of them is disabled
+                                    /// may cause all activities removed from workspace.
+                                    final boolean isComponentEnabled = Utilities
+                                            .isComponentEnabled(getContext(), name);
+
+                                    if (!isComponentEnabled) {
+                                        LauncherModel.deleteItemFromDatabase(mLauncher, info);
+                                        childrenToRemove.add(view);
+                                    }
+                                }
+                            }
+                        } else if (tag instanceof FolderInfo) {
+                            final FolderInfo info = (FolderInfo) tag;
+                            final ArrayList<ShortcutInfo> contents = info.contents;
+                            final int contentsCount = contents.size();
+                            final ArrayList<ShortcutInfo> appsToRemoveFromFolder =
+                                    new ArrayList<ShortcutInfo>();
+
+                            /// M: If the folder will be removed completely, delay to remove, else remove folder items.
+                            if (isNeedToDelayRemoveFolderItems(info, packageNames, appsToRemoveFromFolder)) {
+                                delayToRemoveFromFolder.add(info);
+                            } else {
+                                removeFolderItems(info, appsToRemoveFromFolder);
+                            }
+                        } else if (tag instanceof LauncherAppWidgetInfo) {
+                            final LauncherAppWidgetInfo info = (LauncherAppWidgetInfo) tag;
+                            final ComponentName provider = info.providerName;
+                            if (provider != null) {
+                                if (packageNames.contains(provider.getPackageName())) {
+                                    LauncherModel.deleteItemFromDatabase(mLauncher, info);
+                                    childrenToRemove.add(view);
+                                }
+                            }
+                        }
+                    }
+
+                    /// M: Remove folder.
+                    int delayFolderCount = delayToRemoveFromFolder.size();
+                    for (int j = 0; j < delayFolderCount; j++) {
+                        FolderInfo info = delayToRemoveFromFolder.get(j);
+                        final ArrayList<ShortcutInfo> appsToRemoveFromFolder = new ArrayList<ShortcutInfo>();
+                        getRemoveFolderItems(info, packageNames, appsToRemoveFromFolder);
+                        removeFolderItems(info, appsToRemoveFromFolder);
+                    }
+
+                    childCount = childrenToRemove.size();
+                    for (int j = 0; j < childCount; j++) {
+                        View child = childrenToRemove.get(j);
+                        // Note: We can not remove the view directly from CellLayoutChildren as this
+                        // does not re-mark the spaces as unoccupied.
+                        layoutParent.removeViewInLayout(child);
+                        if (child instanceof DropTarget) {
+                            mDragController.removeDropTarget((DropTarget)child);
+                        }
+                    }
+
+                    if (childCount > 0) {
+                        layout.requestLayout();
+                        layout.invalidate();
+                    }
+                }
+            });
+        }
+
+        // Clean up new-apps animation list
+        final Context context = getContext();
+        post(new Runnable() {
+            @Override
+            public void run() {
+                String spKey = LauncherApplication.getSharedPreferencesKey();
+                SharedPreferences sp = context.getSharedPreferences(spKey,
+                        Context.MODE_PRIVATE);
+                Set<String> newApps = sp.getStringSet(InstallShortcutReceiver.NEW_APPS_LIST_KEY,
+                        null);
+
+                // Remove all queued items that match the same package
+                if (newApps != null) {
+                    synchronized (newApps) {
+                        Iterator<String> iter = newApps.iterator();
+                        while (iter.hasNext()) {
+                            try {
+                                Intent intent = Intent.parseUri(iter.next(), 0);
+                                String pn = ItemInfo.getPackageName(intent);
+                                if (packageNames.contains(pn)) {
+                                    iter.remove();
+                                }
+
+                                // It is possible that we've queued an item to be loaded, yet it has
+                                // not been added to the workspace, so remove those items as well.
+                                ArrayList<ItemInfo> shortcuts;
+                                shortcuts = LauncherModel.getWorkspaceShortcutItemInfosWithIntent(
+                                        intent);
+                                for (ItemInfo info : shortcuts) {
+                                    LauncherModel.deleteItemFromDatabase(context, info);
+                                }
+                            } catch (URISyntaxException e) {}
+                        }
+                    }
+                }
+            }
+        });
+    }
     // Removes ALL items that match a given package name, this is usually called when a package
     // has been removed and we want to remove all components (widgets, shortcuts, apps) that
     // belong to that package.
@@ -4493,5 +4639,152 @@ public class Workspace extends SmoothPagedView
 
     public void getLocationInDragLayer(int[] loc) {
         mLauncher.getDragLayer().getLocationInDragLayer(this, loc);
+    }
+    /**
+     * M: Update unread number of shortcuts and folders in workspace and hotseat.
+     */
+    public void updateShortcutsAndFoldersUnread() {
+
+        final ArrayList<ShortcutAndWidgetContainer> childrenLayouts = getAllShortcutAndWidgetContainers();
+        int childCount = 0;
+        View view = null;
+        Object tag = null;
+        for (ShortcutAndWidgetContainer layout : childrenLayouts) {
+            childCount = layout.getChildCount();
+            for (int j = 0; j < childCount; j++) {
+                view = layout.getChildAt(j);
+                tag = view.getTag();
+
+                if (tag instanceof ShortcutInfo) {
+                    final ShortcutInfo info = (ShortcutInfo) tag;
+                    final Intent intent = info.intent;
+                    final ComponentName componentName = intent.getComponent();
+                    ((MTKShortcut) view).updateShortcutUnreadNum(MTKUnreadLoader
+                            .getUnreadNumberOfComponent(componentName));
+                } else if (tag instanceof FolderInfo) {
+                    ((FolderIcon) view).updateFolderUnreadNum();
+                }
+            }
+        }
+    }
+
+    /**
+     * M: Update unread number of shortcuts and folders in workspace and hotseat
+     * with the given component.
+     *
+     * @param component
+     * @param unreadNum
+     */
+    public void updateComponentUnreadChanged(ComponentName component, int unreadNum) {
+
+        final ArrayList<ShortcutAndWidgetContainer> childrenLayouts = getAllShortcutAndWidgetContainers();
+        int childCount = 0;
+        View view = null;
+        Object tag = null;
+        for (ShortcutAndWidgetContainer layout : childrenLayouts) {
+            childCount = layout.getChildCount();
+            for (int j = 0; j < childCount; j++) {
+                view = layout.getChildAt(j);
+                tag = view.getTag();
+
+                if (tag instanceof ShortcutInfo) {
+                    final ShortcutInfo info = (ShortcutInfo) tag;
+                    final Intent intent = info.intent;
+                    final ComponentName componentName = intent.getComponent();
+
+                    if (componentName != null && componentName.equals(component)) {
+
+                        ((MTKShortcut) view).updateShortcutUnreadNum(unreadNum);
+                    }
+                } else if (tag instanceof FolderInfo) {
+                    ((FolderIcon) view).updateFolderUnreadNum(component, unreadNum);
+                }
+            }
+        }
+    }
+
+    /**
+     * M: Set wallpaper.
+     *
+     * @param wallpaper The name of the wallpaper will be set.
+     */
+    public void setWallpaper(String wallpaper) {
+        if (wallpaper == null) {
+            wallpaper = new String(DEFAULT_WALLPAPER);
+        }
+        if (wallpaper.equals(DEFAULT_WALLPAPER)) {
+            try {
+                mWallpaperManager.clear();
+            } catch (IOException e) {
+
+            }
+        } else {
+            final Resources resources = mLauncher.getResources();
+            final String pkgName = resources.getResourcePackageName(R.array.wallpapers);
+            final int res = resources.getIdentifier(wallpaper, "drawable", pkgName);
+            try {
+                mWallpaperManager.setResource(res);
+            } catch (IOException e) {
+
+            }
+        }
+    }
+
+    /**
+     * M: Whether all the items in folder will be removed or not.
+     *
+     * @param info
+     * @param packageNames
+     * @param appsToRemoveFromFolder
+     * @return true, all the items in folder will be removed.
+     */
+    private boolean isNeedToDelayRemoveFolderItems(FolderInfo info, HashSet<String> packageNames,
+                                                   ArrayList<ShortcutInfo> appsToRemoveFromFolder) {
+        final ArrayList<ShortcutInfo> contents = info.contents;
+        final int contentsCount = contents.size();
+        int removeFolderItemsCount = getRemoveFolderItems(info, packageNames, appsToRemoveFromFolder);
+
+
+        return (removeFolderItemsCount >= (contentsCount - 1));
+    }
+
+    /**
+     * M: When uninstall one app, if the foler item is the shortcut of the app, it will be removed.
+     *
+     * @param info
+     * @param packageNames
+     * @param appsToRemoveFromFolder
+     * @return the count of the folder items will be removed.
+     */
+    private int getRemoveFolderItems(FolderInfo info, HashSet<String> packageNames,
+                                     ArrayList<ShortcutInfo> appsToRemoveFromFolder) {
+        final ArrayList<ShortcutInfo> contents = info.contents;
+        final int contentsCount = contents.size();
+
+        for (int k = 0; k < contentsCount; k++) {
+            final ShortcutInfo appInfo = contents.get(k);
+            final Intent intent = appInfo.intent;
+            final ComponentName name = intent.getComponent();
+
+            if (name != null && packageNames.contains(name.getPackageName())) {
+                appsToRemoveFromFolder.add(appInfo);
+            }
+        }
+
+
+        return appsToRemoveFromFolder.size();
+    }
+
+    /**
+     * M: Remove folder items.
+     *
+     * @param info
+     * @param appsToRemoveFromFolder
+     */
+    private void removeFolderItems(FolderInfo info, ArrayList<ShortcutInfo> appsToRemoveFromFolder) {
+        for (ShortcutInfo item : appsToRemoveFromFolder) {
+            info.remove(item);
+            LauncherModel.deleteItemFromDatabase(mLauncher, item);
+        }
     }
 }

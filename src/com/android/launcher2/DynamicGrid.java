@@ -32,10 +32,11 @@ import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.FrameLayout;
 
+import com.android.launcher.R;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import com.android.launcher.R;
 
 class DeviceProfileQuery {
     float widthDps;
@@ -376,6 +377,7 @@ class DeviceProfileQuery {
         boolean hasVerticalBarLayout = isVerticalBarLayout();
 
         // Layout the search bar space
+
             View searchBar = launcher.getSearchBar();
             lp = (FrameLayout.LayoutParams) searchBar.getLayoutParams();
             if (hasVerticalBarLayout) {

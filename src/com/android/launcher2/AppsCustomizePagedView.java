@@ -49,13 +49,13 @@ import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.android.launcher.R;
 import com.android.launcher2.DropTarget.DragObject;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
-import com.android.launcher.R;
 /**
  * A simple callback interface which also provides the results of the task.
  */
@@ -1695,5 +1695,137 @@ public class AppsCustomizePagedView extends PagedViewWithDraggableItems implemen
         }
 
         return String.format(getContext().getString(stringId), page + 1, count);
+    }
+    /**
+     * M: Reorder apps in applist.
+     */
+    public void reorderApps() {
+
+        if (AllAppsList.sTopPackages == null || mApps == null || mApps.isEmpty()
+                || AllAppsList.sTopPackages.isEmpty()) {
+            return;
+        }
+
+        ArrayList<AppInfo> dataReorder = new ArrayList<AppInfo>(
+                AllAppsList.DEFAULT_APPLICATIONS_NUMBER);
+
+        for (AllAppsList.TopPackage tp : AllAppsList.sTopPackages) {
+            for (AppInfo ai : mApps) {
+                if (ai.componentName.getPackageName().equals(tp.packageName)
+                        && ai.componentName.getClassName().equals(tp.className)) {
+                    mApps.remove(ai);
+                    dataReorder.add(ai);
+                    break;
+                }
+            }
+        }
+
+        for (AllAppsList.TopPackage tp : AllAppsList.sTopPackages) {
+            int newIndex = 0;
+            for (AppInfo ai : dataReorder) {
+                if (ai.componentName.getPackageName().equals(tp.packageName)
+                        && ai.componentName.getClassName().equals(tp.className)) {
+                    newIndex = Math.min(Math.max(tp.order, 0), mApps.size());
+                    mApps.add(newIndex, ai);
+                    break;
+                }
+            }
+        }
+    }
+
+    /**
+     * M: Update unread number of the given component in app customize paged view
+     * with the given value, first find the icon, and then update the number.
+     * NOTES: since maybe not all applications are added in the customize paged
+     * view, we should update the apps info at the same time.
+     *
+     * @param component
+     * @param unreadNum
+     */
+    public void updateAppsUnreadChanged(ComponentName component, int unreadNum) {
+
+        updateUnreadNumInAppInfo(component, unreadNum);
+        for (int i = 0; i < mNumAppsPages; i++) {
+            PagedViewCellLayout cl = (PagedViewCellLayout) getPageAt(i);
+            if (cl == null) {
+                return;
+            }
+            final int count = cl.getPageChildCount();
+            MTKAppIcon appIcon = null;
+            AppInfo appInfo = null;
+            for (int j = 0; j < count; j++) {
+                appIcon = (MTKAppIcon) cl.getChildOnPageAt(j);
+                appInfo = (AppInfo) appIcon.getTag();
+
+                if (appInfo != null && appInfo.componentName.equals(component)) {
+                    appIcon.updateUnreadNum(unreadNum);
+                }
+            }
+        }
+    }
+
+    /**
+     * M: Update unread number of all application info with data in MTKUnreadLoader.
+     */
+    public void updateAppsUnread() {
+
+        updateUnreadNumInAppInfo(mApps);
+        // Update apps which already shown in the customized pane.
+        for (int i = 0; i < mNumAppsPages; i++) {
+            PagedViewCellLayout cl = (PagedViewCellLayout) getPageAt(i);
+            if (cl == null) {
+                return;
+            }
+            final int count = cl.getPageChildCount();
+            MTKAppIcon appIcon = null;
+            AppInfo appInfo = null;
+            int unreadNum = 0;
+            for (int j = 0; j < count; j++) {
+                appIcon = (MTKAppIcon) cl.getChildOnPageAt(j);
+                appInfo = (AppInfo) appIcon.getTag();
+                unreadNum = MTKUnreadLoader.getUnreadNumberOfComponent(appInfo.componentName);
+                appIcon.updateUnreadNum(unreadNum);
+
+            }
+        }
+    }
+
+    /**
+     * M: Update the unread number of the app info with given component.
+     *
+     * @param component
+     * @param unreadNum
+     */
+    private void updateUnreadNumInAppInfo(ComponentName component, int unreadNum) {
+        final int size = mApps.size();
+        AppInfo appInfo = null;
+        for (int i = 0; i < size; i++) {
+            appInfo = mApps.get(i);
+            if (appInfo.intent.getComponent().equals(component)) {
+                appInfo.unreadNum = unreadNum;
+            }
+        }
+    }
+
+    /**
+     * M: Update unread number of all application info with data in MTKUnreadLoader.
+     *
+     * @param apps
+     */
+    public static void updateUnreadNumInAppInfo(final ArrayList<AppInfo> apps) {
+        final int size = apps.size();
+        AppInfo appInfo = null;
+        for (int i = 0; i < size; i++) {
+            appInfo = apps.get(i);
+            appInfo.unreadNum = MTKUnreadLoader.getUnreadNumberOfComponent(appInfo.componentName);
+        }
+    }
+
+    /**
+     * M: invalidate app page items.
+     */
+    void invalidateAppPages(int currentPage, boolean immediateAndOnly) {
+
+        invalidatePageData(currentPage, immediateAndOnly);
     }
 }

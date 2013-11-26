@@ -56,6 +56,14 @@ public class LauncherAppState {
         }
         return INSTANCE;
     }
+    public static LauncherAppState setInstance(LauncherAppState ls) {
+        if (ls == null) {
+            INSTANCE = new LauncherAppState();
+        }else{
+            INSTANCE=ls;
+        }
+        return INSTANCE;
+    }
 
     public static LauncherAppState getInstanceNoCreate() {
         return INSTANCE;
@@ -193,6 +201,9 @@ public class LauncherAppState {
         grid.updateFromConfiguration(context.getResources(), width, height,
                 availableWidth, availableHeight);
         return grid;
+    }
+    public void setDynamicGrid(DynamicGrid grid) {
+        mDynamicGrid=grid;
     }
     DynamicGrid getDynamicGrid() {
         return mDynamicGrid;

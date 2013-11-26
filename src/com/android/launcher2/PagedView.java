@@ -54,8 +54,9 @@ import android.view.animation.LinearInterpolator;
 import android.widget.IMTKWidget;
 import android.widget.Scroller;
 
-import java.util.ArrayList;
 import com.android.launcher.R;
+
+import java.util.ArrayList;
 //import android.support.v4.view.accessibility.AccessibilityEventCompat;
 
 interface Page {
@@ -74,6 +75,7 @@ public abstract class PagedView extends ViewGroup implements ViewGroup.OnHierarc
     private static final String TAG = "PagedView";
     private static final boolean DEBUG = false;
     protected static final int INVALID_PAGE = -1;
+    protected static final int INVALID_PAGE2 = -2;
 
     // the min drag distance for a fling to register, to prevent random page shifts
     private static final int MIN_LENGTH_FOR_FLING = 25;
@@ -557,7 +559,7 @@ public abstract class PagedView extends ViewGroup implements ViewGroup.OnHierarc
             return;
         }
         mForceScreenScrolled = true;
-        mCurrentPage = Math.max(0, Math.min(currentPage, getPageCount() - 1));
+        mCurrentPage = Math.max(-1, Math.min(currentPage, getPageCount() - 1));
         updateCurrentPageScroll();
         notifyPageSwitchListener();
         invalidate();

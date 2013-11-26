@@ -41,11 +41,20 @@ import java.util.Set;
 
 public class InstallShortcutReceiver extends BroadcastReceiver {
     private static final String TAG = "InstallShortcutReceiver";
+    public static final String NEW_APPS_PAGE_KEY = "apps.new.page";
+    public static final String NEW_APPS_LIST_KEY = "apps.new.list";
+
     private static final boolean DBG = false;
 
     public static final String ACTION_INSTALL_SHORTCUT =
             "com.android.launcher.action.INSTALL_SHORTCUT";
-
+    /// M: Add for Message Shortcut (batch)
+    private static final String EXTRA_SHORTCUT_INTENT_ARRAY = "com.android.launcher2.extra.shortcut.array.INTENT";
+    private static final String EXTRA_SHORTCUT_NAME_ARRAY = "com.android.launcher2.extra.shortcut.array.NAME";
+    private static final String EXTRA_SHORTCUT_ICON_ARRAY = "com.android.launcher2.extra.shortcut.array.ICON";
+    private static final String EXTRA_SHORTCUT_ICON_RESOURCE_ARRAY = "com.android.launcher2.extra.shortcut.array.ICON_RESOURCE";
+    private static final String EXTRA_SHORTCUT_TOTAL_NUMBER = "com.android.launcher2.extra.shortcut.totalnumber";
+    private static final String EXTRA_SHORTCUT_STEP_NUMBER = "com.android.launcher2.extra.shortcut.stepnumber";
     public static final String DATA_INTENT_KEY = "intent.data";
     public static final String LAUNCH_INTENT_KEY = "intent.launch";
     public static final String NAME_KEY = "name";

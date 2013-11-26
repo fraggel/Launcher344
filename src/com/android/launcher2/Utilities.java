@@ -18,8 +18,11 @@ package com.android.launcher2;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BlurMaskFilter;
@@ -38,8 +41,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import java.util.ArrayList;
 import com.android.launcher.R;
+
+import java.util.ArrayList;
 /**
  * Various utilities shared amongst the Launcher's classes.
  */
@@ -340,5 +344,43 @@ final class Utilities {
                     ". Make sure to create a MAIN intent-filter for the corresponding activity " +
                     "or use the exported attribute for this activity.", e);
         }
+    }
+    /**
+     * M: Check whether the given component name is enabled.
+     *
+     * @param context
+     * @param cmpName
+     * @return true if the component is in default or enable state, and the application is also in default or enable state,
+     *         false if in disable or disable user state.
+     */
+    static boolean isComponentEnabled(final Context context, final ComponentName cmpName) {
+        final String pkgName = cmpName.getPackageName();
+        final PackageManager pm = context.getPackageManager();
+        // Check whether the package has been uninstalled.
+        PackageInfo pInfo = null;
+        try {
+            pInfo = pm.getPackageInfo(pkgName, 0);
+        } catch (PackageManager.NameNotFoundException e) {
+
+        }
+
+        if (pInfo == null) {
+
+            return false;
+        }
+
+        final int pkgEnableState = pm.getApplicationEnabledSetting(pkgName);
+
+        if (pkgEnableState == PackageManager.COMPONENT_ENABLED_STATE_DEFAULT
+                || pkgEnableState == PackageManager.COMPONENT_ENABLED_STATE_ENABLED) {
+            final int cmpEnableState = pm.getComponentEnabledSetting(cmpName);
+
+            if (cmpEnableState == PackageManager.COMPONENT_ENABLED_STATE_DEFAULT
+                    || cmpEnableState == PackageManager.COMPONENT_ENABLED_STATE_ENABLED) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
