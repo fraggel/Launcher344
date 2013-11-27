@@ -1,5 +1,6 @@
 package com.android.launcher2;
 
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -20,12 +21,23 @@ public class CustomView extends ViewGroup implements Launcher.CustomContentCallb
 
     @Override
     public void onShow() {
-
+/*
         PackageManager pm = getContext().getPackageManager();
         Intent i = new Intent();
-        String pack=Utils.getSharedPreferences(getContext(),"app_custom_content","com.google.android.googlequicksearchbox");
+        String pack=Utils.getSharedPreferences(getContext(),"app_custom_contentPackage","com.google.android.googlequicksearchbox");
         i = pm.getLaunchIntentForPackage(pack);
         getContext().startActivity(i);
+*/
+        String pack=Utils.getSharedPreferences(getContext(),"app_custom_contentPackage",null);
+        if(pack!=null){
+            String pck=pack.split("/")[0];
+            String name=pack.split("/")[1];
+            Intent intent = new Intent("android.intent.action.MAIN");
+            intent.addCategory("android.intent.category.LAUNCHER");
+            intent.setComponent(new ComponentName(pck, name));
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            getContext().startActivity(intent);
+        }
         System.exit(0);
 
     }

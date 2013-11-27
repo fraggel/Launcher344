@@ -39,8 +39,9 @@ public class jiayuLauncherConfig extends Activity implements SeekBar.OnSeekBarCh
     Switch show_google_bar=null;
     Switch show_customcontent=null;
     Spinner spinnerApps=null;
-    HashMap<String,String> componentList = new HashMap<String, String>();
     HashMap<String,String> componentListPack = new HashMap<String, String>();
+    HashMap<String,String> componentListPackName = new HashMap<String, String>();
+
     List<String> componentListString=new ArrayList<String>();
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -85,9 +86,9 @@ public class jiayuLauncherConfig extends Activity implements SeekBar.OnSeekBarCh
 
     private void initValues() {
         try {
-            componentList.clear();
             componentListString.clear();
             componentListPack.clear();
+            componentListPackName.clear();
             workspace_rows.setProgress(Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_rows", 4));
             workspace_rows_text.setText(String.valueOf(workspace_rows.getProgress()));
             workspace_cols.setProgress(Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_cols", 4));
@@ -105,7 +106,7 @@ public class jiayuLauncherConfig extends Activity implements SeekBar.OnSeekBarCh
             dataAdapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spinnerApps.setAdapter(dataAdapter3);
             spinnerApps.setEnabled(show_customcontent.isChecked());
-            spinnerApps.setSelection(getSelected(Utils.getSharedPreferences(getApplicationContext(), "app_custom_content","com.google.android.googlequicksearchbox")));
+            spinnerApps.setSelection(getSelected(Utils.getSharedPreferences(getApplicationContext(), "app_custom_contentName","Google")));
         }catch(Exception e){
 
         }
@@ -125,8 +126,8 @@ public class jiayuLauncherConfig extends Activity implements SeekBar.OnSeekBarCh
                     name = ri.activityInfo.applicationInfo.loadLabel(
                             getPackageManager()).toString();
                 }
-                componentList.put(ri.activityInfo.packageName,name);
-                componentListPack.put(name,ri.activityInfo.packageName);
+                componentListPack.put(name,ri.activityInfo.packageName+"/"+ri.activityInfo.name);
+                componentListPackName.put(ri.activityInfo.packageName+"/"+ri.activityInfo.name,name);
                 componentListString.add(name);
             }
         }
@@ -144,14 +145,14 @@ public class jiayuLauncherConfig extends Activity implements SeekBar.OnSeekBarCh
             throws PackageManager.NameNotFoundException {
         //recorrer el hashmap y ver el texto de ese package
         //al tener el nombre, buscar la posicion en el componentListString
-        String s = componentList.get(nombrePackage);
+        String s = componentListPackName.get(nombrePackage);
         return s;
     }
     private int getSelected(String nombrePackage)
             throws PackageManager.NameNotFoundException {
         int id=-1;
-        String s = componentList.get(nombrePackage);
-        id=componentListString.indexOf(s);
+        //String s = componentListPack.get(nombrePackage);
+        id=componentListString.indexOf(nombrePackage);
 
         return id;
     }
@@ -369,8 +370,8 @@ public class jiayuLauncherConfig extends Activity implements SeekBar.OnSeekBarCh
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         try {
-            Utils.setSharedPreferences(getApplicationContext(), "app_custom_content",getPackageName(componentListString.get(position)));
-            Utils.setSharedPreferences(getApplicationContext(), "app_custom_content_name",getName(componentListString.get(position)));
+            Utils.setSharedPreferences(getApplicationContext(), "app_custom_contentPackage",getPackageName(componentListString.get(position)));
+            Utils.setSharedPreferences(getApplicationContext(), "app_custom_contentName",getName(getPackageName(componentListString.get(position))));
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }

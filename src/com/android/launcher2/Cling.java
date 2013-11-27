@@ -56,7 +56,7 @@ public class Cling extends FrameLayout implements Insettable, View.OnClickListen
     private static float FIRST_RUN_CIRCLE_BUFFER_DPS = 60;
     private static float WORKSPACE_INNER_CIRCLE_RADIUS_DPS = 50;
     private static float WORKSPACE_OUTER_CIRCLE_RADIUS_DPS = 60;
-    private static float WORKSPACE_CIRCLE_Y_OFFSET_DPS = 30;
+    private static float WORKSPACE_CIRCLE_Y_OFFSET_DPS = 40;
 
     private Launcher mLauncher;
     private boolean mIsInitialized;
