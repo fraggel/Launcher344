@@ -2,15 +2,20 @@ package com.jiayu.config;
 
 import android.app.Activity;
 import android.app.TaskStackBuilder;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.Switch;
@@ -41,8 +46,9 @@ public class jiayuLauncherConfig extends Activity implements SeekBar.OnSeekBarCh
     Spinner spinnerApps=null;
     HashMap<String,String> componentListPack = new HashMap<String, String>();
     HashMap<String,String> componentListPackName = new HashMap<String, String>();
-
+    String[] listaStringComponent=null;
     List<String> componentListString=new ArrayList<String>();
+    Drawable[] packageIcons=null;
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.jiayu_launcher_config);
@@ -102,9 +108,14 @@ public class jiayuLauncherConfig extends Activity implements SeekBar.OnSeekBarCh
             show_customcontent.setChecked(Utils.getSharedPreferencesBoolean(getApplicationContext(), "show_customcontent", false));
 
             getInstalledComponentList();
+            listaStringComponent=new String[componentListString.size()];
+            for(int x=0;x<componentListString.size();x++){
+                listaStringComponent[x]=componentListString.get(x);
+            }
             ArrayAdapter<String> dataAdapter3 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, componentListString);
             dataAdapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            spinnerApps.setAdapter(dataAdapter3);
+            spinnerApps.setAdapter(new MyAdapter(this, R.layout.spinnerrow, listaStringComponent));
+            //spinnerApps.setAdapter(dataAdapter3);
             spinnerApps.setEnabled(show_customcontent.isChecked());
             spinnerApps.setSelection(getSelected(Utils.getSharedPreferences(getApplicationContext(), "app_custom_contentName","Google")));
         }catch(Exception e){
@@ -129,9 +140,18 @@ public class jiayuLauncherConfig extends Activity implements SeekBar.OnSeekBarCh
                 componentListPack.put(name,ri.activityInfo.packageName+"/"+ri.activityInfo.name);
                 componentListPackName.put(ri.activityInfo.packageName+"/"+ri.activityInfo.name,name);
                 componentListString.add(name);
+
             }
         }
-        componentListString=reordenarLista(componentListString);
+        packageIcons=new Drawable[componentListString.size()];
+        int x=0;
+        for (ResolveInfo ri : ril) {
+            if (ri.activityInfo != null) {
+                packageIcons[x]=ri.activityInfo.loadIcon(getPackageManager());
+            }
+            x++;
+        }
+        //componentListString=reordenarLista(componentListString);
     }
 
     private String getPackageName(String nombreApp)
@@ -379,5 +399,41 @@ public class jiayuLauncherConfig extends Activity implements SeekBar.OnSeekBarCh
 
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
+    }
+    public class MyAdapter extends ArrayAdapter<String>
+    {
+
+        public MyAdapter(Context context, int textViewResourceId, String[] objects)
+        {
+            super(context, textViewResourceId, objects);
+        }
+
+
+        @Override
+        public View getDropDownView(int position, View convertView,ViewGroup parent)
+        {
+            return getCustomView(position, convertView, parent);
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent)
+        {
+            return getCustomView(position, convertView, parent);
+        }
+
+        public View getCustomView(int position, View convertView, ViewGroup parent)
+        {
+
+            LayoutInflater inflater=getLayoutInflater();
+            View row=inflater.inflate(R.layout.spinnerrow, parent, false);
+            TextView label=(TextView)row.findViewById(R.id.textView1);
+            label.setText(listaStringComponent[position]);
+
+            ImageView icon=(ImageView)row.findViewById(R.id.imageView1);
+            icon.setImageDrawable(packageIcons[position]);
+
+            return row;
+        }
+
     }
 }

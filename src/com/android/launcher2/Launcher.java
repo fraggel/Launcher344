@@ -545,8 +545,9 @@ public class Launcher extends Activity
         double calc=jiayuLauncherConfig.calcularPercentFormula(Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_icons", 5));
         calc=calc/100;
         //int iconSize=(int)(grid.work*calc);
-        grid.allAppsNumRows=Utils.getSharedPreferencesInt(getApplicationContext(), "all_apps_rows", 5);
-        grid.allAppsNumCols=Utils.getSharedPreferencesInt(getApplicationContext(), "all_apps_cols", 4);
+        grid.updateFromConfiguration(getResources(), grid.widthPx, grid.heightPx, grid.availableWidthPx, grid.availableHeightPx);
+        //grid.allAppsNumCols=Utils.getSharedPreferencesInt(getApplicationContext(), "all_apps_rows", 5);
+        //grid.allAppsNumRows=Utils.getSharedPreferencesInt(getApplicationContext(), "all_apps_cols", 4);
     }
 
     protected void onUserLeaveHint() {
