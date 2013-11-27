@@ -17,11 +17,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25c6fd96-9691-4356-a157-a2ad0904d627" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/android/launcher2/Launcher.java" afterPath="$PROJECT_DIR$/src/com/android/launcher2/Launcher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android_packages_apps_Launcher3-somex-4.4.iml" afterPath="$PROJECT_DIR$/android_packages_apps_Launcher3-somex-4.4.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfig.java" afterPath="$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/spinnerrow.xml" afterPath="$PROJECT_DIR$/res/layout/spinnerrow.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="android_packages_apps_Launcher3-somex-4.4.iws" />
@@ -235,7 +230,7 @@
       <file leaf-file-name="Launcher.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/Launcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="547" column="8" selection-start="22032" selection-end="22032" vertical-scroll-proportion="0.64801866" vertical-offset="8749" max-vertical-offset="82416">
+            <state line="543" column="62" selection-start="21805" selection-end="21805" vertical-scroll-proportion="0.48951048" vertical-offset="8749" max-vertical-offset="82416">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#70047#70076#0" expanded="true" />
@@ -788,7 +783,11 @@
       <created>1385580920965</created>
       <updated>1385580920965</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;&#9;src/com/android/launcher2/AllAppsList.java&#10;&#9;src/com/android/launcher2/DynamicGrid.java&#10;&#9;src/com/android/launcher2/Launcher.java&#10;&#9;src/com/jiayu/config/jiayuLauncherConfig.java&#10;">
+      <created>1385586073444</created>
+      <updated>1385586073444</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1272,7 +1271,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/Launcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="547" column="8" selection-start="22032" selection-end="22032" vertical-scroll-proportion="0.64801866" vertical-offset="8749" max-vertical-offset="82416">
+        <state line="543" column="62" selection-start="21805" selection-end="21805" vertical-scroll-proportion="0.48951048" vertical-offset="8749" max-vertical-offset="82416">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#70047#70076#0" expanded="true" />
