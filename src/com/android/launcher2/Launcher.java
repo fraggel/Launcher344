@@ -536,13 +536,13 @@ public class Launcher extends Activity
     private void asignarPropiedades(DeviceProfile grid) {
         grid.numRows=Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_rows", 4);
         grid.numColumns=Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_cols", 4);
-        double calc2= jiayuLauncherConfig.calcularPercentFormula(Utils.getSharedPreferencesInt(getApplicationContext(), "hotseat_icons", 2));
+        double calc2= jiayuLauncherConfig.calcularPercentFormula(Utils.getSharedPreferencesInt(getApplicationContext(), "hotseat_icons", 5));
         calc2=calc2/100;
         int hotseatIconSize=(int)(grid.hotseatIconSize*calc2);
         grid.hotseatIconSize=hotseatIconSize;
         grid.hotseatIconSizePx=(int)(grid.hotseatIconSizePx*calc2);
-
-        double calc=jiayuLauncherConfig.calcularPercentFormula(Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_icons", 2));
+        grid.hotseatBarHeightPx=(int)(grid.hotseatBarHeightPx*calc2);
+        double calc=jiayuLauncherConfig.calcularPercentFormula(Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_icons", 5));
         calc=calc/100;
         //int iconSize=(int)(grid.work*calc);
         grid.allAppsNumRows=Utils.getSharedPreferencesInt(getApplicationContext(), "all_apps_rows", 5);
@@ -596,28 +596,29 @@ public class Launcher extends Activity
         boolean voiceVisible = false;
         // If we have a saved version of these external icons, we load them up immediately
         int coi = getCurrentOrientationIndexForGlobalIcons();
-        if (sGlobalSearchIcon[coi] == null || sVoiceSearchIcon[coi] == null ||
-                sAppMarketIcon[coi] == null) {
-            if (!DISABLE_MARKET_BUTTON) {
-                updateAppMarketIcon();
+
+            if (sGlobalSearchIcon[coi] == null || sVoiceSearchIcon[coi] == null ||
+                    sAppMarketIcon[coi] == null) {
+                if (!DISABLE_MARKET_BUTTON) {
+                    updateAppMarketIcon();
+                }
+                searchVisible = updateGlobalSearchIcon();
+                voiceVisible = updateVoiceSearchIcon(searchVisible);
             }
-            searchVisible = updateGlobalSearchIcon();
-            voiceVisible = updateVoiceSearchIcon(searchVisible);
-        }
-        if (sGlobalSearchIcon[coi] != null) {
-             updateGlobalSearchIcon(sGlobalSearchIcon[coi]);
-             searchVisible = true;
-        }
-        if (sVoiceSearchIcon[coi] != null) {
-            updateVoiceSearchIcon(sVoiceSearchIcon[coi]);
-            voiceVisible = true;
-        }
-        if (!DISABLE_MARKET_BUTTON && sAppMarketIcon[coi] != null) {
-            updateAppMarketIcon(sAppMarketIcon[coi]);
-        }
-        if (mSearchDropTargetBar != null) {
-            mSearchDropTargetBar.onSearchPackagesChanged(searchVisible, voiceVisible);
-        }
+            if (sGlobalSearchIcon[coi] != null) {
+                 updateGlobalSearchIcon(sGlobalSearchIcon[coi]);
+                 searchVisible = true;
+            }
+            if (sVoiceSearchIcon[coi] != null) {
+                updateVoiceSearchIcon(sVoiceSearchIcon[coi]);
+                voiceVisible = true;
+            }
+            if (!DISABLE_MARKET_BUTTON && sAppMarketIcon[coi] != null) {
+                updateAppMarketIcon(sAppMarketIcon[coi]);
+            }
+            if (mSearchDropTargetBar != null) {
+                mSearchDropTargetBar.onSearchPackagesChanged(searchVisible, voiceVisible);
+            }
     }
 
     private void checkForLocaleChange() {
@@ -987,7 +988,12 @@ public class Launcher extends Activity
         InstallShortcutReceiver.disableAndFlushInstallQueue(this);
 
         // Update the voice search button proxy
-        updateVoiceButtonProxyVisible(false);
+        if(Utils.getSharedPreferencesBoolean(getApplicationContext(), "show_google_bar", true)){
+            updateVoiceButtonProxyVisible(false);
+        }else{
+            updateVoiceButtonProxyVisible(true);
+        }
+
 
         // Again, as with the above scenario, it's possible that one or more of the global icons
         // were updated in the wrong orientation.

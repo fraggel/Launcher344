@@ -145,6 +145,7 @@ public class Workspace extends SmoothPagedView
     static Rect mPortraitCellLayoutMetrics = null;
 
     CustomContentCallbacks mCustomContentCallbacks;
+    CustomContentCallbacks mCustomContentCallbacksAUX;
     boolean mCustomContentShowing;
     private float mLastCustomContentScrollProgress = -1f;
     private String mCustomContentDescription = "";
@@ -1080,22 +1081,39 @@ public class Workspace extends SmoothPagedView
 
         Launcher.setScreen(mCurrentPage);
 
+        if(mCustomContentCallbacks!=null){
+            mCustomContentCallbacksAUX=mCustomContentCallbacks;
+        }
         if (hasCustomContent() && getNextPage() == 0 && !mCustomContentShowing) {
             mCustomContentShowing = true;
             if (mCustomContentCallbacks != null) {
                 mCustomContentCallbacks.onShow();
                 mCustomContentShowTime = System.currentTimeMillis();
-                mLauncher.updateVoiceButtonProxyVisible(false);
+                if(Utils.getSharedPreferencesBoolean(getContext(),"show_google_bar",true)){
+                    mLauncher.updateVoiceButtonProxyVisible(false);
+                }else{
+                    mLauncher.updateVoiceButtonProxyVisible(true);
+                }
+                mCustomContentCallbacks=null;
             }
         } else if (hasCustomContent() && getNextPage() != 0 && mCustomContentShowing) {
             mCustomContentShowing = false;
+            mCustomContentCallbacks=mCustomContentCallbacksAUX;
             if (mCustomContentCallbacks != null) {
                 mCustomContentCallbacks.onHide();
-                mLauncher.resetQSBScroll();
-                mLauncher.updateVoiceButtonProxyVisible(false);
+                if(Utils.getSharedPreferencesBoolean(getContext(),"show_google_bar",true)){
+                    mLauncher.resetQSBScroll();
+                    mLauncher.updateVoiceButtonProxyVisible(false);
+                }else{
+                    mLauncher.updateVoiceButtonProxyVisible(true);
+                }
+
             }
         }
         if (getPageIndicator() != null) {
+            if(mCustomContentCallbacks==null){
+                Launcher.setScreen(1);
+            }
             getPageIndicator().setContentDescription(getPageIndicatorDescription());
         }
     }

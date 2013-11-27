@@ -691,10 +691,11 @@ public class FolderIcon extends LinearLayout implements FolderListener {
      */
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
-        if (mUnread.getVisibility() == View.VISIBLE && mUnread.getLeft() == 0) {
-            invalidate();
+        if(mUnread!=null){
+            if (mUnread.getVisibility() == View.VISIBLE && mUnread.getLeft() == 0) {
+                invalidate();
+            }
         }
-
         super.onLayout(changed, l, t, r, b);
     }
 
