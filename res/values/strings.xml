@@ -295,6 +295,6 @@ s -->
     <!-- Text for settings button -->
     <string name="settings_button_text">Settings</string>
 
-    <string name="settings_button_text2">GoogleNow</string>
+    <string name="googlenow_button_text">GoogleNow</string>
 
 </resources>

@@ -101,6 +101,7 @@ import android.widget.Toast;
 
 import com.android.launcher.R;
 import com.android.launcher2.DropTarget.DragObject;
+import com.jiayu.config.jiayuLauncherConfig;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -535,7 +536,7 @@ public class Launcher extends Activity
     private void asignarPropiedades(DeviceProfile grid) {
         grid.numRows=Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_rows", 4);
         grid.numColumns=Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_cols", 4);
-        double calc2=jiayuLauncherConfig.calcularPercentFormula(Utils.getSharedPreferencesInt(getApplicationContext(), "hotseat_icons", 2));
+        double calc2= jiayuLauncherConfig.calcularPercentFormula(Utils.getSharedPreferencesInt(getApplicationContext(), "hotseat_icons", 2));
         calc2=calc2/100;
         int hotseatIconSize=(int)(grid.hotseatIconSize*calc2);
         grid.hotseatIconSize=hotseatIconSize;
