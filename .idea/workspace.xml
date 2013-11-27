@@ -17,18 +17,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25c6fd96-9691-4356-a157-a2ad0904d627" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/android/launcher/BuildConfig.java" afterPath="$PROJECT_DIR$/gen/com/android/launcher/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/android/launcher2/CustomView.java" afterPath="$PROJECT_DIR$/src/com/android/launcher2/CustomView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/android/launcher2/DynamicGrid.java" afterPath="$PROJECT_DIR$/src/com/android/launcher2/DynamicGrid.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/android/launcher2/FolderIcon.java" afterPath="$PROJECT_DIR$/src/com/android/launcher2/FolderIcon.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/android/launcher2/Launcher.java" afterPath="$PROJECT_DIR$/src/com/android/launcher2/Launcher.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/android/launcher2/Workspace.java" afterPath="$PROJECT_DIR$/src/com/android/launcher2/Workspace.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android_packages_apps_Launcher3-somex-4.4.iml" afterPath="$PROJECT_DIR$/android_packages_apps_Launcher3-somex-4.4.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfig.java" afterPath="$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/jiayu_launcher_config.xml" afterPath="$PROJECT_DIR$/res/layout/jiayu_launcher_config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/workspace_screen.xml" afterPath="$PROJECT_DIR$/res/layout/workspace_screen.xml" />
     </list>
     <ignored path="android_packages_apps_Launcher3-somex-4.4.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -222,7 +211,7 @@
       <file leaf-file-name="jiayuLauncherConfig.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="160" column="0" selection-start="7427" selection-end="7427" vertical-scroll-proportion="0.2875" vertical-offset="2259" max-vertical-offset="6681">
+            <state line="175" column="67" selection-start="8175" selection-end="8175" vertical-scroll-proportion="0.81875" vertical-offset="2259" max-vertical-offset="6681">
               <folding>
                 <element signature="e#4289#4297#0" expanded="true" />
                 <element signature="e#5182#5190#0" expanded="true" />
@@ -728,7 +717,11 @@
       <created>1385487401994</created>
       <updated>1385487401994</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Version Final 1">
+      <created>1385563856431</created>
+      <updated>1385563856431</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -858,7 +851,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version WidgetIncluido, ahora la configuración" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version Final 1" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -874,6 +867,7 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="Version mod 1 primer intento de añadir el widget mediatek" />
     <MESSAGE value="Version WidgetIncluido, ahora la configuración" />
+    <MESSAGE value="Version Final 1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1023,7 +1017,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="160" column="0" selection-start="7427" selection-end="7427" vertical-scroll-proportion="0.2875" vertical-offset="2259" max-vertical-offset="6681">
+        <state line="175" column="67" selection-start="8175" selection-end="8175" vertical-scroll-proportion="0.81875" vertical-offset="2259" max-vertical-offset="6681">
           <folding>
             <element signature="e#4289#4297#0" expanded="true" />
             <element signature="e#5182#5190#0" expanded="true" />
