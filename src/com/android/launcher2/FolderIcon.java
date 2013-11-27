@@ -20,6 +20,7 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ValueAnimator;
 import android.animation.ValueAnimator.AnimatorUpdateListener;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Canvas;
@@ -40,11 +41,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.android.launcher.R;
 import com.android.launcher2.DropTarget.DragObject;
 import com.android.launcher2.FolderInfo.FolderListener;
 
 import java.util.ArrayList;
-import com.android.launcher.R;
 /**
  * An icon that can appear on in the workspace representing an {@link UserFolder}.
  */
@@ -68,7 +69,7 @@ public class FolderIcon extends LinearLayout implements FolderListener {
 
     // The degree to which the outer ring is scaled in its natural state
     private static final float OUTER_RING_GROWTH_FACTOR = 0.3f;
-
+    private TextView mUnread;
     // The amount of vertical spread between items in the stack [0...1]
     private static final float PERSPECTIVE_SHIFT_FACTOR = 0.24f;
 
@@ -680,5 +681,147 @@ public class FolderIcon extends LinearLayout implements FolderListener {
         super.cancelLongPress();
 
         mLongPressHelper.cancelLongPress();
+    }
+    /**
+     * M: Unread text view cannot be drown on the top when receiving unread event first time on key
+     * guard because of no layout. But view system use display list to redraw it afterward. So
+     * force invalidate it in onLayout() to redraw it when mUnread is visible and first time layout.
+     *
+     * CR ID: ALPS00404708
+     */
+    @Override
+    protected void onLayout(boolean changed, int l, int t, int r, int b) {
+        if (mUnread.getVisibility() == View.VISIBLE && mUnread.getLeft() == 0) {
+            invalidate();
+        }
+
+        super.onLayout(changed, l, t, r, b);
+    }
+
+    /**
+     * M: Update the unread message number of the shortcut with the given value.
+     *
+     * @param unreadNum the number of the unread message.
+     */
+    public void setFolderUnreadNum(int unreadNum) {
+
+
+        if (unreadNum <= 0) {
+            mInfo.unreadNum = 0;
+            mUnread.setVisibility(View.GONE);
+        } else {
+            mInfo.unreadNum = unreadNum;
+            mUnread.setVisibility(View.VISIBLE);
+            if (unreadNum > Launcher.MAX_UNREAD_COUNT) {
+                mUnread.setText(MTKUnreadLoader.getExceedText());
+            } else {
+                mUnread.setText(String.valueOf(unreadNum));
+            }
+        }
+    }
+
+    /**
+     * M: Set the margin right of unread text view, used for user folder in hotseat
+     * only.
+     *
+     * @param marginRight
+     */
+    void setFolderUnreadMarginRight(int marginRight) {
+        MarginLayoutParams params = (MarginLayoutParams) mUnread.getLayoutParams();
+        params.setMargins(params.leftMargin, params.topMargin, marginRight, params.bottomMargin);
+
+        mUnread.setLayoutParams(params);
+        mUnread.requestLayout();
+    }
+
+    /**
+     * M: Update unread number of the folder, the number is the total unread number
+     * of all shortcuts in folder, duplicate shortcut will be only count once.
+     */
+    public void updateFolderUnreadNum() {
+        final ArrayList<ShortcutInfo> contents = mInfo.contents;
+        final int contentsCount = contents.size();
+        int unreadNumTotal = 0;
+        final ArrayList<ComponentName> components = new ArrayList<ComponentName>();
+        ShortcutInfo shortcutInfo = null;
+        ComponentName componentName = null;
+        int unreadNum = 0;
+        for (int i = 0; i < contentsCount; i++) {
+            shortcutInfo = contents.get(i);
+            componentName = shortcutInfo.intent.getComponent();
+            unreadNum = MTKUnreadLoader.getUnreadNumberOfComponent(componentName);
+            if (unreadNum > 0) {
+                shortcutInfo.unreadNum = unreadNum;
+                int j = 0;
+                for (j = 0; j < components.size(); j++) {
+                    if (componentName != null && componentName.equals(components.get(j))) {
+                        break;
+                    }
+                }
+
+                if (j >= components.size()) {
+                    components.add(componentName);
+                    unreadNumTotal += unreadNum;
+                }
+            }
+        }
+
+        setFolderUnreadNum(unreadNumTotal);
+    }
+
+    /**
+     * M: Update the unread message of the shortcut with the given information.
+     *
+     * @param unreadNum the number of the unread message.
+     */
+    public void updateFolderUnreadNum(ComponentName component, int unreadNum) {
+        final ArrayList<ShortcutInfo> contents = mInfo.contents;
+        final int contentsCount = contents.size();
+        int unreadNumTotal = 0;
+        ShortcutInfo appInfo = null;
+        ComponentName name = null;
+        final ArrayList<ComponentName> components = new ArrayList<ComponentName>();
+        for (int i = 0; i < contentsCount; i++) {
+            appInfo = contents.get(i);
+            name = appInfo.intent.getComponent();
+            if (name != null && name.equals(component)) {
+                appInfo.unreadNum = unreadNum;
+            }
+            if (appInfo.unreadNum > 0) {
+                int j = 0;
+                for (j = 0; j < components.size(); j++) {
+                    if (name != null && name.equals(components.get(j))) {
+                        break;
+                    }
+                }
+
+                if (j >= components.size()) {
+                    components.add(name);
+                    unreadNumTotal += appInfo.unreadNum;
+                }
+            }
+        }
+
+        setFolderUnreadNum(unreadNumTotal);
+    }
+
+    /**
+     * M: Get the visibility of the shortcut unread text.
+     *
+     * @return
+     */
+    public int getUnreadVisibility() {
+        if (mUnread != null) {
+            return mUnread.getVisibility();
+        }
+
+        return View.GONE;
+    }
+
+    /**
+     * M: Reset the value of the variable of sStaticValuesDirty.
+     */
+    public static void resetValuesDirty() {
+        sStaticValuesDirty = true;
     }
 }

@@ -30,6 +30,7 @@ import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.ActivityOptions;
 import android.app.SearchManager;
+import android.appwidget.AppWidgetHost;
 import android.appwidget.AppWidgetHostView;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProviderInfo;
@@ -48,6 +49,7 @@ import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.database.ContentObserver;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Point;
@@ -77,6 +79,7 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MotionEvent;
+import android.view.OrientationEventListener;
 import android.view.Surface;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -96,6 +99,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.launcher.R;
 import com.android.launcher2.DropTarget.DragObject;
 
 import java.io.DataInputStream;
@@ -112,15 +116,12 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
-import com.android.launcher.R;
-import com.jiayu.config.jiayuLauncherConfig;
-
 /**
  * Default launcher application.
  */
 public class Launcher extends Activity
         implements View.OnClickListener, OnLongClickListener, LauncherModel.Callbacks,
-                   View.OnTouchListener {
+                   View.OnTouchListener,MTKUnreadLoader.UnreadCallbacks {
     static final String TAG = "Launcher";
     static final boolean LOGD = false;
 
@@ -360,7 +361,62 @@ public class Launcher extends Activity
     private static boolean isPropertyEnabled(String propertyName) {
         return Log.isLoggable(propertyName, Log.VERBOSE);
     }
+    /// M: Static variable to record whether locale has been changed.
+    private static boolean sLocaleChanged = false;
 
+    /// M: Add for launch specified applications in landscape. @{
+    private static final int ORIENTATION_0 = 0;
+    private static final int ORIENTATION_90 = 90;
+    private static final int ORIENTATION_180 = 180;
+    private static final int ORIENTATION_270 = 270;
+
+    private OrientationEventListener mOrientationListener;
+    private int mLastOrientation = ORIENTATION_0;
+    /// @}
+
+    /// M: Add for measure launcher performance. @{
+    private class PostDrawListener implements android.view.ViewTreeObserver.OnPostDrawListener {
+        @Override
+        public boolean onPostDraw() {
+
+            return true;
+        }
+    }
+    private final PostDrawListener mPostDrawListener = new PostDrawListener();
+    /// @}
+
+    /// M: Add for launcher scene feature. @{
+    private static final String CURRENT_SCENE = "current_scene";
+    private static final String CURRETN_SCENE_POS = "current_scene_pos";
+    private static String sCurrentScene = "default";
+    private static String sCurrentWallpaper = "default_wallpaper";
+
+    static final HashMap<String, String> SCENE_WALLPAPER = new HashMap<String, String>();
+    static String[] mSceneNames;
+    static int mCurrentScenePos;
+    /// @}
+
+    /// M: Add for launcher unread shortcut feature. @{
+
+    private boolean mUnreadLoadCompleted = false;
+    private boolean mBindingWorkspaceFinished = false;
+    private boolean mBindingAppsFinished = false;
+    /// @}
+
+    /// M: Save current CellLayout bounds before workspace.changeState(CellLayout will be scaled).
+    private Rect mCurrentBounds = new Rect();
+
+    /// M: Used to popup long press widget to add message.
+    private Toast mLongPressWidgetToAddToast;
+
+    /// M: Used to force reload when loading workspace
+    private boolean mIsLoadingWorkspace;
+
+    /// M: flag to indicate whether the orientation has changed.
+    private boolean mOrientationChanged;
+
+    /// M: flag to indicate whether the pages in app customized pane were recreated.
+    private boolean mPagesWereRecreated;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         if (DEBUG_STRICT_MODE) {
@@ -393,6 +449,7 @@ public class Launcher extends Activity
         DisplayMetrics dm = new DisplayMetrics();
         display.getMetrics(dm);
         // Lazy-initialize the dynamic grid
+        app.setDynamicGrid(null);
         DeviceProfile grid = app.initDynamicGrid(this,
                 Math.min(smallestSize.x, smallestSize.y),
                 Math.min(largestSize.x, largestSize.y),
@@ -408,7 +465,6 @@ public class Launcher extends Activity
         mIconCache.flushInvalidIcons(grid);
         mDragController = new DragController(this);
         mInflater = getLayoutInflater();
-
         mStats = new Stats(this);
 
         mAppWidgetManager = AppWidgetManager.getInstance(this);
@@ -426,9 +482,8 @@ public class Launcher extends Activity
                     Environment.getExternalStorageDirectory() + "/launcher");
         }
 
-
-        checkForLocaleChange();
         setContentView(R.layout.launcher);
+        checkForLocaleChange();
 
         setupViews();
         grid.layout(this);
@@ -480,7 +535,7 @@ public class Launcher extends Activity
     private void asignarPropiedades(DeviceProfile grid) {
         grid.numRows=Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_rows", 4);
         grid.numColumns=Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_cols", 4);
-        double calc2= jiayuLauncherConfig.calcularPercentFormula(Utils.getSharedPreferencesInt(getApplicationContext(), "hotseat_icons", 2));
+        double calc2=jiayuLauncherConfig.calcularPercentFormula(Utils.getSharedPreferencesInt(getApplicationContext(), "hotseat_icons", 2));
         calc2=calc2/100;
         int hotseatIconSize=(int)(grid.hotseatIconSize*calc2);
         grid.hotseatIconSize=hotseatIconSize;
@@ -500,7 +555,9 @@ public class Launcher extends Activity
 
     /** To be overriden by subclasses to hint to Launcher that we have custom content */
     protected boolean hasCustomContentToLeft() {
-        return false;
+        boolean customcontent=false;
+        customcontent=Utils.getSharedPreferencesBoolean(getApplicationContext(), "show_customcontent", false);
+        return customcontent;
     }
 
     /**
@@ -509,6 +566,9 @@ public class Launcher extends Activity
      * {@link #hasCustomContentToLeft()} is {@code true}.
      */
     protected void addCustomContentToLeft() {
+        CustomView v=new CustomView(getApplicationContext());
+        addToCustomContentPage(v,v,null);
+
     }
 
     /**
@@ -846,6 +906,7 @@ public class Launcher extends Activity
     @Override
     protected void onResume() {
         long startTime = 0;
+
         if (DEBUG_RESUME_TIME) {
             startTime = System.currentTimeMillis();
             Log.v(TAG, "Launcher.onResume()");
@@ -941,6 +1002,7 @@ public class Launcher extends Activity
             // if PagedView#setRestorePage was set to the custom content page in onCreate().
             if (mWorkspace.isOnOrMovingToCustomContent()) {
                 mWorkspace.getCustomContentCallbacks().onShow();
+
             }
         }
 
@@ -948,6 +1010,11 @@ public class Launcher extends Activity
         mWorkspace.updateInteractionForState();
 
         mWorkspace.onResume();
+        if(Utils.getSharedPreferencesBoolean(getApplicationContext(), "need_restart", false)){
+           Utils.setSharedPreferencesBoolean(getApplicationContext(), "need_restart", false);
+           System.exit(0);
+           //onCreate(null);
+        }
     }
 
     @Override
@@ -1004,11 +1071,11 @@ public class Launcher extends Activity
     }
 
     protected void startSettings() {
-       /*Intent i = new Intent(getApplicationContext(),jiayuLauncherConfig.class);
+       Intent i = new Intent(getApplicationContext(),jiayuLauncherConfig.class);
        startActivity(i);
        if (mWorkspace.isInOverviewMode()) {
            mWorkspace.exitOverviewMode(false);
-       }*/
+       }
 
     }
     protected void startGoogleNow(){
@@ -1218,8 +1285,7 @@ public class Launcher extends Activity
         settingsButton.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                startGoogleNow();
-                //startSettings();
+                startSettings();
             }
         });
         settingsButton.setOnTouchListener(getHapticFeedbackTouchListener());
@@ -1232,6 +1298,7 @@ public class Launcher extends Activity
         dragController.addDragListener(mWorkspace);
 
         // Get the search/delete bar
+
         mSearchDropTargetBar = (SearchDropTargetBar) mDragLayer.findViewById(R.id.qsb_bar);
 
         // Setup AppsCustomize
@@ -1248,6 +1315,11 @@ public class Launcher extends Activity
 
         if (mSearchDropTargetBar != null) {
             mSearchDropTargetBar.setup(this, dragController);
+        }
+        if(!Utils.getSharedPreferencesBoolean(getApplicationContext(), "show_google_bar", true)){
+            mSearchDropTargetBar.hideSearchBar(false);
+        }else{
+            mSearchDropTargetBar.showSearchBar(false);
         }
 
         if (getResources().getBoolean(R.bool.debug_memory_enabled)) {
@@ -2266,9 +2338,10 @@ public class Launcher extends Activity
      * @param v The view that was clicked.
      */
     public void onClickSearchButton(View v) {
-        v.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
-
-        onSearchRequested();
+        if(Utils.getSharedPreferencesBoolean(getApplicationContext(), "show_google_bar", true)){
+            v.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
+            onSearchRequested();
+        }
     }
 
     /**
@@ -2277,9 +2350,10 @@ public class Launcher extends Activity
      * @param v The view that was clicked.
      */
     public void onClickVoiceButton(View v) {
-        v.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
-
-        startVoice();
+        if(Utils.getSharedPreferencesBoolean(getApplicationContext(), "show_google_bar", true)){
+            v.performHapticFeedback(HapticFeedbackConstants.VIRTUAL_KEY);
+            startVoice();
+        }
     }
 
     public void startVoice() {
@@ -3084,8 +3158,10 @@ public class Launcher extends Activity
 
             // Show the search bar (only animate if we were showing the drop target bar in spring
             // loaded mode)
-            if (mSearchDropTargetBar != null) {
-                mSearchDropTargetBar.showSearchBar(animated && wasInSpringLoadedMode);
+            if(!Utils.getSharedPreferencesBoolean(getApplicationContext(), "show_google_bar", true)){
+                mSearchDropTargetBar.hideSearchBar(false);
+            }else{
+                mSearchDropTargetBar.showSearchBar(false);
             }
 
             // Set focus to the AppsCustomize button
@@ -4427,7 +4503,11 @@ public class Launcher extends Activity
                 DISMISS_CLING_DURATION, true);
 
         // Fade in the search bar
-        mSearchDropTargetBar.showSearchBar(true);
+        if(!Utils.getSharedPreferencesBoolean(getApplicationContext(), "show_google_bar", true)){
+            mSearchDropTargetBar.hideSearchBar(false);
+        }else{
+            mSearchDropTargetBar.showSearchBar(false);
+        }
     }
     public void dismissFolderCling(View v) {
         Cling cling = (Cling) findViewById(R.id.folder_cling);
@@ -4554,6 +4634,345 @@ public class Launcher extends Activity
         }
         // Exit spring loaded mode if necessary after adding the widget.
         exitSpringLoadedDragModeDelayed(false, false, null);
+    }
+    private void setClingTitleWithThemeColor(final View cling, int id) {
+        if (cling != null) {
+            final TextView titleView = (TextView) cling.findViewById(id);
+            if (titleView != null) {
+                titleView.setTextColor(getThemeColor(getResources(), R.color.cling_title_text_color));
+            }
+        }
+    }
+
+    /**
+     * M: Get theme main color.
+     *
+     * @param res resources object.
+     * @param id the default color resource id.
+     * @return theme main color, if non, return the default color from given id.
+     */
+    public static int getThemeColor(Resources res, int id) {
+        int color = 0;
+        /*if (FeatureOption.MTK_THEMEMANAGER_APP) {
+            color = res.getThemeMainColor();
+        }*/
+        if (color == 0) {
+            color = res.getColor(id);
+        }
+        return color;
+    }
+
+    /**
+     * M: Get current CellLayout bounds.
+     *
+     * @return mCurrentBounds.
+     */
+    Rect getCurrentBounds() {
+        return mCurrentBounds;
+    }
+
+    /**
+     * M: Register OrientationListerner when onCreate.
+     */
+    private void registerOrientationListener() {
+        mOrientationListener = new OrientationEventListener(Launcher.this) {
+            @Override
+            public void onOrientationChanged(int orientation) {
+                orientation = roundOrientation(orientation);
+                if (orientation != mLastOrientation) {
+                    if (mLastOrientation == Launcher.ORIENTATION_0 || mLastOrientation == Launcher.ORIENTATION_180) {
+                        if (orientation == Launcher.ORIENTATION_270 || orientation == Launcher.ORIENTATION_90) {
+                            boolean isRotateEnabled = Settings.System.getInt(getContentResolver(),
+                                    Settings.System.ACCELEROMETER_ROTATION, 1) != 0;
+                            if (isRotateEnabled) {
+                                String cmpName = Settings.System.getString(getContentResolver(),
+                                        "landscape");
+                                if (cmpName != null && !cmpName.equals("none")) {
+                                    fireAppRotated(cmpName);
+                                }
+                            }
+                        }
+                    }
+                    mLastOrientation = orientation;
+                }
+            }
+        };
+        final String cmpName = Settings.System.getString(getContentResolver(), "landscape");
+        if (cmpName != null && !cmpName.equals("none")) {
+            mOrientationListener.enable();
+        }
+    }
+
+    /**
+     * M: Calculate orientation.
+     *
+     * @param orientation
+     * @return
+     */
+    private int roundOrientation(int orientation) {
+        return ((orientation + 45) / 90 * 90) % 360;
+    }
+
+    /**
+     * M: Launch the specified app with name of "cmpName" and intent action is intent.ACTION_ROTATED_MAIN.
+     *
+     * @param cmpName
+     */
+    private void fireAppRotated(String cmpName) {
+
+
+        String name[] = cmpName.split("/");
+        Intent intent = new Intent();
+        intent.setComponent(new ComponentName(name[0], name[1]));
+        startActivitySafely(null, intent, null);
+    }
+
+    /**
+     * M: Enable OrientationListener when onResume.
+     */
+    private void enableOrientationListener() {
+        final String cmpName = Settings.System.getString(getContentResolver(), "landscape");
+        if (cmpName != null && !cmpName.equals("none")) {
+            if (mOrientationListener.canDetectOrientation()) {
+                mOrientationListener.enable();
+                mLastOrientation = Launcher.ORIENTATION_270;
+            }
+        }
+    }
+
+    /**
+     * M: Disable OrientationListener when onPause/onDestory.
+     */
+    private void disableOrientationListener() {
+        final String cmpName = Settings.System.getString(getContentResolver(), "landscape");
+        if (cmpName != null && !cmpName.equals("none")) {
+            mLastOrientation = Launcher.ORIENTATION_0;
+            mOrientationListener.disable();
+        }
+    }
+
+    /**
+     * M: Save Scene after switch scene.
+     */
+    private void saveSceneSetting(Context context, String scene, int pos) {
+        SharedPreferences settings = context.getSharedPreferences(CURRENT_SCENE, 0);
+        SharedPreferences.Editor editor = settings.edit();
+
+        editor.putString(CURRENT_SCENE, scene);
+        editor.putInt(CURRETN_SCENE_POS, pos);
+        sCurrentScene = scene;
+
+        // Don't forget to commit your edits!!!
+        editor.commit();
+    }
+
+    /**
+     * M: Get current scene.
+     *
+     * @return the name of current scene.
+     */
+    public static String getCurrentScene() {
+        return sCurrentScene;
+    }
+
+    /**
+     * M: Clear DropTarget before switch scene.
+     *
+     * @param scene the name of the scene will be switched to.
+     */
+    public void clearAndSwitchScene(String scene, int pos) {
+        for (int i = 0; i < SCREEN_COUNT; i++) {
+            final CellLayout cellLayout = (CellLayout) mWorkspace.getChildAt(i);
+            cellLayout.removeAllViews();
+        }
+
+        // wipe any previous widgets
+        final Context context = getApplicationContext();
+        AppWidgetHost appWidgetHost = new AppWidgetHost(context, Launcher.APPWIDGET_HOST_ID);
+        appWidgetHost.deleteHost();
+        final ContentResolver resolver = context.getContentResolver();
+        resolver.notifyChange(LauncherProvider.CONTENT_APPWIDGET_RESET_URI, null);
+
+        DragController dragController = mDragController;
+        dragController.resetDropTarget();
+        // The order here is bottom to top.
+        dragController.addDropTarget(mWorkspace);
+        if (mSearchDropTargetBar != null) {
+            mSearchDropTargetBar.setup(this, dragController);
+        }
+        switchScene(scene, pos);
+    }
+
+    /**
+     * M: Switch scene to the given scene.
+     *
+     * @param scene The name of the scene will be switched to.
+     */
+    private void switchScene(String scene, int pos) {
+        if (LauncherModel.exists(this, scene)) {
+            LauncherModel.resetScene(this, scene);
+        }
+
+        LauncherProvider.DatabaseHelper dbHelper = LauncherProvider.getOpenHelper();
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        dbHelper.loadFavorites(db, getSceneDefinedIdBySceneName(scene));
+        dbHelper.loadScene(db, getSceneDefinedIdBySceneName(scene));
+        dbHelper.close();
+
+        if (!sCurrentScene.equals(scene)) {
+            saveSceneSetting(this, scene, pos);
+        }
+
+        sCurrentWallpaper = getSceneWallpaper(sCurrentScene);
+        mWorkspace.setWallpaper(sCurrentWallpaper);
+        mModel.forceReload();
+    }
+
+    private String getSceneWallpaper(String scene) {
+        return SCENE_WALLPAPER.get(scene);
+    }
+
+    private int getSceneDefinedIdBySceneName(String sceneName) {
+        int loc = 0;
+        int count = LauncherModel.SYSTEM_SCENE_NAMES.length;
+        for (int i = 0; i < count; i++) {
+            if (LauncherModel.SYSTEM_SCENE_NAMES[i].equals(sceneName)) {
+                loc = i;
+                break;
+            }
+        }
+        return LauncherProvider.DatabaseHelper.PRESCENES[loc];
+    }
+
+    /**
+     * M: Bind component unread information in workspace and all apps list.
+     *
+     * @param component the component name of the app.
+     * @param unreadNum the number of the unread message.
+     */
+    public void bindComponentUnreadChanged(final ComponentName component, final int unreadNum) {
+
+        // Post to message queue to avoid possible ANR.
+        mHandler.post(new Runnable() {
+            public void run() {
+                final long start = System.currentTimeMillis();
+
+                if (mWorkspace != null) {
+                    mWorkspace.updateComponentUnreadChanged(component, unreadNum);
+                }
+
+                if (mAppsCustomizeContent != null) {
+                    mAppsCustomizeContent.updateAppsUnreadChanged(component, unreadNum);
+                }
+
+            }
+        });
+    }
+
+    /**
+     * M: Bind shortcuts unread number if binding process has finished.
+     */
+    public void bindUnreadInfoIfNeeded() {
+
+        if (mBindingWorkspaceFinished) {
+            bindWorkspaceUnreadInfo();
+        }
+
+        if (mBindingAppsFinished) {
+            bindAppsUnreadInfo();
+        }
+        mUnreadLoadCompleted = true;
+    }
+
+    /**
+     * M: Bind unread number to shortcuts with data in MTKUnreadLoader.
+     */
+    private void bindWorkspaceUnreadInfo() {
+        mHandler.post(new Runnable() {
+            public void run() {
+                final long start = System.currentTimeMillis();
+
+                if (mWorkspace != null) {
+                    mWorkspace.updateShortcutsAndFoldersUnread();
+                }
+
+            }
+        });
+    }
+
+    /**
+     * M: Bind unread number to shortcuts with data in MTKUnreadLoader.
+     */
+    private void bindAppsUnreadInfo() {
+        mHandler.post(new Runnable() {
+            public void run() {
+                final long start = System.currentTimeMillis();
+
+                if (mAppsCustomizeContent != null) {
+                    mAppsCustomizeContent.updateAppsUnread();
+                }
+
+            }
+        });
+    }
+
+    /**
+     * M: Show long press widget to add message, avoid duplication of message.
+     */
+    public void showLongPressWidgetToAddMessage() {
+        if (mLongPressWidgetToAddToast == null) {
+            mLongPressWidgetToAddToast = Toast.makeText(getApplicationContext(), R.string.long_press_widget_to_add,
+                    Toast.LENGTH_SHORT);
+        } else {
+            mLongPressWidgetToAddToast.setText(R.string.long_press_widget_to_add);
+            mLongPressWidgetToAddToast.setDuration(Toast.LENGTH_SHORT);
+        }
+        mLongPressWidgetToAddToast.show();
+    }
+
+    /**
+     * M: Cancel long press widget to add message when press back key.
+     */
+    private void cancelLongPressWidgetToAddMessage() {
+        if (mLongPressWidgetToAddToast != null) {
+            mLongPressWidgetToAddToast.cancel();
+        }
+    }
+
+    /**
+     * M: A widget was uninstalled/disabled.
+     *
+     * Implementation of the method from LauncherModel.Callbacks.
+     */
+    public void bindAppWidgetRemoved(ArrayList<String> appWidget, boolean permanent) {
+
+        if (permanent) {
+            mWorkspace.removeItems(appWidget);
+        }
+    }
+
+    /**
+     * M: set orientation changed flag, this would make the apps customized pane
+     * recreate views in certain condition.
+     */
+    public void notifyOrientationChanged() {
+
+        mOrientationChanged = true;
+    }
+
+    /**
+     * M: tell Launcher that the pages in app customized pane were recreated.
+     */
+    void notifyPagesWereRecreated() {
+        mPagesWereRecreated = true;
+    }
+
+    /**
+     * M: reset re-sync apps pages flags.
+     */
+    private void resetReSyncFlags() {
+        mOrientationChanged = false;
+        mPagesWereRecreated = false;
     }
 
 }

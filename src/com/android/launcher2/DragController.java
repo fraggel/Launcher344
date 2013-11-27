@@ -746,7 +746,9 @@ public class DragController {
     public void removeDropTarget(DropTarget target) {
         mDropTargets.remove(target);
     }
-
+    public void resetDropTarget() {
+        mDropTargets.clear();
+    }
     /**
      * Sets the current fling-to-delete drop target.
      */

@@ -275,5 +275,6 @@ class LauncherSettings {
          * @see android.provider.LiveFolders#DISPLAY_MODE_LIST
          */
         static final String DISPLAY_MODE = "displayMode";
+        static final String SCENE = "scene";
     }
 }
