@@ -584,7 +584,7 @@ public class LauncherProvider extends ContentProvider {
 
             // Where's version 5?
             // - Donut and sholes on 2.0 shipped with version 4 of launcher1.
-            // - Passion shipped on 2.1 with version 6 of launcher3
+            // - Passion shipped on 2.1 with version 6 of Jiayu launcher
             // - Sholes shipped on 2.1r1 (aka Mr. 3) with version 5 of launcher 1
             //   but version 5 on there was the updateContactsShortcuts change
             //   which was version 6 in launcher 2 (first shipped on passion 2.1r1).

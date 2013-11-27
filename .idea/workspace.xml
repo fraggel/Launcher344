@@ -17,6 +17,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25c6fd96-9691-4356-a157-a2ad0904d627" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Android.mk" afterPath="$PROJECT_DIR$/Android.mk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/android/launcher2/Launcher.java" afterPath="$PROJECT_DIR$/src/com/android/launcher2/Launcher.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/android/launcher2/LauncherProvider.java" afterPath="$PROJECT_DIR$/src/com/android/launcher2/LauncherProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/android/launcher2/SavedWallpaperImages.java" afterPath="$PROJECT_DIR$/src/com/android/launcher2/SavedWallpaperImages.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/android/launcher2/Stats.java" afterPath="$PROJECT_DIR$/src/com/android/launcher2/Stats.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/android/launcher2/WallpaperCropActivity.java" afterPath="$PROJECT_DIR$/src/com/android/launcher2/WallpaperCropActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-af/strings.xml" afterPath="$PROJECT_DIR$/res/values-af/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-ar/strings.xml" afterPath="$PROJECT_DIR$/res/values-ar/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-bg/strings.xml" afterPath="$PROJECT_DIR$/res/values-bg/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-ca/strings.xml" afterPath="$PROJECT_DIR$/res/values-ca/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-cs/strings.xml" afterPath="$PROJECT_DIR$/res/values-cs/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-da/strings.xml" afterPath="$PROJECT_DIR$/res/values-da/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-de/strings.xml" afterPath="$PROJECT_DIR$/res/values-de/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-el/strings.xml" afterPath="$PROJECT_DIR$/res/values-el/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-en-rGB/strings.xml" afterPath="$PROJECT_DIR$/res/values-en-rGB/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-en-rIN/strings.xml" afterPath="$PROJECT_DIR$/res/values-en-rIN/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-es/strings.xml" afterPath="$PROJECT_DIR$/res/values-es/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-es-rUS/strings.xml" afterPath="$PROJECT_DIR$/res/values-es-rUS/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-et-rEE/strings.xml" afterPath="$PROJECT_DIR$/res/values-et-rEE/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-fa/strings.xml" afterPath="$PROJECT_DIR$/res/values-fa/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-fi/strings.xml" afterPath="$PROJECT_DIR$/res/values-fi/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-fr/strings.xml" afterPath="$PROJECT_DIR$/res/values-fr/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-hi/strings.xml" afterPath="$PROJECT_DIR$/res/values-hi/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-hu/strings.xml" afterPath="$PROJECT_DIR$/res/values-hu/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-hy-rAM/strings.xml" afterPath="$PROJECT_DIR$/res/values-hy-rAM/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-in/strings.xml" afterPath="$PROJECT_DIR$/res/values-in/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-it/strings.xml" afterPath="$PROJECT_DIR$/res/values-it/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-iw/strings.xml" afterPath="$PROJECT_DIR$/res/values-iw/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-ja/strings.xml" afterPath="$PROJECT_DIR$/res/values-ja/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-ka-rGE/strings.xml" afterPath="$PROJECT_DIR$/res/values-ka-rGE/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-km-rKH/strings.xml" afterPath="$PROJECT_DIR$/res/values-km-rKH/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-ko/strings.xml" afterPath="$PROJECT_DIR$/res/values-ko/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-lo-rLA/strings.xml" afterPath="$PROJECT_DIR$/res/values-lo-rLA/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-lt/strings.xml" afterPath="$PROJECT_DIR$/res/values-lt/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-lv/strings.xml" afterPath="$PROJECT_DIR$/res/values-lv/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-mn-rMN/strings.xml" afterPath="$PROJECT_DIR$/res/values-mn-rMN/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-ms-rMY/strings.xml" afterPath="$PROJECT_DIR$/res/values-ms-rMY/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-nb/strings.xml" afterPath="$PROJECT_DIR$/res/values-nb/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-nl/strings.xml" afterPath="$PROJECT_DIR$/res/values-nl/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-pl/strings.xml" afterPath="$PROJECT_DIR$/res/values-pl/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-pt/strings.xml" afterPath="$PROJECT_DIR$/res/values-pt/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-ro/strings.xml" afterPath="$PROJECT_DIR$/res/values-ro/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-ru/strings.xml" afterPath="$PROJECT_DIR$/res/values-ru/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-sk/strings.xml" afterPath="$PROJECT_DIR$/res/values-sk/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-sr/strings.xml" afterPath="$PROJECT_DIR$/res/values-sr/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-sv/strings.xml" afterPath="$PROJECT_DIR$/res/values-sv/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-th/strings.xml" afterPath="$PROJECT_DIR$/res/values-th/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-tl/strings.xml" afterPath="$PROJECT_DIR$/res/values-tl/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-tr/strings.xml" afterPath="$PROJECT_DIR$/res/values-tr/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-uk/strings.xml" afterPath="$PROJECT_DIR$/res/values-uk/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-vi/strings.xml" afterPath="$PROJECT_DIR$/res/values-vi/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-zh-rCN/strings.xml" afterPath="$PROJECT_DIR$/res/values-zh-rCN/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-zh-rHK/strings.xml" afterPath="$PROJECT_DIR$/res/values-zh-rHK/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-zh-rTW/strings.xml" afterPath="$PROJECT_DIR$/res/values-zh-rTW/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="android_packages_apps_Launcher3-somex-4.4.iws" />
@@ -145,101 +200,114 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="workspace_screen.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/workspace_screen.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
+      <file leaf-file-name="Launcher.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/Launcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="82" selection-start="218" selection-end="218" vertical-scroll-proportion="-2.04" vertical-offset="0" max-vertical-offset="221">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CellLayout.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/CellLayout.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="145" column="23" selection-start="5371" selection-end="5371" vertical-scroll-proportion="-3.0384614" vertical-offset="2148" max-vertical-offset="56151">
+            <state line="4540" column="38" selection-start="182696" selection-end="182696" vertical-scroll-proportion="0.0" vertical-offset="73285" max-vertical-offset="81158">
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#10645#10655#0" expanded="true" />
+                <element signature="e#10725#10735#0" expanded="true" />
+                <element signature="e#11378#11396#0" expanded="true" />
+                <element signature="e#11816#11845#0" expanded="true" />
+                <element signature="e#12631#12640#0" expanded="true" />
+                <element signature="e#12705#12713#0" expanded="true" />
+                <element signature="e#14049#14070#0" expanded="true" />
+                <element signature="e#15747#15763#0" expanded="true" />
+                <element signature="e#85113#85166#0" expanded="true" />
+                <element signature="e#85653#85695#0" expanded="true" />
+                <element signature="e#86233#86262#0" expanded="true" />
+                <element signature="e#98855#98859#0" expanded="true" />
+                <element signature="e#99518#99522#0" expanded="true" />
+                <element signature="e#146311#146357#0" expanded="true" />
+                <element signature="e#154050#154060#0" expanded="true" />
+                <element signature="e#196034#196057#0" expanded="true" />
+                <element signature="e#196199#196232#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomView.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/CustomView.java">
+      <file leaf-file-name="LauncherProvider.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/LauncherProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="730" selection-end="730" vertical-scroll-proportion="0.0" vertical-offset="243" max-vertical-offset="731">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Utilities.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/Utilities.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="300" column="0" selection-start="11582" selection-end="11582" vertical-scroll-proportion="0.0" vertical-offset="4255" max-vertical-offset="5967">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Workspace.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/Workspace.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1084" column="0" selection-start="42160" selection-end="42160" vertical-scroll-proportion="-1.4615384" vertical-offset="18050" max-vertical-offset="80767">
+            <state line="586" column="72" selection-start="24305" selection-end="24305" vertical-scroll-proportion="0.0" vertical-offset="8770" max-vertical-offset="24990">
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#189264#189319#0" expanded="true" />
-                <element signature="e#189695#189751#0" expanded="true" />
+                <element signature="e#50977#51032#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LauncherAppState.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/LauncherAppState.java">
+      <file leaf-file-name="SavedWallpaperImages.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/SavedWallpaperImages.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="22" selection-start="1342" selection-end="1342" vertical-scroll-proportion="0.0" vertical-offset="3060" max-vertical-offset="3587">
+            <state line="45" column="46" selection-start="1533" selection-end="1546" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3621">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jiayuLauncherConfig.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Stats.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/Stats.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="52" selection-start="1000" selection-end="1000" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3315">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WallpaperCropActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/WallpaperCropActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="55" selection-start="1967" selection-end="1967" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="11951">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Android.mk" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Android.mk">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="35" selection-start="1062" selection-end="1062" vertical-scroll-proportion="0.0" vertical-offset="440" max-vertical-offset="1156">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="49" selection-start="832" selection-end="832" vertical-scroll-proportion="0.0" vertical-offset="219" max-vertical-offset="5202">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values-af/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="78" selection-start="862" selection-end="862" vertical-scroll-proportion="0.0" vertical-offset="189" max-vertical-offset="2210">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/res/values-ar/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="21" column="65" selection-start="849" selection-end="849" vertical-scroll-proportion="0.33267328" vertical-offset="189" max-vertical-offset="2210">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jiayuLauncherConfig.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="175" column="67" selection-start="8175" selection-end="8175" vertical-scroll-proportion="0.81875" vertical-offset="2259" max-vertical-offset="6681">
+            <state line="168" column="76" selection-start="7742" selection-end="7742" vertical-scroll-proportion="-14.461538" vertical-offset="2157" max-vertical-offset="6681">
               <folding>
                 <element signature="e#4289#4297#0" expanded="true" />
                 <element signature="e#5182#5190#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jiayu_launcher_config.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/jiayu_launcher_config.xml">
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3043">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DynamicGrid.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/DynamicGrid.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="225" column="26" selection-start="8270" selection-end="8288" vertical-scroll-proportion="-13.961538" vertical-offset="2867" max-vertical-offset="9350">
-              <folding>
-                <element signature="e#10636#10847#0" expanded="true" />
-                <element signature="e#10836#10837#0" expanded="true" />
-                <element signature="e#20454#20469#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -275,22 +343,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/res/layout-port/launcher2.xml" />
-        <option value="$PROJECT_DIR$/res/layout-land/launcher2.xml" />
-        <option value="$PROJECT_DIR$/src/com/android/launcher2/PagedView.java" />
-        <option value="$PROJECT_DIR$/src/com/android/launcher2/jiayuLauncherConfig.java" />
-        <option value="$PROJECT_DIR$/src/com/android/launcher2/CustomContent.java" />
-        <option value="$PROJECT_DIR$/src/com/android/launcher2/SearchDropTargetBar.java" />
-        <option value="$PROJECT_DIR$/src/com/android/launcher2/Utilities.java" />
-        <option value="$PROJECT_DIR$/src/com/android/launcher2/FolderIcon.java" />
         <option value="$PROJECT_DIR$/res/layout/hotseat.xml" />
         <option value="$PROJECT_DIR$/src/com/android/launcher2/DynamicGrid.java" />
         <option value="$PROJECT_DIR$/res/layout/workspace_screen.xml" />
-        <option value="$PROJECT_DIR$/src/com/android/launcher2/Launcher.java" />
         <option value="$PROJECT_DIR$/src/com/android/launcher2/Workspace.java" />
         <option value="$PROJECT_DIR$/src/com/android/launcher2/CustomView.java" />
         <option value="$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfig.java" />
         <option value="$PROJECT_DIR$/res/layout/jiayu_launcher_config.xml" />
+        <option value="$PROJECT_DIR$/src/com/android/launcher2/Launcher.java" />
+        <option value="$PROJECT_DIR$/src/com/android/launcher2/LauncherProvider.java" />
+        <option value="$PROJECT_DIR$/src/com/android/launcher2/SavedWallpaperImages.java" />
+        <option value="$PROJECT_DIR$/src/com/android/launcher2/Stats.java" />
+        <option value="$PROJECT_DIR$/src/com/android/launcher2/WallpaperCropActivity.java" />
+        <option value="$PROJECT_DIR$/Android.mk" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/res/values-af/strings.xml" />
+        <option value="$PROJECT_DIR$/res/values-ar/strings.xml" />
       </list>
     </option>
   </component>
@@ -721,7 +789,11 @@
       <created>1385563856431</created>
       <updated>1385563856431</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Version Final 1">
+      <created>1385564184165</created>
+      <updated>1385564184165</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -746,7 +818,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1288" height="954" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32549506" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -759,14 +831,14 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3279703" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32673267" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32673267" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44430694" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3128039" sideWeight="0.5940594" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32549506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32549506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -873,99 +945,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/FolderIcon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="693" column="26" selection-start="27874" selection-end="27874" vertical-scroll-proportion="-0.2656904" vertical-offset="10939" max-vertical-offset="13209">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/hotseat.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="35" selection-start="954" selection-end="954" vertical-scroll-proportion="-12.88" vertical-offset="18" max-vertical-offset="510">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/DynamicGrid.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="225" column="26" selection-start="8270" selection-end="8288" vertical-scroll-proportion="-13.961538" vertical-offset="2867" max-vertical-offset="9350">
-          <folding>
-            <element signature="e#10636#10847#0" expanded="true" />
-            <element signature="e#10836#10837#0" expanded="true" />
-            <element signature="e#20454#20469#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-17/android/app/AlertDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="351" column="24" selection-start="13226" selection-end="13226" vertical-scroll-proportion="0.33333334" vertical-offset="5272" max-vertical-offset="15827">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/sdk/sources/android-17/android/app/Dialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="280" column="0" selection-start="9498" selection-end="9498" vertical-scroll-proportion="0.0" vertical-offset="3752" max-vertical-offset="20366">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/Launcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1068" column="21" selection-start="42114" selection-end="42114" vertical-scroll-proportion="0.29288703" vertical-offset="15959" max-vertical-offset="81158">
-          <folding>
-            <element signature="e#10645#10655#0" expanded="true" />
-            <element signature="e#10725#10735#0" expanded="true" />
-            <element signature="e#11378#11396#0" expanded="true" />
-            <element signature="e#11816#11845#0" expanded="true" />
-            <element signature="e#12631#12640#0" expanded="true" />
-            <element signature="e#12705#12713#0" expanded="true" />
-            <element signature="e#14049#14070#0" expanded="true" />
-            <element signature="e#15747#15763#0" expanded="true" />
-            <element signature="e#85113#85166#0" expanded="true" />
-            <element signature="e#85653#85695#0" expanded="true" />
-            <element signature="e#86233#86262#0" expanded="true" />
-            <element signature="e#98855#98859#0" expanded="true" />
-            <element signature="e#99518#99522#0" expanded="true" />
-            <element signature="e#146311#146357#0" expanded="true" />
-            <element signature="e#154050#154060#0" expanded="true" />
-            <element signature="e#196024#196047#0" expanded="true" />
-            <element signature="e#196189#196222#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/workspace_screen.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="82" selection-start="218" selection-end="218" vertical-scroll-proportion="-2.04" vertical-offset="0" max-vertical-offset="221">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/Utilities.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="300" column="0" selection-start="11582" selection-end="11582" vertical-scroll-proportion="0.0" vertical-offset="4255" max-vertical-offset="5967">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/CellLayout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="145" column="23" selection-start="5371" selection-end="5371" vertical-scroll-proportion="-3.0384614" vertical-offset="2148" max-vertical-offset="56151">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/LauncherAppState.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="22" selection-start="1342" selection-end="1342" vertical-scroll-proportion="0.0" vertical-offset="3060" max-vertical-offset="3587">
@@ -1017,11 +996,94 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="175" column="67" selection-start="8175" selection-end="8175" vertical-scroll-proportion="0.81875" vertical-offset="2259" max-vertical-offset="6681">
+        <state line="168" column="76" selection-start="7742" selection-end="7742" vertical-scroll-proportion="-14.461538" vertical-offset="2157" max-vertical-offset="6681">
           <folding>
             <element signature="e#4289#4297#0" expanded="true" />
             <element signature="e#5182#5190#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/Launcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4540" column="38" selection-start="182696" selection-end="182696" vertical-scroll-proportion="0.0" vertical-offset="73285" max-vertical-offset="81158">
+          <folding>
+            <element signature="e#10645#10655#0" expanded="true" />
+            <element signature="e#10725#10735#0" expanded="true" />
+            <element signature="e#11378#11396#0" expanded="true" />
+            <element signature="e#11816#11845#0" expanded="true" />
+            <element signature="e#12631#12640#0" expanded="true" />
+            <element signature="e#12705#12713#0" expanded="true" />
+            <element signature="e#14049#14070#0" expanded="true" />
+            <element signature="e#15747#15763#0" expanded="true" />
+            <element signature="e#85113#85166#0" expanded="true" />
+            <element signature="e#85653#85695#0" expanded="true" />
+            <element signature="e#86233#86262#0" expanded="true" />
+            <element signature="e#98855#98859#0" expanded="true" />
+            <element signature="e#99518#99522#0" expanded="true" />
+            <element signature="e#146311#146357#0" expanded="true" />
+            <element signature="e#154050#154060#0" expanded="true" />
+            <element signature="e#196034#196057#0" expanded="true" />
+            <element signature="e#196199#196232#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/LauncherProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="586" column="72" selection-start="24305" selection-end="24305" vertical-scroll-proportion="0.0" vertical-offset="8770" max-vertical-offset="24990">
+          <folding>
+            <element signature="e#50977#51032#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/SavedWallpaperImages.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="46" selection-start="1533" selection-end="1546" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3621">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/Stats.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="52" selection-start="1000" selection-end="1000" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3315">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/WallpaperCropActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="55" selection-start="1967" selection-end="1967" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="11951">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Android.mk">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="35" selection-start="1062" selection-end="1062" vertical-scroll-proportion="0.0" vertical-offset="440" max-vertical-offset="1156">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="49" selection-start="832" selection-end="832" vertical-scroll-proportion="0.0" vertical-offset="219" max-vertical-offset="5202">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-af/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="78" selection-start="862" selection-end="862" vertical-scroll-proportion="0.0" vertical-offset="189" max-vertical-offset="2210">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-ar/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="65" selection-start="849" selection-end="849" vertical-scroll-proportion="0.33267328" vertical-offset="189" max-vertical-offset="2210">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -4526,7 +4526,7 @@ public class Launcher extends Activity
      * Prints out out state for debugging.
      */
     public void dumpState() {
-        Log.d(TAG, "BEGIN launcher3 dump state for launcher " + this);
+        Log.d(TAG, "BEGIN Jiayu launcher dump state for launcher " + this);
         Log.d(TAG, "mSavedState=" + mSavedState);
         Log.d(TAG, "mWorkspaceLoading=" + mWorkspaceLoading);
         Log.d(TAG, "mRestoring=" + mRestoring);
@@ -4538,7 +4538,7 @@ public class Launcher extends Activity
         if (mAppsCustomizeContent != null) {
             mAppsCustomizeContent.dumpState();
         }
-        Log.d(TAG, "END launcher3 dump state");
+        Log.d(TAG, "END Jiayu launcher dump state");
     }
 
     @Override
