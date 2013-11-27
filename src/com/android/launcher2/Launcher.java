@@ -534,8 +534,8 @@ public class Launcher extends Activity
     }
 
     private void asignarPropiedades(DeviceProfile grid) {
-        grid.numRows=Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_rows", 4);
-        grid.numColumns=Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_cols", 4);
+        grid.numRows=Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_cols", 4);
+        grid.numColumns=Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_rows", 4);
         double calc2= jiayuLauncherConfig.calcularPercentFormula(Utils.getSharedPreferencesInt(getApplicationContext(), "hotseat_icons", 5));
         calc2=calc2/100;
         int hotseatIconSize=(int)(grid.hotseatIconSize*calc2);
