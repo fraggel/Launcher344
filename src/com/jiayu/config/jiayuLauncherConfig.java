@@ -19,6 +19,8 @@ import android.widget.TextView;
 import com.android.launcher.R;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -37,6 +39,9 @@ public class jiayuLauncherConfig extends Activity implements SeekBar.OnSeekBarCh
     Switch show_google_bar=null;
     Switch show_customcontent=null;
     Spinner spinnerApps=null;
+    HashMap<String,String> componentList = new HashMap<String, String>();
+    HashMap<String,String> componentListPack = new HashMap<String, String>();
+    List<String> componentListString=new ArrayList<String>();
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.jiayu_launcher_config);
@@ -80,6 +85,9 @@ public class jiayuLauncherConfig extends Activity implements SeekBar.OnSeekBarCh
 
     private void initValues() {
         try {
+            componentList.clear();
+            componentListString.clear();
+            componentListPack.clear();
             workspace_rows.setProgress(Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_rows", 4));
             workspace_rows_text.setText(String.valueOf(workspace_rows.getProgress()));
             workspace_cols.setProgress(Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_cols", 4));
@@ -92,7 +100,8 @@ public class jiayuLauncherConfig extends Activity implements SeekBar.OnSeekBarCh
             show_google_bar.setChecked(Utils.getSharedPreferencesBoolean(getApplicationContext(), "show_google_bar", true));
             show_customcontent.setChecked(Utils.getSharedPreferencesBoolean(getApplicationContext(), "show_customcontent", false));
 
-            ArrayAdapter<String> dataAdapter3 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, getInstalledComponentList());
+            getInstalledComponentList();
+            ArrayAdapter<String> dataAdapter3 = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, componentListString);
             dataAdapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spinnerApps.setAdapter(dataAdapter3);
             spinnerApps.setEnabled(show_customcontent.isChecked());
@@ -101,14 +110,12 @@ public class jiayuLauncherConfig extends Activity implements SeekBar.OnSeekBarCh
 
         }
     }
-    private List<String> getInstalledComponentList()
+    private void getInstalledComponentList()
             throws PackageManager.NameNotFoundException {
         final Intent mainIntent = new Intent(Intent.ACTION_MAIN, null);
         mainIntent.addCategory(Intent.CATEGORY_LAUNCHER);
         List<ResolveInfo> ril = getPackageManager().queryIntentActivities(mainIntent, 0);
-        List<String> componentList = new ArrayList<String>();
         String name = null;
-        componentList.add("Google NOW");
         for (ResolveInfo ri : ril) {
             if (ri.activityInfo != null) {
                 Resources res = getPackageManager().getResourcesForApplication(ri.activityInfo.applicationInfo);
@@ -118,73 +125,40 @@ public class jiayuLauncherConfig extends Activity implements SeekBar.OnSeekBarCh
                     name = ri.activityInfo.applicationInfo.loadLabel(
                             getPackageManager()).toString();
                 }
-                componentList.add(name);
+                componentList.put(ri.activityInfo.packageName,name);
+                componentListPack.put(name,ri.activityInfo.packageName);
+                componentListString.add(name);
             }
         }
-        return componentList;
+        componentListString=reordenarLista(componentListString);
     }
-    private String getPackageComponent(String nombre)
-            throws PackageManager.NameNotFoundException {
-        final Intent mainIntent = new Intent(Intent.ACTION_MAIN, null);
-        mainIntent.addCategory(Intent.CATEGORY_LAUNCHER);
-        List<ResolveInfo> ril = getPackageManager().queryIntentActivities(mainIntent, 0);
-        String tmpName="";
-        String dev="com.google.android.googlequicksearchbox";
-        if("Google NOW".equals(nombre)){
-            dev="com.google.android.googlequicksearchbox";
-        }
-        for (ResolveInfo ri : ril) {
-            if (ri.activityInfo != null) {
-                Resources res = getPackageManager().getResourcesForApplication(ri.activityInfo.applicationInfo);
-                if (ri.activityInfo.labelRes != 0) {
-                    tmpName = res.getString(ri.activityInfo.labelRes);
-                } else {
-                    tmpName = ri.activityInfo.applicationInfo.loadLabel(
-                            getPackageManager()).toString();
-                }
-                if(nombre.equals(tmpName)){
-                    dev=ri.activityInfo.packageName;
-                }
 
-            }
-        }
-        return dev;
-    }
-    private int getSelected(String nombre)
+    private String getPackageName(String nombreApp)
             throws PackageManager.NameNotFoundException {
-        final Intent mainIntent = new Intent(Intent.ACTION_MAIN, null);
-        mainIntent.addCategory(Intent.CATEGORY_LAUNCHER);
-        List<ResolveInfo> ril = getPackageManager().queryIntentActivities(mainIntent, 0);
-        String tmpName="";
+        //recorrer el hashmap y ver el texto de ese package
+        //al tener el nombre, buscar la posicion en el componentListString
+        String s = componentListPack.get(nombreApp);
+        return s;
+    }
+    private String getName(String nombrePackage)
+            throws PackageManager.NameNotFoundException {
+        //recorrer el hashmap y ver el texto de ese package
+        //al tener el nombre, buscar la posicion en el componentListString
+        String s = componentList.get(nombrePackage);
+        return s;
+    }
+    private int getSelected(String nombrePackage)
+            throws PackageManager.NameNotFoundException {
         int id=-1;
-        int x=1;
-        if("com.google.android.googlequicksearchbox".equals(nombre)){
-            id=0;
-        }else{
-            id=-1;
-        }
-        if(id!=0){
-            for (ResolveInfo ri : ril) {
-                if (ri.activityInfo != null) {
-                    Resources res = getPackageManager().getResourcesForApplication(ri.activityInfo.applicationInfo);
-                    if (ri.activityInfo.labelRes != 0) {
-                        tmpName = res.getString(ri.activityInfo.labelRes);
-                    } else {
-                        tmpName = ri.activityInfo.applicationInfo.loadLabel(
-                                getPackageManager()).toString();
-                    }
-                    if(nombre.equals(ri.activityInfo.packageName)){
-                        id=x;
-                        break;
-                    }
+        String s = componentList.get(nombrePackage);
+        id=componentListString.indexOf(s);
 
-                }
-                x++;
-            }
-        }
         return id;
     }
-
+    private List<String> reordenarLista(List<String> listaEntrada){
+        Collections.sort(listaEntrada);
+        return listaEntrada;
+    }
     @Override
     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 
@@ -395,7 +369,8 @@ public class jiayuLauncherConfig extends Activity implements SeekBar.OnSeekBarCh
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         try {
-            Utils.setSharedPreferences(getApplicationContext(), "app_custom_content",getPackageComponent(getInstalledComponentList().get(position)));
+            Utils.setSharedPreferences(getApplicationContext(), "app_custom_content",getPackageName(componentListString.get(position)));
+            Utils.setSharedPreferences(getApplicationContext(), "app_custom_content_name",getName(componentListString.get(position)));
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }
