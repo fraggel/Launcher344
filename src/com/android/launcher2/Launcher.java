@@ -124,6 +124,7 @@ public class Launcher extends Activity
         implements View.OnClickListener, OnLongClickListener, LauncherModel.Callbacks,
                    View.OnTouchListener,MTKUnreadLoader.UnreadCallbacks {
     static final String TAG = "Launcher";
+    static final String TAG_SURFACEWIDGET = "MTKWidgetView";
     static final boolean LOGD = false;
 
     static final boolean PROFILE_STARTUP = false;
@@ -1031,6 +1032,7 @@ public class Launcher extends Activity
         InstallShortcutReceiver.enableInstallQueue();
 
         super.onPause();
+        mWorkspace.onPauseWhenShown(mWorkspace.getCurrentPage());
         mPaused = true;
         mDragController.cancelDrag();
         mDragController.resetLastGestureUpTime();
@@ -1790,6 +1792,7 @@ public class Launcher extends Activity
             mWorkspace.exitWidgetResizeMode();
             if (alreadyOnHome && mState == State.WORKSPACE && !mWorkspace.isTouchActive() &&
                     openFolder == null) {
+                mWorkspace.moveOutAppWidget(mWorkspace.getCurrentPage());
                 mWorkspace.moveToDefaultScreen(true);
             }
 
@@ -2752,6 +2755,7 @@ public class Launcher extends Activity
             } else {
                 if (!(itemUnderLongClick instanceof Folder)) {
                     // User long pressed on an item
+                    mWorkspace.startDragAppWidget(mWorkspace.getCurrentPage());
                     mWorkspace.startDrag(longClickCellInfo);
                 }
             }
@@ -3148,6 +3152,7 @@ public class Launcher extends Activity
     }
 
     protected void showWorkspace(boolean animated) {
+        mWorkspace.stopCovered(mWorkspace.getCurrentPage());
         showWorkspace(animated, null);
     }
 
@@ -3209,6 +3214,7 @@ public class Launcher extends Activity
         if (resetPageToZero) {
             mAppsCustomizeTabHost.reset();
         }
+        mWorkspace.startCovered(mWorkspace.getCurrentPage());
         showAppsCustomizeHelper(animated, false, contentType);
         mAppsCustomizeTabHost.requestFocus();
 
@@ -3944,7 +3950,7 @@ public class Launcher extends Activity
 
         item.hostView.setTag(item);
         item.onBindAppWidget(this);
-
+        mWorkspace.setAppWidgetIdAndScreen(item.hostView, mWorkspace.getCurrentPage(), appWidgetId);
         workspace.addInScreen(item.hostView, item.container, item.screenId, item.cellX,
                 item.cellY, item.spanX, item.spanY, false);
         addWidgetToAutoAdvanceIfNeeded(item.hostView, appWidgetInfo);

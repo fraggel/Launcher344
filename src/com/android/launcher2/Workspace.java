@@ -2568,17 +2568,17 @@ public class Workspace extends SmoothPagedView
                             hotseat.getOrderInHotseat(mTargetCell[0], mTargetCell[1]))) {
                         return false;
                     }
-                    if (d.dragInfo instanceof PendingAddWidgetInfo) {
-                        PendingAddWidgetInfo info = (PendingAddWidgetInfo) d.dragInfo;
-                        if (searchIMTKWidget(this, info.componentName.getClassName()) != null) {
-                            mLauncher.showOnlyOneWidgetMessage(info);
-                            return false;
-                        }
-                    }
                 }
 
                 mLauncher.showOutOfSpaceMessage(isHotseat);
                 return false;
+            }
+            if (d.dragInfo instanceof PendingAddWidgetInfo) {
+                PendingAddWidgetInfo info = (PendingAddWidgetInfo) d.dragInfo;
+                if (searchIMTKWidget(this, info.componentName.getClassName()) != null) {
+                    mLauncher.showOnlyOneWidgetMessage(info);
+                    return false;
+                }
             }
         }
 
@@ -2899,6 +2899,9 @@ public class Workspace extends SmoothPagedView
                 cell.setVisibility(VISIBLE);
             }
             parent.onDropChild(cell);
+            if (mTargetCell[0] == -1 && mTargetCell[1] == -1) {
+                stopDragAppWidget((int)mDragInfo.screenId);
+            }
         }
     }
 

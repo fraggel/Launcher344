@@ -713,7 +713,12 @@ public abstract class PagedView extends ViewGroup implements ViewGroup.OnHierarc
             return true;
         } else if (mNextPage != INVALID_PAGE) {
             sendScrollAccessibilityEvent();
-
+            moveInAppWidget(mNextPage);
+            sCanCallEnterAppWidget = true;
+            if (mNextPage != mCurrentPage) {
+                leaveAppWidget(mCurrentPage);
+                enterAppWidget(mNextPage);
+            }
             mCurrentPage = Math.max(0, Math.min(mNextPage, getPageCount() - 1));
             mNextPage = INVALID_PAGE;
             notifyPageSwitchListener();
