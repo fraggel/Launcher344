@@ -184,10 +184,16 @@ public class jiayuLauncherConfig extends Activity implements SeekBar.OnSeekBarCh
     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
 
             if(seekBar.getId()==R.id.workspace_rows){
+                if(progress<1){
+                    progress=1;
+                }
                 Utils.setSharedPreferencesInt(getApplicationContext(), "workspace_rows", progress);
                 workspace_rows_text.setText(String.valueOf(progress));
                 resetLauncher();
             }else if(seekBar.getId()==R.id.workspace_cols){
+                if(progress<1){
+                    progress=1;
+                }
                 Utils.setSharedPreferencesInt(getApplicationContext(), "workspace_cols", progress);
                 workspace_cols_text.setText(String.valueOf(progress));
                 resetLauncher();

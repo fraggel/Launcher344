@@ -77,7 +77,8 @@
         android:icon="@mipmap/ic_launcher_home"
         android:hardwareAccelerated="true"
         android:largeHeap="@bool/config_largeHeap"
-        android:supportsRtl="true">
+        android:supportsRtl="true"
+        android:allowBackup="true">
         <activity
             android:name="com.android.launcher2.Launcher"
             android:launchMode="singleTask"
