@@ -87,7 +87,8 @@
             android:theme="@style/Theme"
             android:configChanges="mcc|mnc"
             android:windowSoftInputMode="adjustPan"
-            android:screenOrientation="nosensor">
+            android:screenOrientation="nosensor"
+            android:hardwareAccelerated="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.HOME" />
@@ -100,7 +101,8 @@
             android:name="com.android.launcher2.ToggleWeightWatcher"
             android:label="@string/toggle_weight_watcher"
             android:enabled="@bool/debug_memory_enabled"
-            android:icon="@mipmap/ic_launcher_home">
+            android:icon="@mipmap/ic_launcher_home"
+            android:hardwareAccelerated="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -114,7 +116,8 @@
             android:label="@string/pick_wallpaper"
             android:icon="@mipmap/ic_launcher_wallpaper"
             android:finishOnCloseSystemDialogs="true"
-            android:process=":wallpaper_chooser">
+            android:process=":wallpaper_chooser"
+            android:hardwareAccelerated="true">
             <intent-filter>
                 <action android:name="android.intent.action.SET_WALLPAPER" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -127,7 +130,8 @@
             android:label="@string/crop_wallpaper"
             android:icon="@mipmap/ic_launcher_wallpaper"
             android:finishOnCloseSystemDialogs="true"
-            android:process=":wallpaper_chooser">
+            android:process=":wallpaper_chooser"
+            android:hardwareAccelerated="true">
             <intent-filter>
                 <action android:name="android.service.wallpaper.CROP_AND_SET_WALLPAPER" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -143,6 +147,7 @@
             android:enabled="@bool/debug_memory_enabled"
             android:excludeFromRecents="true"
             android:icon="@mipmap/ic_launcher_home"
+            android:hardwareAccelerated="true"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

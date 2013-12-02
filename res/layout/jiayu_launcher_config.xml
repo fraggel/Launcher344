@@ -27,6 +27,18 @@
             android:id="@+id/textView3"
             android:paddingLeft="10dp"/>
 
+        <NumberPicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/numberPicker2"
+                android:layout_gravity="left|center_vertical"/>
+
+        <NumberPicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/numberPicker"
+                android:layout_gravity="left|center_vertical"/>
+
         <SeekBar
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"

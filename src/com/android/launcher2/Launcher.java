@@ -1302,9 +1302,10 @@ public class Launcher extends Activity
         mOverviewPanel.setAlpha(0f);
 
         // Setup the workspace
-        mWorkspace.setHapticFeedbackEnabled(false);
+        mWorkspace.setHapticFeedbackEnabled(true);
         mWorkspace.setOnLongClickListener(this);
         mWorkspace.setup(dragController);
+
         dragController.addDragListener(mWorkspace);
 
         // Get the search/delete bar
