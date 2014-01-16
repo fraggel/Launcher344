@@ -142,6 +142,7 @@ public class Launcher extends Activity
 
     private static final int REQUEST_BIND_APPWIDGET = 11;
     static final int MAX_UNREAD_COUNT = 99;
+    boolean showBar=false;
     private MTKUnreadLoader mUnreadLoader;
     /**
      * IntentStarter uses request codes starting with this. This must be greater than all activity
@@ -297,7 +298,7 @@ public class Launcher extends Activity
 
     // Determines how long to wait after a rotation before restoring the screen orientation to
     // match the sensor state.
-    private final int mRestoreScreenOrientationDelay = 500;
+    private final int mRestoreScreenOrientationDelay = 300;
 
     // External icons saved in case of resource changes, orientation, etc.
     private static Drawable.ConstantState[] sGlobalSearchIcon = new Drawable.ConstantState[2];
@@ -485,6 +486,8 @@ public class Launcher extends Activity
         }
 
         setContentView(R.layout.launcher);
+
+
         checkForLocaleChange();
 
         setupViews();
@@ -549,6 +552,12 @@ public class Launcher extends Activity
         grid.updateFromConfiguration(getResources(), grid.widthPx, grid.heightPx, grid.availableWidthPx, grid.availableHeightPx);
         //grid.allAppsNumCols=Utils.getSharedPreferencesInt(getApplicationContext(), "all_apps_rows", 5);
         //grid.allAppsNumRows=Utils.getSharedPreferencesInt(getApplicationContext(), "all_apps_cols", 4);
+        if(!Utils.getSharedPreferencesBoolean(getApplicationContext(), "show_google_bar", true)){
+            showBar=false;
+        }else{
+            showBar=true;
+        }
+        grid.setShowBar(showBar);
     }
 
     protected void onUserLeaveHint() {

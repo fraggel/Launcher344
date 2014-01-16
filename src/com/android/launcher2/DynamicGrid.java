@@ -97,6 +97,11 @@ class DeviceProfileQuery {
     int searchBarSpaceHeightPx;
     int searchBarHeightPx;
     int pageIndicatorHeightPx;
+     boolean showBar=true;
+     public void setShowBar(boolean showB){
+         this.showBar=showB;
+
+     }
     public void setNumRows(float rows){
          this.numRows=rows;
 
@@ -311,12 +316,19 @@ class DeviceProfileQuery {
     }
 
     Rect getWorkspacePadding(int orientation) {
+
         Rect padding = new Rect();
         if (orientation == CellLayout.LANDSCAPE &&
                 transposeLayoutWithOrientation) {
             // Pad the left and right of the workspace with search/hotseat bar sizes
-            padding.set(searchBarSpaceHeightPx, edgeMarginPx,
+
+            if(showBar){
+                padding.set(searchBarSpaceHeightPx, edgeMarginPx,
                     hotseatBarHeightPx, edgeMarginPx);
+            }else{
+                padding.set(2*edgeMarginPx, edgeMarginPx,
+                        hotseatBarHeightPx*2, edgeMarginPx);
+            }
         } else {
             if (isTablet()) {
                 // Pad the left and right of the workspace to ensure consistent spacing
@@ -328,16 +340,30 @@ class DeviceProfileQuery {
                 //      that into account here too.
                 int gap = (int) ((width - 2 * edgeMarginPx -
                         (numColumns * cellWidthPx)) / (2 * (numColumns + 1)));
-                padding.set(edgeMarginPx + gap,
+                if(showBar){
+                    padding.set(edgeMarginPx + gap,
                         searchBarSpaceHeightPx,
                         edgeMarginPx + gap,
                         hotseatBarHeightPx + pageIndicatorHeightPx);
+                }else{
+                padding.set(edgeMarginPx + gap,
+                        2*edgeMarginPx,
+                        edgeMarginPx + gap,
+                        hotseatBarHeightPx + pageIndicatorHeightPx);
+                }
             } else {
                 // Pad the top and bottom of the workspace with search/hotseat bar sizes
-                padding.set(desiredWorkspaceLeftRightMarginPx - defaultWidgetPadding.left,
-                        searchBarSpaceHeightPx,
-                        desiredWorkspaceLeftRightMarginPx - defaultWidgetPadding.right,
-                        hotseatBarHeightPx + pageIndicatorHeightPx);
+                if(showBar){
+                    padding.set(desiredWorkspaceLeftRightMarginPx - defaultWidgetPadding.left,
+                            searchBarSpaceHeightPx,
+                            desiredWorkspaceLeftRightMarginPx - defaultWidgetPadding.right,
+                            hotseatBarHeightPx + pageIndicatorHeightPx);
+                }else{
+                    padding.set(desiredWorkspaceLeftRightMarginPx - defaultWidgetPadding.left,
+                            2*edgeMarginPx,
+                            desiredWorkspaceLeftRightMarginPx - defaultWidgetPadding.right,
+                            hotseatBarHeightPx + pageIndicatorHeightPx);
+                }
             }
         }
         return padding;
