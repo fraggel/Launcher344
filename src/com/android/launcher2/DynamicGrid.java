@@ -59,6 +59,7 @@ class DeviceProfileQuery {
     float minHeightDps;
     float numRows;
     float numColumns;
+    float allAppsIconSize;
     float iconSize;
     float iconTextSize;
     float numHotseatIcons;
@@ -92,6 +93,7 @@ class DeviceProfileQuery {
     int hotseatAllAppsRank;
     int allAppsNumRows;
     int allAppsNumCols;
+    int allAppsIconSizePx;
     int searchBarSpaceWidthPx;
     int searchBarSpaceMaxWidthPx;
     int searchBarSpaceHeightPx;
@@ -111,7 +113,7 @@ class DeviceProfileQuery {
 
      }
     DeviceProfile(String n, float w, float h, float r, float c,
-                  float is, float its, float hs, float his) {
+                  float is,float ais, float its, float hs, float his) {
         // Ensure that we have an odd number of hotseat items (since we need to place all apps)
         if (!AppsCustomizePagedView.DISABLE_ALL_APPS && hs % 2 == 0) {
             throw new RuntimeException("All Device Profiles must have an odd number of hotseat spaces");
@@ -122,6 +124,7 @@ class DeviceProfileQuery {
         minHeightDps = h;
         numRows = r;
         numColumns = c;
+        allAppsIconSize=ais;
         iconSize = is;
         iconTextSize = its;
         numHotseatIcons = hs;
@@ -168,6 +171,13 @@ class DeviceProfileQuery {
         iconSize = invDistWeightedInterpolate(minWidth, minHeight, points);
         iconSizePx = DynamicGrid.pxFromDp(iconSize, dm);
 
+        points.clear();
+        for (DeviceProfile p : profiles) {
+            points.add(new DeviceProfileQuery(p.minWidthDps, p.minHeightDps, p.allAppsIconSize));
+        }
+        allAppsIconSize = invDistWeightedInterpolate(minWidth, minHeight, points);
+        allAppsIconSizePx = DynamicGrid.pxFromDp(allAppsIconSize, dm);
+
         // Interpolate the icon text size
         points.clear();
         for (DeviceProfile p : profiles) {
@@ -191,6 +201,7 @@ class DeviceProfileQuery {
         hotseatIconSize = invDistWeightedInterpolate(minWidth, minHeight, points);
         hotseatIconSizePx = DynamicGrid.pxFromDp(hotseatIconSize, dm);
         hotseatAllAppsRank = (int) (numColumns / 2);
+
 
         // Calculate other vars based on Configuration
         updateFromConfiguration(resources, wPx, hPx, awPx, ahPx);
@@ -254,14 +265,14 @@ class DeviceProfileQuery {
                 CellLayout.LANDSCAPE : CellLayout.PORTRAIT);
         int pageIndicatorOffset =
             resources.getDimensionPixelSize(R.dimen.apps_customize_page_indicator_offset);
-        if (isLandscape) {
+        /*if (isLandscape) {
             allAppsNumRows = (availableHeightPx - pageIndicatorOffset - 4 * edgeMarginPx) /
                     (iconSizePx + iconTextSizePx + 2 * edgeMarginPx);
         } else {
             allAppsNumRows = (int) numRows + 1;
         }
         allAppsNumCols = (availableWidthPx - padding.left - padding.right - 2 * edgeMarginPx) /
-                (iconSizePx + 2 * edgeMarginPx);
+                (iconSizePx + 2 * edgeMarginPx);*/
     }
 
     private float dist(PointF p0, PointF p1) {
@@ -551,26 +562,28 @@ public class DynamicGrid {
         calc=calc/100;
         double calc2= jiayuLauncherConfig.calcularPercentFormula(Utils.getSharedPreferencesInt(context, "hotseat_icons", 5));
         calc2=calc2/100;
+        double calc3= jiayuLauncherConfig.calcularPercentFormula(Utils.getSharedPreferencesInt(context, "allapps_icons", 5));
+        calc3=calc3/100;
         // Our phone profiles include the bar sizes in each orientation
         deviceProfiles.add(new DeviceProfile("Super Short Stubby",
-                255, 300,  2, 3,  (int)(48*calc), Math.max(13,(int)(13/calc)), (hasAA ? 5 : 4), 48));
+                255, 300,  2, 3,  (int)(48*calc),(int)(48*calc3), Math.max(13,(int)(13/calc)), (hasAA ? 5 : 4), 48));
         deviceProfiles.add(new DeviceProfile("Shorter Stubby",
-                255, 400,  3, 3,  (int)(48*calc), Math.max(13,(int)(13/calc)), (hasAA ? 5 : 4), 48));
+                255, 400,  3, 3,  (int)(48*calc),(int)(48*calc3), Math.max(13,(int)(13/calc)), (hasAA ? 5 : 4), 48));
         deviceProfiles.add(new DeviceProfile("Short Stubby",
-                275, 420,  3, 4,  (int)(48*calc), Math.max(13,(int)(13/calc)), (hasAA ? 5 : 4), 48));
+                275, 420,  3, 4,  (int)(48*calc),(int)(48*calc3), Math.max(13,(int)(13/calc)), (hasAA ? 5 : 4), 48));
         deviceProfiles.add(new DeviceProfile("Stubby",
-                255, 450,  3, 4,  (int)(48*calc), Math.max(13,(int)(13/calc)), (hasAA ? 5 : 4), 48));
+                255, 450,  3, 4,  (int)(48*calc),(int)(48*calc3), Math.max(13,(int)(13/calc)), (hasAA ? 5 : 4), 48));
         deviceProfiles.add(new DeviceProfile("Nexus S",
-                296, 491.33f,  4, 4,  (int)(48*calc), Math.max(13,(int)(13/calc)), (hasAA ? 5 : 4), 48));
+                296, 491.33f,  4, 4,  (int)(48*calc),(int)(48*calc3), Math.max(13,(int)(13/calc)), (hasAA ? 5 : 4), 48));
         deviceProfiles.add(new DeviceProfile("Nexus 4",
-                359, 518,  4, 4,  (int)(48*calc), Math.max(13,(int)(13/calc)), (hasAA ? 5 : 4), 56));
+                359, 518,  4, 4,  (int)(48*calc),(int)(48*calc3), Math.max(13,(int)(13/calc)), (hasAA ? 5 : 4), 56));
         // The tablet profile is odd in that the landscape orientation
         // also includes the nav bar on the side
         deviceProfiles.add(new DeviceProfile("Nexus 7",
-                575, 904,  6, 6,  (int)(72*calc), Math.max(14.4f,(int)(14.4f/calc)),  7, 60));
+                575, 904,  6, 6,  (int)(72*calc),(int)(72*calc3), Math.max(14.4f,(int)(14.4f/calc)),  7, 60));
         // Larger tablet profiles always have system bars on the top & bottom
         deviceProfiles.add(new DeviceProfile("Nexus 10",
-                727, 1207,  5, 8,  (int)(80*calc), Math.max(14.4f,(int)(14.4f/calc)),  9, 64));
+                727, 1207,  5, 8,  (int)(80*calc),(int)(80*calc3), Math.max(14.4f,(int)(14.4f/calc)),  9, 64));
         /*
         deviceProfiles.add(new DeviceProfile("Nexus 7",
                 600, 960,  5, 5,  72, 14.4f,  5, 60));
@@ -578,7 +591,7 @@ public class DynamicGrid {
                 800, 1280,  5, 5,  80, 14.4f, (hasAA ? 7 : 6), 64));
          */
         deviceProfiles.add(new DeviceProfile("20-inch Tablet",
-                1527, 2527,  7, 7,  (int)(100*calc), Math.max(20,(int)(20/calc)),  7, 72));
+                1527, 2527,  7, 7,  (int)(100*calc),(int)(100*calc3), Math.max(20,(int)(20/calc)),  7, 72));
         mMinWidth = dpiFromPx(minWidthPx, dm);
         mMinHeight = dpiFromPx(minHeightPx, dm);
         mProfile = new DeviceProfile(context, deviceProfiles,
@@ -597,7 +610,8 @@ public class DynamicGrid {
                 "Wd: " + mProfile.minWidthDps + ", Hd: " + mProfile.minHeightDps +
                 ", W: " + mProfile.widthPx + ", H: " + mProfile.heightPx +
                 " [r: " + mProfile.numRows + ", c: " + mProfile.numColumns +
-                ", is: " + mProfile.iconSizePx + ", its: " + mProfile.iconTextSize +
+                ", is: " + mProfile.iconSizePx +
+                ", ais: " + mProfile.allAppsIconSizePx +", its: " + mProfile.iconTextSize +
                 ", cw: " + mProfile.cellWidthPx + ", ch: " + mProfile.cellHeightPx +
                 ", hc: " + mProfile.numHotseatIcons + ", his: " + mProfile.hotseatIconSizePx + "]";
     }

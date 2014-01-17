@@ -538,8 +538,11 @@ public class Launcher extends Activity
     }
 
     private void asignarPropiedades(DeviceProfile grid) {
-        grid.numRows=Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_cols", 4);
-        grid.numColumns=Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_rows", 4);
+        grid.numRows=Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_rows", 4);
+        grid.numColumns=Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_cols", 4);
+        grid.allAppsNumRows=Utils.getSharedPreferencesInt(getApplicationContext(), "allapps_rows", 6);
+        grid.allAppsNumCols=Utils.getSharedPreferencesInt(getApplicationContext(), "allapps_cols", 6);
+
         double calc2= jiayuLauncherConfig.calcularPercentFormula(Utils.getSharedPreferencesInt(getApplicationContext(), "hotseat_icons", 5));
         calc2=calc2/100;
         int hotseatIconSize=(int)(grid.hotseatIconSize*calc2);
@@ -549,6 +552,7 @@ public class Launcher extends Activity
         double calc=jiayuLauncherConfig.calcularPercentFormula(Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_icons", 5));
         calc=calc/100;
         //int iconSize=(int)(grid.work*calc);
+
         grid.updateFromConfiguration(getResources(), grid.widthPx, grid.heightPx, grid.availableWidthPx, grid.availableHeightPx);
         //grid.allAppsNumCols=Utils.getSharedPreferencesInt(getApplicationContext(), "all_apps_rows", 5);
         //grid.allAppsNumRows=Utils.getSharedPreferencesInt(getApplicationContext(), "all_apps_cols", 4);
@@ -3093,7 +3097,7 @@ public class Launcher extends Activity
         }
 
         setPivotsForZoom(fromView, scaleFactor);
-        showHotseat(animated);
+        //showHotseat(animated);
         if (animated) {
             final LauncherViewPropertyAnimator scaleAnim =
                     new LauncherViewPropertyAnimator(fromView);

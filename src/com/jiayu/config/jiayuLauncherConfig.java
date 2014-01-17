@@ -40,6 +40,12 @@ public class jiayuLauncherConfig extends Activity implements SeekBar.OnSeekBarCh
     TextView workspace_cols_text=null;
     TextView hotseat_icons_text=null;
     TextView workspace_icons_text=null;
+    SeekBar allapps_rows =null;
+    SeekBar allapps_cols =null;
+    SeekBar allapps_icons=null;
+    TextView allapps_rows_text=null;
+    TextView allapps_cols_text=null;
+    TextView allapps_icons_text=null;
     Switch allow_rotation=null;
     Switch show_google_bar=null;
     Switch show_customcontent=null;
@@ -62,6 +68,19 @@ public class jiayuLauncherConfig extends Activity implements SeekBar.OnSeekBarCh
         hotseat_icons_text =(TextView)findViewById(R.id.hotseat_icons_text);
         workspace_icons_text=(TextView)findViewById(R.id.workspace_icons_text);
 
+        allapps_rows =(SeekBar)findViewById(R.id.allapps_rows);
+        allapps_cols =(SeekBar)findViewById(R.id.allapps_cols);
+        allapps_icons =(SeekBar)findViewById(R.id.allapps_icons);
+
+        workspace_rows_text =(TextView)findViewById(R.id.workspace_rows_text);
+        workspace_cols_text =(TextView)findViewById(R.id.workspace_cols_text);
+        hotseat_icons_text =(TextView)findViewById(R.id.hotseat_icons_text);
+        workspace_icons_text=(TextView)findViewById(R.id.workspace_icons_text);
+
+        allapps_rows_text =(TextView)findViewById(R.id.allapps_rows_text);
+        allapps_cols_text =(TextView)findViewById(R.id.allapps_cols_text);
+        allapps_icons_text =(TextView)findViewById(R.id.allapps_icons_text);
+
         allow_rotation =(Switch) findViewById(R.id.allow_rotation);
         show_google_bar =(Switch) findViewById(R.id.show_google_bar);
         show_customcontent =(Switch) findViewById(R.id.show_customcontent);
@@ -71,6 +90,9 @@ public class jiayuLauncherConfig extends Activity implements SeekBar.OnSeekBarCh
         workspace_cols.setOnSeekBarChangeListener(this);
         hotseat_icons.setOnSeekBarChangeListener(this);
         workspace_icons.setOnSeekBarChangeListener(this);
+        allapps_rows.setOnSeekBarChangeListener(this);
+        allapps_cols.setOnSeekBarChangeListener(this);
+        allapps_icons.setOnSeekBarChangeListener(this);
 
         allow_rotation.setOnCheckedChangeListener(this);
         show_google_bar.setOnCheckedChangeListener(this);
@@ -99,6 +121,12 @@ public class jiayuLauncherConfig extends Activity implements SeekBar.OnSeekBarCh
             workspace_rows_text.setText(String.valueOf(workspace_rows.getProgress()));
             workspace_cols.setProgress(Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_cols", 4));
             workspace_cols_text.setText(String.valueOf(workspace_cols.getProgress()));
+            allapps_rows.setProgress(Utils.getSharedPreferencesInt(getApplicationContext(), "allapps_rows", 6));
+            allapps_rows_text.setText(String.valueOf(allapps_rows.getProgress()));
+            allapps_cols.setProgress(Utils.getSharedPreferencesInt(getApplicationContext(), "allapps_cols", 5));
+            allapps_cols_text.setText(String.valueOf(allapps_cols.getProgress()));
+            allapps_icons.setProgress(Utils.getSharedPreferencesInt(getApplicationContext(), "allapps_icons", 5));
+            allapps_icons_text.setText(calcularPercentString(allapps_icons.getProgress()));
             hotseat_icons.setProgress(Utils.getSharedPreferencesInt(getApplicationContext(), "hotseat_icons", 5));
             hotseat_icons_text.setText(calcularPercentString(hotseat_icons.getProgress()));
             workspace_icons.setProgress(Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_icons", 5));
@@ -204,6 +232,24 @@ public class jiayuLauncherConfig extends Activity implements SeekBar.OnSeekBarCh
             }else if(seekBar.getId()==R.id.hotseat_icons){
                 Utils.setSharedPreferencesInt(getApplicationContext(), "hotseat_icons", progress);
                 hotseat_icons_text.setText(calcularPercentString(progress));
+                resetLauncher();
+            }else if(seekBar.getId()==R.id.allapps_rows){
+                if(progress<1){
+                    progress=1;
+                }
+                Utils.setSharedPreferencesInt(getApplicationContext(), "allapps_rows", progress);
+                allapps_rows_text.setText(String.valueOf(progress));
+                resetLauncher();
+            }else if(seekBar.getId()==R.id.allapps_cols){
+                if(progress<1){
+                    progress=1;
+                }
+                Utils.setSharedPreferencesInt(getApplicationContext(), "allapps_cols", progress);
+                allapps_cols_text.setText(String.valueOf(progress));
+                resetLauncher();
+            }else if(seekBar.getId()==R.id.allapps_icons){
+                Utils.setSharedPreferencesInt(getApplicationContext(), "allapps_icons", progress);
+                allapps_icons_text.setText(calcularPercentString(progress));
                 resetLauncher();
             }
 

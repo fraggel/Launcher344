@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Tamaño cuadrícula"
-            android:id="@+id/textView"
+            android:id="@+id/txtCuadricula"
             android:paddingLeft="10dp"/>
 
         <TextView
@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="Filas"
-            android:id="@+id/textView3"
+            android:id="@+id/txtWrows"
             android:paddingLeft="10dp"/>
 
 
@@ -53,7 +53,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="Columnas"
-            android:id="@+id/textView4"
+            android:id="@+id/txtWCols"
             android:paddingLeft="10dp"/>
 
         <SeekBar
@@ -76,11 +76,106 @@
             android:layout_gravity="center_horizontal" />
 
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Tamaño cajón"
+            android:id="@+id/txtCajon"
+            android:paddingLeft="10dp"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Filas"
+            android:id="@+id/txtCRows"
+            android:paddingLeft="10dp"/>
+
+
+        <SeekBar
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/allapps_rows"
+            android:max="7"
+            android:progress="5"
+            android:indeterminate="false"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingRight="20dp"
+            android:paddingLeft="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:id="@+id/allapps_rows_text"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Columnas"
+            android:id="@+id/txtCcols"
+            android:paddingLeft="10dp"/>
+
+        <SeekBar
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/allapps_cols"
+            android:progress="6"
+            android:max="7"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:id="@+id/allapps_cols_text"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Tamaño iconos cajón"
+            android:id="@+id/txtICajon"
+            android:layout_gravity="left|center_vertical"
+            android:paddingLeft="10dp"/>
+
+        <SeekBar
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/allapps_icons"
+            android:progress="5"
+            android:max="17"
+            android:longClickable="false"
+            android:layout_gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:id="@+id/allapps_icons_text"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Tamaño iconos escritorio"
-                android:id="@+id/textView3"
+                android:id="@+id/txtIEscritorio"
                 android:layout_gravity="left|center_vertical"
                 android:paddingLeft="10dp"/>
 
@@ -110,7 +205,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Tamaño iconos inferiores"
-            android:id="@+id/textView2"
+            android:id="@+id/txtIHotseat"
             android:paddingLeft="10dp"
             android:layout_gravity="center"/>
 
@@ -119,7 +214,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/hotseat_icons"
             android:progress="5"
-            android:max="10"
+            android:max="7"
             android:longClickable="true"
             android:layout_gravity="center"
             android:paddingLeft="20dp"
