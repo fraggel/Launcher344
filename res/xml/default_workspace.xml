@@ -3,16 +3,16 @@
   xmlns:launcher="http://schemas.android.com/apk/res/com.android.launcher">
     <scene launcher:scene="default" />
     <wallpaper launcher:wallpaper="default_wallpaper" />
-    <appwidget launcher:className="es.jiayu.brillojiayu.NewAppWidget" launcher:packageName="es.jiayu.brillojiayu" launcher:screen="0" launcher:x="0" launcher:y="0" launcher:spanX="1" launcher:spanY="1" />
-    <appwidget launcher:className="es.jiayu.datawidgetjiayu.NewAppWidget" launcher:packageName="es.jiayu.datawidgetjiayu" launcher:screen="0" launcher:x="1" launcher:y="0" launcher:spanX="1" launcher:spanY="1" />
-    <favorite launcher:className="es.jiayu.jiayuid.Inicio" launcher:packageName="es.jiayu.jiayuid" launcher:screen="0" launcher:x="2" launcher:y="1" />
-    <favorite launcher:className="com.android.vending.AssetBrowserActivity" launcher:packageName="com.android.vending" launcher:screen="0" launcher:x="3" launcher:y="2" />
-    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.gallery3d" launcher:screen="0" launcher:x="0" launcher:y="3" />
-    <favorite launcher:className="com.android.gallery3d.app.Gallery" launcher:packageName="com.android.gallery3d" launcher:screen="0" launcher:x="1" launcher:y="3" />
-    <favorite launcher:className="com.jrummy.apps.root.browser.activities.RootBrowserActivity" launcher:packageName="com.jrummy.root.browserfree" launcher:screen="0" launcher:x="2" launcher:y="3" />
-    <favorite launcher:className="com.android.settings.Settings" launcher:packageName="com.android.settings" launcher:screen="0" launcher:x="3" launcher:y="3" />
-    <appwidget launcher:className="com.mediatek.weather3dwidget.WeatherWidget" launcher:packageName="com.mediatek.weather3dwidget" launcher:screen="1" launcher:x="0" launcher:y="0" launcher:spanX="4" launcher:spanY="4" />
-    <appwidget launcher:className="com.android.settings.widget.SettingsAppWidgetProvider" launcher:packageName="com.android.settings" launcher:screen="2" launcher:x="0" launcher:y="0" launcher:spanX="4" launcher:spanY="1" />
+    <appwidget launcher:className="com.android.settings.widget.SettingsAppWidgetProvider" launcher:packageName="com.android.settings" launcher:screen="0" launcher:x="0" launcher:y="0" launcher:spanX="5" launcher:spanY="1" />
+    <appwidget launcher:className="es.jiayu.brillojiayu.NewAppWidget" launcher:packageName="es.jiayu.brillojiayu" launcher:screen="0" launcher:x="0" launcher:y="1" launcher:spanX="1" launcher:spanY="1" />
+    <appwidget launcher:className="es.jiayu.datawidgetjiayu.NewAppWidget" launcher:packageName="es.jiayu.datawidgetjiayu" launcher:screen="0" launcher:x="1" launcher:y="1" launcher:spanX="1" launcher:spanY="1" />
+    <favorite launcher:className="es.jiayu.jiayuid.Inicio" launcher:packageName="es.jiayu.jiayuid" launcher:screen="0" launcher:x="3" launcher:y="2" />
+    <favorite launcher:className="com.android.vending.AssetBrowserActivity" launcher:packageName="com.android.vending" launcher:screen="0" launcher:x="4" launcher:y="3" />
+    <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.gallery3d" launcher:screen="0" launcher:x="0" launcher:y="4" />
+    <favorite launcher:className="com.android.gallery3d.app.Gallery" launcher:packageName="com.android.gallery3d" launcher:screen="0" launcher:x="1" launcher:y="4" />
+    <favorite launcher:className="com.jrummy.apps.root.browser.activities.RootBrowserActivity" launcher:packageName="com.jrummy.root.browserfree" launcher:screen="0" launcher:x="3" launcher:y="4" />
+    <favorite launcher:className="com.android.settings.Settings" launcher:packageName="com.android.settings" launcher:screen="0" launcher:x="4" launcher:y="4" />
+    <appwidget launcher:className="com.mediatek.weather3dwidget.WeatherWidget" launcher:packageName="com.mediatek.weather3dwidget" launcher:screen="1" launcher:x="0" launcher:y="0" launcher:spanX="5" launcher:spanY="5" />
     <favorite launcher:className="com.android.contacts.activities.DialtactsActivity" launcher:packageName="com.android.contacts" launcher:container="-101" launcher:screen="0" launcher:x="0" launcher:y="0" />
     <favorite launcher:className="com.android.contacts.activities.PeopleActivity" launcher:packageName="com.android.contacts" launcher:container="-101" launcher:screen="1" launcher:x="1" launcher:y="0" />
     <favorite launcher:className="com.android.mms.ui.BootActivity" launcher:packageName="com.android.mms" launcher:container="-101" launcher:screen="3" launcher:x="3" launcher:y="0" />

@@ -33,7 +33,9 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.FrameLayout;
 
 import com.android.launcher.R;
-import com.jiayu.config.jiayuLauncherConfig;
+import com.jiayu.config.jiayuLauncherConfigCajon;
+import com.jiayu.config.jiayuLauncherConfigEscritorio;
+import com.jiayu.config.jiayuLauncherConfigInferior;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -558,11 +560,11 @@ public class DynamicGrid {
         ArrayList<DeviceProfile> deviceProfiles =
                 new ArrayList<DeviceProfile>();
         boolean hasAA = !AppsCustomizePagedView.DISABLE_ALL_APPS;
-        double calc= jiayuLauncherConfig.calcularPercentFormula(Utils.getSharedPreferencesInt(context, "workspace_icons", 5));
+        double calc= jiayuLauncherConfigEscritorio.calcularPercentFormula(Utils.getSharedPreferencesInt(context, "workspace_icons", 10));
         calc=calc/100;
-        double calc2= jiayuLauncherConfig.calcularPercentFormula(Utils.getSharedPreferencesInt(context, "hotseat_icons", 5));
+        double calc2= jiayuLauncherConfigInferior.calcularPercentFormula(Utils.getSharedPreferencesInt(context, "hotseat_icons", 7));
         calc2=calc2/100;
-        double calc3= jiayuLauncherConfig.calcularPercentFormula(Utils.getSharedPreferencesInt(context, "allapps_icons", 5));
+        double calc3= jiayuLauncherConfigCajon.calcularPercentFormula(Utils.getSharedPreferencesInt(context, "allapps_icons", 5));
         calc3=calc3/100;
         // Our phone profiles include the bar sizes in each orientation
         deviceProfiles.add(new DeviceProfile("Super Short Stubby",

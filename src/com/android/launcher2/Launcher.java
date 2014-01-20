@@ -52,6 +52,7 @@ import android.database.ContentObserver;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.PorterDuff;
 import android.graphics.Rect;
@@ -102,6 +103,8 @@ import android.widget.Toast;
 import com.android.launcher.R;
 import com.android.launcher2.DropTarget.DragObject;
 import com.jiayu.config.jiayuLauncherConfig;
+import com.jiayu.config.jiayuLauncherConfigEscritorio;
+import com.jiayu.config.jiayuLauncherConfigInferior;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -459,7 +462,13 @@ public class Launcher extends Activity
                 realSize.x, realSize.y,
                 dm.widthPixels, dm.heightPixels);
         //FRAGGEL
+        /*if(getResources().getBoolean(R.bool.show_search_bar)){
+            Utils.setSharedPreferencesBoolean(getApplicationContext(), "show_google_bar", true);
+        }else{
+            Utils.setSharedPreferencesBoolean(getApplicationContext(), "show_google_bar", false);
+        }*/
         asignarPropiedades(grid);
+
         // the LauncherApplication should call this, but in case of Instrumentation it might not be present yet
         mSharedPrefs = getSharedPreferences(LauncherAppState.getSharedPreferencesKey(),
                 Context.MODE_PRIVATE);
@@ -534,34 +543,45 @@ public class Launcher extends Activity
         // On large interfaces, we want the screen to auto-rotate based on the current orientation
         unlockScreenOrientation(false);
 
-        showFirstRunCling();
+        //showFirstRunCling();
     }
 
     private void asignarPropiedades(DeviceProfile grid) {
-        grid.numRows=Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_rows", 4);
-        grid.numColumns=Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_cols", 4);
+        grid.numRows=Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_rows", 5);
+        Utils.setSharedPreferencesInt(getApplicationContext(), "workspace_rows", Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_rows", 5));
+        grid.numColumns=Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_cols", 5);
+        Utils.setSharedPreferencesInt(getApplicationContext(), "workspace_cols", Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_cols", 5));
         grid.allAppsNumRows=Utils.getSharedPreferencesInt(getApplicationContext(), "allapps_rows", 6);
-        grid.allAppsNumCols=Utils.getSharedPreferencesInt(getApplicationContext(), "allapps_cols", 6);
-
-        double calc2= jiayuLauncherConfig.calcularPercentFormula(Utils.getSharedPreferencesInt(getApplicationContext(), "hotseat_icons", 5));
+        Utils.setSharedPreferencesInt(getApplicationContext(), "allapps_rows", Utils.getSharedPreferencesInt(getApplicationContext(), "allapps_rows", 6));
+        grid.allAppsNumCols=Utils.getSharedPreferencesInt(getApplicationContext(), "allapps_cols", 4);
+        Utils.setSharedPreferencesInt(getApplicationContext(), "allapps_cols", Utils.getSharedPreferencesInt(getApplicationContext(), "allapps_cols", 4));
+        double calc2= jiayuLauncherConfigInferior.calcularPercentFormula(Utils.getSharedPreferencesInt(getApplicationContext(), "hotseat_icons", 7));
         calc2=calc2/100;
         int hotseatIconSize=(int)(grid.hotseatIconSize*calc2);
         grid.hotseatIconSize=hotseatIconSize;
         grid.hotseatIconSizePx=(int)(grid.hotseatIconSizePx*calc2);
         grid.hotseatBarHeightPx=(int)(grid.hotseatBarHeightPx*calc2);
-        double calc=jiayuLauncherConfig.calcularPercentFormula(Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_icons", 5));
+        double calc= jiayuLauncherConfigEscritorio.calcularPercentFormula(Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_icons", 10));
         calc=calc/100;
-        //int iconSize=(int)(grid.work*calc);
 
-        grid.updateFromConfiguration(getResources(), grid.widthPx, grid.heightPx, grid.availableWidthPx, grid.availableHeightPx);
+
+        /*int iconSize=(int)(grid.iconSize*calc);
+        grid.iconSize=iconSize;*/
         //grid.allAppsNumCols=Utils.getSharedPreferencesInt(getApplicationContext(), "all_apps_rows", 5);
         //grid.allAppsNumRows=Utils.getSharedPreferencesInt(getApplicationContext(), "all_apps_cols", 4);
+        //Utils.setSharedPreferencesBoolean(getApplicationContext(), "show_customcontent", true);
+
+        Utils.setSharedPreferencesInt(getApplicationContext(), "hotseat_icons",Utils.getSharedPreferencesInt(getApplicationContext(), "hotseat_icons", 7));
+        Utils.setSharedPreferencesInt(getApplicationContext(), "workspace_icons",Utils.getSharedPreferencesInt(getApplicationContext(), "workspace_icons", 10));
+
         if(!Utils.getSharedPreferencesBoolean(getApplicationContext(), "show_google_bar", true)){
             showBar=false;
         }else{
             showBar=true;
         }
+        Utils.setSharedPreferencesBoolean(getApplicationContext(), "show_google_bar", showBar);
         grid.setShowBar(showBar);
+        grid.updateFromConfiguration(getResources(), grid.widthPx, grid.heightPx, grid.availableWidthPx, grid.availableHeightPx);
     }
 
     protected void onUserLeaveHint() {
@@ -1032,10 +1052,11 @@ public class Launcher extends Activity
         mWorkspace.updateInteractionForState();
 
         mWorkspace.onResume();
+
+
         if(Utils.getSharedPreferencesBoolean(getApplicationContext(), "need_restart", false)){
            Utils.setSharedPreferencesBoolean(getApplicationContext(), "need_restart", false);
            System.exit(0);
-           //onCreate(null);
         }
     }
 
@@ -1327,8 +1348,13 @@ public class Launcher extends Activity
 
         // Setup AppsCustomize
         mAppsCustomizeTabHost = (AppsCustomizeTabHost) findViewById(R.id.apps_customize_pane);
+
         mAppsCustomizeContent = (AppsCustomizePagedView)
                 mAppsCustomizeTabHost.findViewById(R.id.apps_customize_pane_content);
+        //int idColor= Utils.getSharedPreferencesInt(getBaseContext(),"allapps_transparency",R.color.transparent10);
+        int idColor= Utils.getSharedPreferencesInt(getBaseContext(),"allapps_transparency_color",R.color.transparent10);
+        mAppsCustomizeContent.setBackgroundResource(idColor);
+
         mAppsCustomizeContent.setup(this, dragController);
 
         // Setup the drag controller (drop targets have to be added in reverse order in priority)
@@ -3231,7 +3257,6 @@ public class Launcher extends Activity
         mWorkspace.startCovered(mWorkspace.getCurrentPage());
         showAppsCustomizeHelper(animated, false, contentType);
         mAppsCustomizeTabHost.requestFocus();
-
         // Change the state *after* we've called all the transition code
         mState = State.APPS_CUSTOMIZE;
 

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scrollbars="horizontal">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.jiayu.config.jiayuLauncherConfig">
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rotación"
+            android:id="@+id/allow_rotation"
+            android:layout_gravity="center_vertical|left"
+            android:padding="10dp"
+            android:singleLine="false"
+            android:switchPadding="50dp"/>
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mostrar Barra búsqueda"
+            android:id="@+id/show_google_bar"
+            android:layout_gravity="center_vertical|left"
+            android:padding="10dp"
+            android:switchPadding="50dp"/>
+
+        <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contenido Personalizado"
+                android:id="@+id/show_customcontent"
+                android:layout_gravity="left|center_vertical"
+                android:checked="false"
+                android:padding="10dp"
+                android:switchPadding="50dp"/>
+
+        <Spinner
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerApps"
+                android:layout_gravity="left|center_vertical"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="30dp"/>
+
+    </LinearLayout>
+</ScrollView>

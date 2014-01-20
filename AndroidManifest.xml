@@ -217,5 +217,9 @@
         <meta-data android:name="android.nfc.disable_beam_default"
                        android:value="true" />
         <activity android:name="com.jiayu.config.jiayuLauncherConfig" />
+        <activity android:name="com.jiayu.config.jiayuLauncherConfigGeneral" />
+        <activity android:name="com.jiayu.config.jiayuLauncherConfigCajon" />
+        <activity android:name="com.jiayu.config.jiayuLauncherConfigEscritorio" />
+        <activity android:name="com.jiayu.config.jiayuLauncherConfigInferior" />
     </application>
 </manifest>

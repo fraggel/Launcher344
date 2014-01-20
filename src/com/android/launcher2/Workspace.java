@@ -2835,10 +2835,11 @@ public class Workspace extends SmoothPagedView
                         final LauncherAppWidgetHostView hostView = (LauncherAppWidgetHostView) cell;
                         AppWidgetProviderInfo pinfo = hostView.getAppWidgetInfo();
                         pinfo.resizeMode=AppWidgetProviderInfo.RESIZE_BOTH;
-                        pinfo.minResizeHeight=-1;
+                        /*pinfo.minResizeHeight=-1;
                         pinfo.minResizeWidth=-1;
                         pinfo.minHeight=-1;
-                        pinfo.minWidth=-1;
+                        pinfo.minWidth=-1;*/
+
                         if (pinfo != null &&
                                 pinfo.resizeMode != AppWidgetProviderInfo.RESIZE_NONE) {
                             final Runnable addResizeFrame = new Runnable() {
