@@ -25,6 +25,7 @@ import com.android.launcher.R;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 
@@ -145,7 +146,16 @@ public class jiayuLauncherConfig extends Activity implements SeekBar.OnSeekBarCh
             spinnerApps.setAdapter(new MyAdapter(this, R.layout.spinnerrow, listaStringComponent));
             //spinnerApps.setAdapter(dataAdapter3);
             spinnerApps.setEnabled(show_customcontent.isChecked());
+            spinnerApps.setVisibility(View.VISIBLE);
             spinnerApps.setSelection(getSelected(Utils.getSharedPreferences(getApplicationContext(), "app_custom_contentName","Google")));
+            if(Utils.getSharedPreferencesBoolean(getApplicationContext(), "show_customcontent", false)){
+                spinnerApps.setEnabled(true);
+                spinnerApps.setVisibility(View.VISIBLE);
+            }else{
+                spinnerApps.setEnabled(false);
+                spinnerApps.setVisibility(View.INVISIBLE);
+            }
+
         }catch(Exception e){
 
         }
@@ -156,6 +166,7 @@ public class jiayuLauncherConfig extends Activity implements SeekBar.OnSeekBarCh
         mainIntent.addCategory(Intent.CATEGORY_LAUNCHER);
         List<ResolveInfo> ril = getPackageManager().queryIntentActivities(mainIntent, 0);
         String name = null;
+
         for (ResolveInfo ri : ril) {
             if (ri.activityInfo != null) {
                 Resources res = getPackageManager().getResourcesForApplication(ri.activityInfo.applicationInfo);
@@ -179,9 +190,26 @@ public class jiayuLauncherConfig extends Activity implements SeekBar.OnSeekBarCh
             }
             x++;
         }
-        //componentListString=reordenarLista(componentListString);
+        //componentListString=burbujaOrdenar(componentListString,componentListPack,componentListPackName);
     }
+    /*public static List<String> burbujaOrdenar(List<String> Array,HashMap<String,String> Array2,HashMap<String,String> Array3){
+        for(int j=0; j<Array.size();j++)
+        {
+            for (int i=j+1 ; i<Array.size(); i++)
+            {
+                if(Array.get(i).compareTo(Array.get(j))<0)
+                {
+                    String temp= Array.get(j);
+                    Array.add(j,Array.get(i));
+                    Array.add(i,temp);
 
+
+                }
+            }
+
+        }
+        return Array;
+    }*/
     private String getPackageName(String nombreApp)
             throws PackageManager.NameNotFoundException {
         //recorrer el hashmap y ver el texto de ese package
@@ -299,11 +327,13 @@ public class jiayuLauncherConfig extends Activity implements SeekBar.OnSeekBarCh
                 Utils.setSharedPreferencesBoolean(getApplicationContext(), "show_customcontent", true);
                 resetLauncher();
                 spinnerApps.setEnabled(true);
+                spinnerApps.setVisibility(View.VISIBLE);
             }else{
                 show_customcontent.setChecked(false);
                 Utils.setSharedPreferencesBoolean(getApplicationContext(), "show_customcontent", false);
                 resetLauncher();
                 spinnerApps.setEnabled(false);
+                spinnerApps.setVisibility(View.INVISIBLE);
             }
         }
 
