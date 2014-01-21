@@ -263,7 +263,8 @@ public class AppsCustomizePagedView extends PagedViewWithDraggableItems implemen
         mClingFocusedY = a.getInt(R.styleable.AppsCustomizePagedView_clingFocusedY, 0);
         a.recycle();
         mWidgetSpacingLayout = new PagedViewCellLayout(getContext());
-
+        mWidgetCountX=Utils.getSharedPreferencesInt(getContext(),"widgets_cols",mWidgetCountX);
+        mWidgetCountY=Utils.getSharedPreferencesInt(getContext(),"widgets_rows",mWidgetCountY);
         // The padding on the non-matched dimension for the default widget preview icons
         // (top + bottom)
         mFadeInAdjacentScreens = false;
@@ -1168,6 +1169,7 @@ public class AppsCustomizePagedView extends PagedViewWithDraggableItems implemen
             PendingAddItemInfo createItemInfo = null;
             PagedViewWidget widget = (PagedViewWidget) mLayoutInflater.inflate(
                     R.layout.apps_customize_widget, layout, false);
+
             if (rawInfo instanceof AppWidgetProviderInfo) {
                 // Fill in the widget information
                 AppWidgetProviderInfo info = (AppWidgetProviderInfo) rawInfo;

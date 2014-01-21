@@ -19,6 +19,10 @@ public class jiayuLauncherConfigCajon extends Activity implements SeekBar.OnSeek
     SeekBar allapps_rows =null;
     SeekBar allapps_cols =null;
     SeekBar allapps_icons=null;
+    SeekBar widgets_rows =null;
+    SeekBar widgets_cols =null;
+    TextView widgets_rows_text=null;
+    TextView widgets_cols_text=null;
     TextView allapps_rows_text=null;
     TextView allapps_cols_text=null;
     TextView allapps_icons_text=null;
@@ -30,6 +34,12 @@ public class jiayuLauncherConfigCajon extends Activity implements SeekBar.OnSeek
         allapps_rows =(SeekBar)findViewById(R.id.allapps_rows);
         allapps_cols =(SeekBar)findViewById(R.id.allapps_cols);
         allapps_icons =(SeekBar)findViewById(R.id.allapps_icons);
+
+        widgets_rows =(SeekBar)findViewById(R.id.widgets_rows);
+        widgets_cols =(SeekBar)findViewById(R.id.widgets_cols);
+
+        widgets_rows_text =(TextView)findViewById(R.id.widgets_rows_text);
+        widgets_cols_text =(TextView)findViewById(R.id.widgets_cols_text);
 
         allapps_rows_text =(TextView)findViewById(R.id.allapps_rows_text);
         allapps_cols_text =(TextView)findViewById(R.id.allapps_cols_text);
@@ -43,6 +53,8 @@ public class jiayuLauncherConfigCajon extends Activity implements SeekBar.OnSeek
         allapps_icons.setOnSeekBarChangeListener(this);
         allapps_transparency.setOnSeekBarChangeListener(this);
 
+        widgets_rows.setOnSeekBarChangeListener(this);
+        widgets_cols.setOnSeekBarChangeListener(this);
 
         initValues();
     }
@@ -71,6 +83,12 @@ public class jiayuLauncherConfigCajon extends Activity implements SeekBar.OnSeek
             allapps_transparency.setProgress(Utils.getSharedPreferencesInt(getApplicationContext(), "allapps_transparency", 10));
             allapps_transparency_text.setText(calcularPercent0100(allapps_transparency.getProgress()));
 
+            widgets_rows.setProgress(Utils.getSharedPreferencesInt(getApplicationContext(), "widgets_rows", 3));
+            widgets_rows_text.setText(String.valueOf(widgets_rows.getProgress()));
+            widgets_cols.setProgress(Utils.getSharedPreferencesInt(getApplicationContext(), "widgets_cols", 2));
+            widgets_cols_text.setText(String.valueOf(widgets_cols.getProgress()));
+
+
         }catch(Exception e){
 
         }
@@ -92,6 +110,20 @@ public class jiayuLauncherConfigCajon extends Activity implements SeekBar.OnSeek
                 }
                 Utils.setSharedPreferencesInt(getApplicationContext(), "allapps_cols", progress);
                 allapps_cols_text.setText(String.valueOf(progress));
+                resetLauncher();
+            }else if(seekBar.getId()==R.id.widgets_rows){
+                if(progress<1){
+                    progress=1;
+                }
+                Utils.setSharedPreferencesInt(getApplicationContext(), "widgets_rows", progress);
+                widgets_rows_text.setText(String.valueOf(progress));
+                resetLauncher();
+            }else if(seekBar.getId()==R.id.widgets_cols){
+                if(progress<1){
+                    progress=1;
+                }
+                Utils.setSharedPreferencesInt(getApplicationContext(), "widgets_cols", progress);
+                widgets_cols_text.setText(String.valueOf(progress));
                 resetLauncher();
             }else if(seekBar.getId()==R.id.transparencyApps){
                 if(progress<0){

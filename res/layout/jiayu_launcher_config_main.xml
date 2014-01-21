@@ -7,24 +7,24 @@
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Opciones generales"
+        android:text="Ajustes generales"
         android:id="@+id/btnGenerales" />
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Opciones cajón aplicaciones"
+        android:text="Ajustes cajón/widgets"
         android:id="@+id/btnCajon" />
 
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Opciones escritorio"
+        android:text="Ajustes escritorio"
         android:id="@+id/btnEscritorio" />
 
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Opciones botones inferiores"
+        android:text="Ajustes inferiores"
         android:id="@+id/btnInferiores" />
 
 </LinearLayout>
