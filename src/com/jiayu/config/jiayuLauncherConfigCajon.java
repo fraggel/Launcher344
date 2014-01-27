@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.android.launcher.R;
+import com.fraggel.launcher.R;
 
 /**
  * Created by Fraggel on 16/11/13.
@@ -19,6 +19,10 @@ public class jiayuLauncherConfigCajon extends Activity implements SeekBar.OnSeek
     SeekBar allapps_rows =null;
     SeekBar allapps_cols =null;
     SeekBar allapps_icons=null;
+    SeekBar widgets_rows =null;
+    SeekBar widgets_cols =null;
+    TextView widgets_rows_text=null;
+    TextView widgets_cols_text=null;
     TextView allapps_rows_text=null;
     TextView allapps_cols_text=null;
     TextView allapps_icons_text=null;
@@ -30,6 +34,12 @@ public class jiayuLauncherConfigCajon extends Activity implements SeekBar.OnSeek
         allapps_rows =(SeekBar)findViewById(R.id.allapps_rows);
         allapps_cols =(SeekBar)findViewById(R.id.allapps_cols);
         allapps_icons =(SeekBar)findViewById(R.id.allapps_icons);
+
+        widgets_rows =(SeekBar)findViewById(R.id.widgets_rows);
+        widgets_cols =(SeekBar)findViewById(R.id.widgets_cols);
+
+        widgets_rows_text =(TextView)findViewById(R.id.widgets_rows_text);
+        widgets_cols_text =(TextView)findViewById(R.id.widgets_cols_text);
 
         allapps_rows_text =(TextView)findViewById(R.id.allapps_rows_text);
         allapps_cols_text =(TextView)findViewById(R.id.allapps_cols_text);
@@ -43,6 +53,8 @@ public class jiayuLauncherConfigCajon extends Activity implements SeekBar.OnSeek
         allapps_icons.setOnSeekBarChangeListener(this);
         allapps_transparency.setOnSeekBarChangeListener(this);
 
+        widgets_rows.setOnSeekBarChangeListener(this);
+        widgets_cols.setOnSeekBarChangeListener(this);
 
         initValues();
     }
@@ -61,15 +73,21 @@ public class jiayuLauncherConfigCajon extends Activity implements SeekBar.OnSeek
     private void initValues() {
         try {
 
-            allapps_rows.setProgress(Utils.getSharedPreferencesInt(getApplicationContext(), "allapps_rows", 6));
+            allapps_rows.setProgress(Utils.getSharedPreferencesInt(getApplicationContext(), "allapps_rows", getResources().getInteger(R.integer.allapps_rows)));
             allapps_rows_text.setText(String.valueOf(allapps_rows.getProgress()));
-            allapps_cols.setProgress(Utils.getSharedPreferencesInt(getApplicationContext(), "allapps_cols", 4));
+            allapps_cols.setProgress(Utils.getSharedPreferencesInt(getApplicationContext(), "allapps_cols", getResources().getInteger(R.integer.allapps_cols)));
             allapps_cols_text.setText(String.valueOf(allapps_cols.getProgress()));
-            allapps_icons.setProgress(Utils.getSharedPreferencesInt(getApplicationContext(), "allapps_icons", 5));
+            allapps_icons.setProgress(Utils.getSharedPreferencesInt(getApplicationContext(), "allapps_icons", getResources().getInteger(R.integer.allapps_icons)));
             allapps_icons_text.setText(calcularPercentString(allapps_icons.getProgress()));
 
-            allapps_transparency.setProgress(Utils.getSharedPreferencesInt(getApplicationContext(), "allapps_transparency", 10));
+            allapps_transparency.setProgress(Utils.getSharedPreferencesInt(getApplicationContext(), "allapps_transparency", R.color.transparent10));
             allapps_transparency_text.setText(calcularPercent0100(allapps_transparency.getProgress()));
+
+            widgets_rows.setProgress(Utils.getSharedPreferencesInt(getApplicationContext(), "widgets_rows", getResources().getInteger(R.integer.widgets_rows)));
+            widgets_rows_text.setText(String.valueOf(widgets_rows.getProgress()));
+            widgets_cols.setProgress(Utils.getSharedPreferencesInt(getApplicationContext(), "widgets_cols", getResources().getInteger(R.integer.widgets_cols)));
+            widgets_cols_text.setText(String.valueOf(widgets_cols.getProgress()));
+
 
         }catch(Exception e){
 
@@ -92,6 +110,20 @@ public class jiayuLauncherConfigCajon extends Activity implements SeekBar.OnSeek
                 }
                 Utils.setSharedPreferencesInt(getApplicationContext(), "allapps_cols", progress);
                 allapps_cols_text.setText(String.valueOf(progress));
+                resetLauncher();
+            }else if(seekBar.getId()==R.id.widgets_rows){
+                if(progress<1){
+                    progress=1;
+                }
+                Utils.setSharedPreferencesInt(getApplicationContext(), "widgets_rows", progress);
+                widgets_rows_text.setText(String.valueOf(progress));
+                resetLauncher();
+            }else if(seekBar.getId()==R.id.widgets_cols){
+                if(progress<1){
+                    progress=1;
+                }
+                Utils.setSharedPreferencesInt(getApplicationContext(), "widgets_cols", progress);
+                widgets_cols_text.setText(String.valueOf(progress));
                 resetLauncher();
             }else if(seekBar.getId()==R.id.transparencyApps){
                 if(progress<0){

@@ -14,9 +14,9 @@
      limitations under the License.
 -->
 
-<com.android.launcher2.PagedViewIcon
+<com.fraggel.launcher.PagedViewIcon
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:launcher="http://schemas.android.com/apk/res-auto/com.android.launcher2"
+    xmlns:launcher="http://schemas.android.com/apk/res-auto/com.fraggel.launcher"
 
     style="@style/WorkspaceIcon.AppsCustomize"
 

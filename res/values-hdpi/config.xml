@@ -92,7 +92,7 @@
     <bool name="allow_rotation">false</bool>
     <bool name="show_customcontent">false</bool>
     <string name="app_custom_contentPackage">com.google.android.googlequicksearchbox</string>
-    <integer name="workspace_icons">10</integer>
+    <integer name="workspace_icons">7</integer>
     <integer name="hotseat_icons">7</integer>
     <integer name="allapps_icons">5</integer>
     <bool name="show_google_bar">false</bool>
@@ -101,7 +101,7 @@
     <integer name="allapps_rows">6</integer>
     <integer name="allapps_cols">4</integer>
     <integer name="allapps_transparency">10</integer>
-    <integer name="workspace_rows">5</integer>
-    <integer name="workspace_cols">5</integer>
+    <integer name="workspace_rows">4</integer>
+    <integer name="workspace_cols">4</integer>
 
 </resources>

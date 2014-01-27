@@ -14,14 +14,14 @@
      limitations under the License.
 -->
 
-<com.android.launcher2.MTKAppIcon
+<com.fraggel.launcher.MTKAppIcon
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:launcher="http://schemas.android.com/apk/res/com.android.launcher"
+    xmlns:launcher="http://schemas.android.com/apk/res/com.fraggel.launcher"
     android:id="@+id/application_icon"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     
-    <com.android.launcher2.PagedViewIcon
+    <com.fraggel.launcher.PagedViewIcon
 	    style="@style/WorkspaceIcon.Landscape.AppsCustomize"
 	    android:id="@+id/app_customize_application_icon"
 	    android:layout_width="match_parent"
@@ -39,4 +39,4 @@
 	    android:layout_marginRight="13dp"
 		android:layout="@layout/mtk_unread_text_layout" 
 		/>
-</com.android.launcher2.MTKAppIcon>
+</com.fraggel.launcher.MTKAppIcon>

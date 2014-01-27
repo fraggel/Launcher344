@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.android.launcher2.MTKShortcut
+<com.fraggel.launcher.MTKShortcut
 	xmlns:android="http://schemas.android.com/apk/res/android" 
 	android:layout_width="match_parent" 
 	android:layout_height="match_parent" >
 	
-	<com.android.launcher2.BubbleTextView
+	<com.fraggel.launcher.BubbleTextView
 		android:id="@+id/app_icon_title" 
 		style="@style/WorkspaceIcon.Portrait"
 		android:focusable="true"
@@ -17,4 +17,4 @@
 		android:layout_marginRight="@dimen/workspace_unread_margin_right"
 		android:layout_alignParentTop="true" 
 		android:layout_alignParentRight="true" />
-</com.android.launcher2.MTKShortcut>
+</com.fraggel.launcher.MTKShortcut>

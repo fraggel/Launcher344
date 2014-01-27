@@ -13,16 +13,225 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="DEBUG" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25c6fd96-9691-4356-a157-a2ad0904d627" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/android/launcher/BuildConfig.java" afterPath="$PROJECT_DIR$/gen/com/android/launcher/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/android_packages_apps_Launcher3-somex-4.4.iml" afterPath="$PROJECT_DIR$/android_packages_apps_Launcher3-somex-4.4.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values-hdpi/config.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values-xhdpi/config.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/xml-hdpi/default_workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/xml-xhdpi/default_workspace.xml" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\gen\com\android\launcher\BuildConfig.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\gen\com\android\launcher\Manifest.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\gen\com\android\launcher\R.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\common\BitmapUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\common\Utils.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\exif\ByteBufferInputStream.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\exif\CountedDataInputStream.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\exif\ExifData.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\exif\ExifInterface.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\exif\ExifInvalidFormatException.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\exif\ExifModifier.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\exif\ExifOutputStream.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\exif\ExifParser.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\exif\ExifReader.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\exif\ExifTag.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\exif\IfdData.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\exif\IfdId.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\exif\JpegHeader.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\exif\OrderedDataOutputStream.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\exif\Rational.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\glrenderer\BasicTexture.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\glrenderer\BitmapTexture.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\glrenderer\GLCanvas.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\glrenderer\GLES20Canvas.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\glrenderer\GLES20IdImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\glrenderer\GLId.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\glrenderer\GLPaint.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\glrenderer\RawTexture.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\glrenderer\Texture.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\glrenderer\UploadedTexture.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\util\IntArray.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\AccessibleTabView.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\AddAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\Alarm.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\AllAppsList.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\AppFilter.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\AppInfo.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\AppWidgetResizeFrame.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\AppsCustomizeCellLayout.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\AppsCustomizePagedView.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\AppsCustomizeTabHost.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\BubbleTextView.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\ButtonDropTarget.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\CellLayout.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\CheckLongPressHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\CheckableFrameLayout.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\Cling.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\CropView.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\CustomView.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\DeferredHandler.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\DeleteDropTarget.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\DragController.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\DragLayer.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\DragScroller.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\DragSource.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\DragView.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\DrawableStateProxyView.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\DropTarget.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\DynamicGrid.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\FastBitmapDrawable.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\FirstFrameAnimatorHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\FocusHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\FocusOnlyTabWidget.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\Folder.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\FolderAutoScrollHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\FolderEditText.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\FolderIcon.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\FolderInfo.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\HideFromAccessibilityHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\HolographicImageView.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\HolographicLinearLayout.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\HolographicOutlineHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\HolographicViewHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\Hotseat.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\IconCache.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\InfoDropTarget.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\Insettable.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\InstallShortcutHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\InstallShortcutReceiver.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\InstallWidgetReceiver.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\InterruptibleInOutAnimator.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\ItemInfo.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\Launcher.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\LauncherAnimUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\LauncherAnimatorUpdateListener.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\LauncherAppState.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\LauncherAppWidgetHost.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\LauncherAppWidgetHostView.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\LauncherAppWidgetInfo.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\LauncherApplication.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\LauncherBackupAgentHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\LauncherBackupHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\LauncherModel.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\LauncherProvider.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\LauncherSettings.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\LauncherViewPropertyAnimator.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\LiveWallpaperListAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\MTKAppIcon.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\MTKShortcut.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\MTKUnreadLoader.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\MemoryDumpActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\MemoryTracker.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\PackageChangedReceiver.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\PageIndicator.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\PageIndicatorMarker.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\PagedView.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\PagedViewCellLayout.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\PagedViewCellLayoutChildren.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\PagedViewGridLayout.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\PagedViewIcon.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\PagedViewIconCache.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\PagedViewWidget.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\PagedViewWidgetImageView.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\PagedViewWithDraggableItems.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\PendingAddItemInfo.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\PreloadReceiver.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\RampUpScroller.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\SavedWallpaperImages.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\ScrimView.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\SearchDropTargetBar.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\ShortcutAndWidgetContainer.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\ShortcutInfo.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\SmoothPagedView.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\SpringLoadedDragController.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\Stats.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\ThirdPartyWallpaperPickerListAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\ToggleWeightWatcher.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\UninstallShortcutReceiver.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\UserInitializeReceiver.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\Utilities.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\Utils.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\WallpaperCropActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\WallpaperPickerActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\WallpaperRootView.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\WeightWatcher.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\WidgetAdder.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\WidgetPreviewLoader.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\Workspace.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\config\ProviderConfig.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\photos\BitmapRegionTileSource.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\photos\views\BlockingGLTextureView.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\photos\views\TiledImageRenderer.java" afterPath="" />
+      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\photos\views\TiledImageView.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-land/all_apps_cling.xml" afterPath="$PROJECT_DIR$/res/layout-land/all_apps_cling.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-port/all_apps_cling.xml" afterPath="$PROJECT_DIR$/res/layout-port/all_apps_cling.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-sw600dp-port/all_apps_cling.xml" afterPath="$PROJECT_DIR$/res/layout-sw600dp-port/all_apps_cling.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-sw720dp/all_apps_cling.xml" afterPath="$PROJECT_DIR$/res/layout-sw720dp/all_apps_cling.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/application.xml" afterPath="$PROJECT_DIR$/res/layout/application.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/apps_customize_application.xml" afterPath="$PROJECT_DIR$/res/layout/apps_customize_application.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/apps_customize_pane.xml" afterPath="$PROJECT_DIR$/res/layout/apps_customize_pane.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/apps_customize_widget.xml" afterPath="$PROJECT_DIR$/res/layout/apps_customize_widget.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/colors.xml" afterPath="$PROJECT_DIR$/res/values/colors.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/config.xml" afterPath="$PROJECT_DIR$/res/values/config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/custom_content_page_indicator_marker.xml" afterPath="$PROJECT_DIR$/res/layout/custom_content_page_indicator_marker.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/custom_workspace_cling.xml" afterPath="$PROJECT_DIR$/res/layout/custom_workspace_cling.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml/default_toppackage.xml" afterPath="$PROJECT_DIR$/res/xml/default_toppackage.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml/default_workspace.xml" afterPath="$PROJECT_DIR$/res/xml/default_workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml-sw600dp/default_workspace.xml" afterPath="$PROJECT_DIR$/res/xml-sw600dp/default_workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml-sw720dp/default_workspace.xml" afterPath="$PROJECT_DIR$/res/xml-sw720dp/default_workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/drop_target_bar.xml" afterPath="$PROJECT_DIR$/res/layout/drop_target_bar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-land/first_run_cling.xml" afterPath="$PROJECT_DIR$/res/layout-land/first_run_cling.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-port/first_run_cling.xml" afterPath="$PROJECT_DIR$/res/layout-port/first_run_cling.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-land/folder_cling.xml" afterPath="$PROJECT_DIR$/res/layout-land/folder_cling.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-port/folder_cling.xml" afterPath="$PROJECT_DIR$/res/layout-port/folder_cling.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-sw600dp-port/folder_cling.xml" afterPath="$PROJECT_DIR$/res/layout-sw600dp-port/folder_cling.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-sw720dp-port/folder_cling.xml" afterPath="$PROJECT_DIR$/res/layout-sw720dp-port/folder_cling.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/folder_icon.xml" afterPath="$PROJECT_DIR$/res/layout/folder_icon.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/hotseat.xml" afterPath="$PROJECT_DIR$/res/layout/hotseat.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfig.java" afterPath="$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/spinnerrow.xml" afterPath="$PROJECT_DIR$/res/layout/spinnerrow.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfigCajon.java" afterPath="$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfigCajon.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfigEscritorio.java" afterPath="$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfigEscritorio.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfigGeneral.java" afterPath="$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfigGeneral.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfigInferior.java" afterPath="$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfigInferior.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/jiayu_launcher_config_cajon.xml" afterPath="$PROJECT_DIR$/res/layout/jiayu_launcher_config_cajon.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/jiayu_launcher_config_escritorio.xml" afterPath="$PROJECT_DIR$/res/layout/jiayu_launcher_config_escritorio.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/jiayu_launcher_config_general.xml" afterPath="$PROJECT_DIR$/res/layout/jiayu_launcher_config_general.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/jiayu_launcher_config_inferior.xml" afterPath="$PROJECT_DIR$/res/layout/jiayu_launcher_config_inferior.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/jiayu_launcher_config_main.xml" afterPath="$PROJECT_DIR$/res/layout/jiayu_launcher_config_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-land/launcher.xml" afterPath="$PROJECT_DIR$/res/layout-land/launcher.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-port/launcher.xml" afterPath="$PROJECT_DIR$/res/layout-port/launcher.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-sw720dp/launcher.xml" afterPath="$PROJECT_DIR$/res/layout-sw720dp/launcher.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-land/launcher22.xml" afterPath="$PROJECT_DIR$/res/layout-land/launcher22.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-port/launcher22.xml" afterPath="$PROJECT_DIR$/res/layout-port/launcher22.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml/mota_update.xml" afterPath="$PROJECT_DIR$/res/xml/mota_update.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-land/mtk_application.xml" afterPath="$PROJECT_DIR$/res/layout-land/mtk_application.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-port/mtk_application.xml" afterPath="$PROJECT_DIR$/res/layout-port/mtk_application.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-land/mtk_apps_customize_application.xml" afterPath="$PROJECT_DIR$/res/layout-land/mtk_apps_customize_application.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-port/mtk_apps_customize_application.xml" afterPath="$PROJECT_DIR$/res/layout-port/mtk_apps_customize_application.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/page_indicator.xml" afterPath="$PROJECT_DIR$/res/layout/page_indicator.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/page_indicator_marker.xml" afterPath="$PROJECT_DIR$/res/layout/page_indicator_marker.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/qsb_bar.xml" afterPath="$PROJECT_DIR$/res/layout/qsb_bar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-land/search_bar.xml" afterPath="$PROJECT_DIR$/res/layout-land/search_bar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-port/search_bar.xml" afterPath="$PROJECT_DIR$/res/layout-port/search_bar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-sw720dp/search_bar.xml" afterPath="$PROJECT_DIR$/res/layout-sw720dp/search_bar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/styles.xml" afterPath="$PROJECT_DIR$/res/values/styles.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/tab_widget_indicator.xml" afterPath="$PROJECT_DIR$/res/layout/tab_widget_indicator.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml/unread_support_shortcuts.xml" afterPath="$PROJECT_DIR$/res/xml/unread_support_shortcuts.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml/update_workspace.xml" afterPath="$PROJECT_DIR$/res/xml/update_workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/user_folder.xml" afterPath="$PROJECT_DIR$/res/layout/user_folder.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/wallpaper_cropper.xml" afterPath="$PROJECT_DIR$/res/layout/wallpaper_cropper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/wallpaper_picker.xml" afterPath="$PROJECT_DIR$/res/layout/wallpaper_picker.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/wallpaper_picker_image_picker_item.xml" afterPath="$PROJECT_DIR$/res/layout/wallpaper_picker_image_picker_item.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/wallpaper_picker_item.xml" afterPath="$PROJECT_DIR$/res/layout/wallpaper_picker_item.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/wallpaper_picker_live_wallpaper_item.xml" afterPath="$PROJECT_DIR$/res/layout/wallpaper_picker_live_wallpaper_item.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/wallpaper_picker_third_party_item.xml" afterPath="$PROJECT_DIR$/res/layout/wallpaper_picker_third_party_item.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml/work.xml" afterPath="$PROJECT_DIR$/res/xml/work.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-land/workspace_cling.xml" afterPath="$PROJECT_DIR$/res/layout-land/workspace_cling.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-port/workspace_cling.xml" afterPath="$PROJECT_DIR$/res/layout-port/workspace_cling.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/workspace_screen.xml" afterPath="$PROJECT_DIR$/res/layout/workspace_screen.xml" />
     </list>
     <ignored path="android_packages_apps_Launcher3-somex-4.4.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,143 +286,7 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
-      <breakpoint url="file://$PROJECT_DIR$/src/com/android/launcher2/CustomView.java" line="23" class="com.android.launcher2.CustomView" package="com.android.launcher2">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfig.java" line="119" class="com.jiayu.config.jiayuLauncherConfig" package="com.jiayu.config">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfig.java" line="99" class="com.jiayu.config.jiayuLauncherConfig" package="com.jiayu.config">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfig.java" line="145" class="com.jiayu.config.jiayuLauncherConfig" package="com.jiayu.config">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/android/launcher2/Launcher.java" line="2347" class="com.android.launcher2.Launcher" package="com.android.launcher2">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/android/launcher2/Launcher.java" line="563" class="com.android.launcher2.Launcher" package="com.android.launcher2">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/android/launcher2/Launcher.java" line="436" class="com.android.launcher2.Launcher" package="com.android.launcher2">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/android/launcher2/Workspace.java" line="2834" class="com.android.launcher2.Workspace" package="com.android.launcher2">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfig.java" line="150" class="com.jiayu.config.jiayuLauncherConfig" package="com.jiayu.config">
-        <option name="ENABLED" value="true" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="REMOVE_AFTER_HIT" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </line_breakpoints>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -223,101 +296,151 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="default_workspace.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/xml/default_workspace.xml">
+      <file leaf-file-name="Launcher.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/fraggel/launcher/Launcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="1873" selection-end="1873" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="425">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jiayuLauncherConfig.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="170" column="0" selection-start="8302" selection-end="8302" vertical-scroll-proportion="6.678571" vertical-offset="459" max-vertical-offset="8942">
+            <state line="1354" column="118" selection-start="54836" selection-end="54836" vertical-scroll-proportion="0.0" vertical-offset="20439" max-vertical-offset="81447">
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1983#1991#0" expanded="true" />
+                <element signature="e#21810#21861#0" expanded="true" />
+                <element signature="e#22018#22069#0" expanded="true" />
+                <element signature="e#22170#22221#0" expanded="true" />
+                <element signature="e#22378#22429#0" expanded="true" />
+                <element signature="e#22532#22581#0" expanded="true" />
+                <element signature="e#22734#22783#0" expanded="true" />
+                <element signature="e#22886#22935#0" expanded="true" />
+                <element signature="e#23088#23137#0" expanded="true" />
+                <element signature="e#23286#23336#0" expanded="true" />
+                <element signature="e#23760#23812#0" expanded="true" />
+                <element signature="e#24387#24437#0" expanded="true" />
+                <element signature="e#24596#24648#0" expanded="true" />
+                <element signature="e#73293#73322#0" expanded="true" />
+                <element signature="e#73325#73346#0" expanded="true" />
+                <element signature="e#88567#88620#0" expanded="true" />
+                <element signature="e#89107#89149#0" expanded="true" />
+                <element signature="e#89687#89716#0" expanded="true" />
+                <element signature="e#100926#100960#0" expanded="true" />
+                <element signature="e#102405#102432#0" expanded="true" />
+                <element signature="e#103068#103095#0" expanded="true" />
+                <element signature="e#108077#108139#0" expanded="true" />
+                <element signature="e#108903#108965#0" expanded="true" />
+                <element signature="e#119601#119657#0" expanded="true" />
+                <element signature="e#119692#119748#0" expanded="true" />
+                <element signature="e#119786#119847#0" expanded="true" />
+                <element signature="e#120005#120076#0" expanded="true" />
+                <element signature="e#126474#126531#0" expanded="true" />
+                <element signature="e#126585#126642#0" expanded="true" />
+                <element signature="e#126702#126763#0" expanded="true" />
+                <element signature="e#126972#127043#0" expanded="true" />
+                <element signature="e#138824#138884#0" expanded="true" />
+                <element signature="e#138902#138963#0" expanded="true" />
+                <element signature="e#149305#149365#0" expanded="true" />
+                <element signature="e#149387#149448#0" expanded="true" />
+                <element signature="e#150104#150150#0" expanded="true" />
+                <element signature="e#200040#200073#0" expanded="true" />
+                <element signature="e#200180#200213#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jiayu_launcher_config.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/jiayu_launcher_config.xml">
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state line="46" column="26" selection-start="1877" selection-end="1877" vertical-scroll-proportion="0.0" vertical-offset="782" max-vertical-offset="4743">
+      <file leaf-file-name="config.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values/config.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="103" column="35" selection-start="4990" selection-end="4990" vertical-scroll-proportion="0.0" vertical-offset="1226" max-vertical-offset="1921">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spinnerrow.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/spinnerrow.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
+      <file leaf-file-name="default_workspace.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/xml-xhdpi/default_workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="18" selection-start="446" selection-end="446" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="561">
+            <state line="9" column="54" selection-start="0" selection-end="2901" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default_toppackage.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/xml/default_toppackage.xml">
+      <file leaf-file-name="config.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values-hdpi/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
+            <state line="94" column="37" selection-start="4571" selection-end="4571" vertical-scroll-proportion="0.0" vertical-offset="1481" max-vertical-offset="1921">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cling.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/Cling.java">
+      <file leaf-file-name="config.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/values-xhdpi/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="8" selection-start="3635" selection-end="3635" vertical-scroll-proportion="0.0" vertical-offset="1700" max-vertical-offset="7667">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="1544" max-vertical-offset="1921">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Launcher.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/Launcher.java">
+      <file leaf-file-name="default_workspace.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/res/xml-hdpi/default_workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="252" column="27" selection-start="10101" selection-end="10101" vertical-scroll-proportion="0.0" vertical-offset="4284" max-vertical-offset="85340">
+            <state line="10" column="38" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.46703297" vertical-offset="0" max-vertical-offset="425">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Instrumentation.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/../../android-sdk/platforms/android-17/android.jar!/android/app/Instrumentation.class">
+      <file leaf-file-name="LauncherProvider.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/fraggel/launcher/LauncherProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="16" selection-start="5963" selection-end="5963" vertical-scroll-proportion="0.0" vertical-offset="1904" max-vertical-offset="2703">
+            <state line="459" column="0" selection-start="18061" selection-end="18061" vertical-scroll-proportion="0.0" vertical-offset="6628" max-vertical-offset="24956">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Handler.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/../../android-sdk/platforms/android-17/android.jar!/android/os/Handler.class">
+      <file leaf-file-name="Workspace.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/fraggel/launcher/Workspace.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="16" selection-start="564" selection-end="564" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="1428">
+            <state line="1103" column="133" selection-start="43326" selection-end="43326" vertical-scroll-proportion="0.0" vertical-offset="17255" max-vertical-offset="79713">
+              <folding>
+                <element signature="e#12611#12679#0" expanded="true" />
+                <element signature="e#12742#12808#0" expanded="true" />
+                <element signature="e#12853#12913#0" expanded="true" />
+                <element signature="e#12941#12988#0" expanded="true" />
+                <element signature="e#78180#78245#0" expanded="true" />
+                <element signature="e#78335#78401#0" expanded="true" />
+                <element signature="e#78443#78519#0" expanded="true" />
+                <element signature="e#84702#84799#0" expanded="true" />
+                <element signature="e#84892#84989#0" expanded="true" />
+                <element signature="e#130121#130182#0" expanded="true" />
+                <element signature="e#130197#130258#0" expanded="true" />
+                <element signature="e#153906#153958#0" expanded="true" />
+                <element signature="e#189699#189754#0" expanded="true" />
+                <element signature="e#190130#190186#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WallpaperCropActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/fraggel/launcher/WallpaperCropActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="116" column="163" selection-start="4408" selection-end="4422" vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="11781">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Looper.class" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/../../android-sdk/platforms/android-17/android.jar!/android/os/Looper.class">
+      <file leaf-file-name="jiayuLauncherConfigCajon.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfigCajon.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="16" selection-start="712" selection-end="712" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="612">
-              <folding />
+            <state line="82" column="145" selection-start="3364" selection-end="3364" vertical-scroll-proportion="0.0" vertical-offset="1127" max-vertical-offset="6086">
+              <folding>
+                <element signature="e#2582#2631#0" expanded="true" />
+                <element signature="e#2826#2875#0" expanded="true" />
+                <element signature="e#3072#3122#0" expanded="true" />
+                <element signature="e#3581#3630#0" expanded="true" />
+                <element signature="e#3825#3874#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -365,12 +488,22 @@
         <option value="$PROJECT_DIR$/src/com/android/launcher2/Workspace.java" />
         <option value="$PROJECT_DIR$/src/com/android/launcher2/PagedView.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/res/values/config.xml" />
         <option value="$PROJECT_DIR$/src/com/android/launcher2/Cling.java" />
         <option value="$PROJECT_DIR$/src/com/android/launcher2/Launcher.java" />
         <option value="$PROJECT_DIR$/res/xml/default_workspace.xml" />
         <option value="$PROJECT_DIR$/res/layout/spinnerrow.xml" />
         <option value="$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfig.java" />
+        <option value="$PROJECT_DIR$/src/com/fraggel/launcher/DynamicGrid.java" />
+        <option value="$PROJECT_DIR$/src/com/fraggel/launcher/Workspace.java" />
+        <option value="$PROJECT_DIR$/src/com/fraggel/launcher/WallpaperCropActivity.java" />
+        <option value="$PROJECT_DIR$/res/values/config720.xml" />
+        <option value="$PROJECT_DIR$/res/values-ldpi/config.xml" />
+        <option value="$PROJECT_DIR$/src/com/fraggel/launcher/Launcher.java" />
+        <option value="$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfigCajon.java" />
+        <option value="$PROJECT_DIR$/res/values/config.xml" />
+        <option value="$PROJECT_DIR$/res/values-mdpi/config.xml" />
+        <option value="$PROJECT_DIR$/res/xml-mdpi/default_workspace.xml" />
+        <option value="$PROJECT_DIR$/res/xml-hdpi/default_workspace.xml" />
       </list>
     </option>
   </component>
@@ -406,6 +539,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -463,6 +597,66 @@
               <option name="myItemId" value="com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fraggel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android_packages_apps_Launcher3-somex-4.4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Launcher344" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fraggel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="launcher" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android_packages_apps_Launcher3-somex-4.4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Launcher344" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fraggel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="launcher" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Launcher.java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -478,10 +672,131 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android_packages_apps_Launcher3-somex-4.4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Launcher344" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xml-xhdpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android_packages_apps_Launcher3-somex-4.4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Launcher344" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android_packages_apps_Launcher3-somex-4.4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Launcher344" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xml-hdpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android_packages_apps_Launcher3-somex-4.4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Launcher344" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xml" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android_packages_apps_Launcher3-somex-4.4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Launcher344" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values-xhdpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android_packages_apps_Launcher3-somex-4.4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Launcher344" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values-hdpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android_packages_apps_Launcher3-somex-4.4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Launcher344" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -518,20 +833,22 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
     <property name="options.searchVisible" value="true" />
+    <property name="AndroidTargetDevices" value="0123456789ABCDEF" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Programacion\androidsuiteworkspace\Launcher344\res\layout-sw720dp" />
-      <recent name="D:\Programacion\androidsuiteworkspace\Launcher344\res\layout-port" />
-      <recent name="D:\Programacion\androidsuiteworkspace\Launcher344\res\layout-land" />
-      <recent name="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2" />
-      <recent name="D:\Programacion\androidsuiteworkspace\Launcher344\res\drawable-xhdpi" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\settings" />
+      <recent name="D:\Programacion\androidsuiteworkspace\Launcher344\res\xml-xhdpi" />
+      <recent name="D:\Programacion\androidsuiteworkspace\Launcher344\res\values-xhdpi" />
+      <recent name="D:\Programacion\androidsuiteworkspace\Launcher344\res\xml-mdpi" />
+      <recent name="D:\Programacion\androidsuiteworkspace\Launcher344\res\values-mdpi" />
+      <recent name="D:\Programacion\androidsuiteworkspace\Launcher344\res\values" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Programacion\androidsuiteworkspace\Launcher344\res\values-ldpi" />
+      <recent name="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\settings" />
     </key>
   </component>
   <component name="RunManager" selected="Android Application.android_packages_apps_Launcher3-somex-4.4">
@@ -658,7 +975,7 @@
     </configuration>
     <configuration default="false" name="android_packages_apps_Launcher3-somex-4.4" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="android_packages_apps_Launcher3-somex-4.4" />
-      <option name="ACTIVITY_CLASS" value="com.android.launcher2.Launcher" />
+      <option name="ACTIVITY_CLASS" value="com.fraggel.launcher.Launcher" />
       <option name="MODE" value="specific_activity" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
@@ -814,35 +1131,35 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32454923" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32732317" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40360612" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32732317" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32454923" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4410541" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30829757" sideWeight="0.6787205" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20028612" sideWeight="0.6787205" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32038835" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6720297" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32732317" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32454923" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6720297" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -870,6 +1187,20 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="jar://$PROJECT_DIR$/../../android-sdk/platforms/android-17/android.jar!/android/os/Handler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="16" selection-start="564" selection-end="564" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="1428">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../android-sdk/platforms/android-17/android.jar!/android/os/Looper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="16" selection-start="712" selection-end="712" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/res/xml/default_workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="0" selection-start="1873" selection-end="1873" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="425">
@@ -881,49 +1212,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="170" column="0" selection-start="8302" selection-end="8302" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="8942">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1983#1991#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/jiayu_launcher_config.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="46" column="26" selection-start="1877" selection-end="1877" vertical-scroll-proportion="0.0" vertical-offset="782" max-vertical-offset="4743">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/spinnerrow.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="18" selection-start="446" selection-end="446" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="561">
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/xml/default_toppackage.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/Cling.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="8" selection-start="3635" selection-end="3635" vertical-scroll-proportion="0.0" vertical-offset="1700" max-vertical-offset="7667">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/Launcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="252" column="27" selection-start="10101" selection-end="10101" vertical-scroll-proportion="0.0" vertical-offset="4284" max-vertical-offset="85340">
           <folding />
         </state>
       </provider>
@@ -960,49 +1266,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="234" column="17" selection-start="11319" selection-end="11319" vertical-scroll-proportion="0.0" vertical-offset="3961" max-vertical-offset="8432">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1983#1991#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/Workspace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="18" selection-start="3115" selection-end="3115" vertical-scroll-proportion="0.0" vertical-offset="1377" max-vertical-offset="81974">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/PagedView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="0" selection-start="3881" selection-end="3881" vertical-scroll-proportion="0.0" vertical-offset="1666" max-vertical-offset="51935" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/workspace_screen.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="46" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="221" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/AllAppsList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="217" column="16" selection-start="7435" selection-end="7435" vertical-scroll-proportion="0.0" vertical-offset="3672" max-vertical-offset="8466" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/DynamicGrid.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="542" column="5" selection-start="21097" selection-end="21097" vertical-scroll-proportion="0.0" vertical-offset="9214" max-vertical-offset="10625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1649">
-          <folding />
-        </state>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values-af/strings.xml">
@@ -1012,11 +1286,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/SmoothPagedView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="170" column="37" selection-start="5426" selection-end="5426" vertical-scroll-proportion="0.0" vertical-offset="2428" max-vertical-offset="3009" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/values-ar/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="53" selection-start="1159" selection-end="1159" vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="2210">
@@ -1024,22 +1293,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/CellLayout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="42" selection-start="2081" selection-end="2081" vertical-scroll-proportion="0.06746032" vertical-offset="51" max-vertical-offset="55488" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/PagedView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="0" selection-start="3881" selection-end="3881" vertical-scroll-proportion="0.0" vertical-offset="487" max-vertical-offset="50626" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/workspace_screen.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="46" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="221" />
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
@@ -1055,19 +1314,19 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout-land/first_run_cling.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1751" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout-land/launcher.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout-land/launcher.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="65" column="24" selection-start="2737" selection-end="2737" vertical-scroll-proportion="-4.68" vertical-offset="988" max-vertical-offset="1819" />
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/../../android-sdk/platforms/android-17/android.jar!/android/app/Activity.class">
@@ -1096,39 +1355,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/DynamicGrid.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="252" column="9" selection-start="9225" selection-end="9225" vertical-scroll-proportion="0.0" vertical-offset="4014" max-vertical-offset="9741">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="71" selection-start="4322" selection-end="4322" vertical-scroll-proportion="0.0" vertical-offset="1224" max-vertical-offset="1649">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/Cling.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="8" selection-start="3635" selection-end="3635" vertical-scroll-proportion="0.0" vertical-offset="1156" max-vertical-offset="7140">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/Workspace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2836" column="0" selection-start="113220" selection-end="113220" vertical-scroll-proportion="0.0" vertical-offset="46327" max-vertical-offset="79662">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/AllAppsList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="12" selection-start="2218" selection-end="2218" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="7888" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/xml/default_toppackage.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="682">
@@ -1136,24 +1362,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/jiayu_launcher_config.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="46" column="26" selection-start="1877" selection-end="1877" vertical-scroll-proportion="0.0" vertical-offset="782" max-vertical-offset="4743">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/spinnerrow.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="18" selection-start="446" selection-end="446" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="561">
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/../../android-sdk/platforms/android-17/android.jar!/java/util/List.class">
@@ -1161,32 +1377,243 @@
         <state line="6" column="17" selection-start="156" selection-end="156" vertical-scroll-proportion="0.18438178" vertical-offset="0" max-vertical-offset="1037" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/android/launcher2/Launcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="252" column="27" selection-start="10101" selection-end="10101" vertical-scroll-proportion="0.0" vertical-offset="4284" max-vertical-offset="85340">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../../android-sdk/platforms/android-17/android.jar!/android/content/pm/ResolveInfo.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="24" selection-start="161" selection-end="172" vertical-scroll-proportion="0.2254642" vertical-offset="0" max-vertical-offset="833" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/xml/default_workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="1873" selection-end="1873" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <folding />
-        </state>
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/apps_customize_bg.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/bg_appwidget_error.9.png">
+      <provider editor-type-id="images">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="ninepatcheditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/bg_cling2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="170" column="0" selection-start="8302" selection-end="8302" vertical-scroll-proportion="6.678571" vertical-offset="459" max-vertical-offset="8942">
+        <state line="22" column="38" selection-start="628" selection-end="628" vertical-scroll-proportion="-0.36074272" vertical-offset="510" max-vertical-offset="901">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1983#1991#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fraggel/launcher/AppsCustomizePagedView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="266" column="78" selection-start="9907" selection-end="9919" vertical-scroll-proportion="0.37037036" vertical-offset="3417" max-vertical-offset="29920">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/attrs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-5.4444447" vertical-offset="2499" max-vertical-offset="3264">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.34304932" vertical-offset="153" max-vertical-offset="5202">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfigGeneral.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="15" selection-start="3811" selection-end="3811" vertical-scroll-proportion="0.0" vertical-offset="991" max-vertical-offset="4267">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfigInferior.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="38" selection-start="1154" selection-end="1154" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="4097">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fraggel/launcher/CustomView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="20" selection-start="886" selection-end="886" vertical-scroll-proportion="0.0" vertical-offset="294" max-vertical-offset="918">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fraggel/launcher/DynamicGrid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="566" column="172" selection-start="22573" selection-end="22618" vertical-scroll-proportion="0.0" vertical-offset="8556" max-vertical-offset="9741">
+          <folding>
+            <element signature="e#4644#4709#0" expanded="true" />
+            <element signature="e#4805#4880#0" expanded="true" />
+            <element signature="e#7406#7480#0" expanded="true" />
+            <element signature="e#7510#7581#0" expanded="true" />
+            <element signature="e#9984#10061#0" expanded="true" />
+            <element signature="e#22168#22215#0" expanded="true" />
+            <element signature="e#22372#22417#0" expanded="true" />
+            <element signature="e#22573#22618#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfigEscritorio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="111" selection-start="2437" selection-end="2452" vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="4760">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fraggel/launcher/Workspace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1103" column="133" selection-start="43326" selection-end="43326" vertical-scroll-proportion="0.0" vertical-offset="17255" max-vertical-offset="79713">
+          <folding>
+            <element signature="e#12611#12679#0" expanded="true" />
+            <element signature="e#12742#12808#0" expanded="true" />
+            <element signature="e#12853#12913#0" expanded="true" />
+            <element signature="e#12941#12988#0" expanded="true" />
+            <element signature="e#78180#78245#0" expanded="true" />
+            <element signature="e#78335#78401#0" expanded="true" />
+            <element signature="e#78443#78519#0" expanded="true" />
+            <element signature="e#84702#84799#0" expanded="true" />
+            <element signature="e#84892#84989#0" expanded="true" />
+            <element signature="e#130121#130182#0" expanded="true" />
+            <element signature="e#130197#130258#0" expanded="true" />
+            <element signature="e#153906#153958#0" expanded="true" />
+            <element signature="e#189699#189754#0" expanded="true" />
+            <element signature="e#190130#190186#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fraggel/launcher/WallpaperCropActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="116" column="163" selection-start="4408" selection-end="4422" vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="11781">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../android-sdk/platforms/android-17/android.jar!/android/view/ContextThemeWrapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="41" selection-start="594" selection-end="674" vertical-scroll-proportion="0.42825112" vertical-offset="47" max-vertical-offset="493">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fraggel/launcher/Launcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1354" column="118" selection-start="54836" selection-end="54836" vertical-scroll-proportion="0.0" vertical-offset="20439" max-vertical-offset="81447">
+          <folding>
+            <element signature="e#21810#21861#0" expanded="true" />
+            <element signature="e#22018#22069#0" expanded="true" />
+            <element signature="e#22170#22221#0" expanded="true" />
+            <element signature="e#22378#22429#0" expanded="true" />
+            <element signature="e#22532#22581#0" expanded="true" />
+            <element signature="e#22734#22783#0" expanded="true" />
+            <element signature="e#22886#22935#0" expanded="true" />
+            <element signature="e#23088#23137#0" expanded="true" />
+            <element signature="e#23286#23336#0" expanded="true" />
+            <element signature="e#23760#23812#0" expanded="true" />
+            <element signature="e#24387#24437#0" expanded="true" />
+            <element signature="e#24596#24648#0" expanded="true" />
+            <element signature="e#73293#73322#0" expanded="true" />
+            <element signature="e#73325#73346#0" expanded="true" />
+            <element signature="e#88567#88620#0" expanded="true" />
+            <element signature="e#89107#89149#0" expanded="true" />
+            <element signature="e#89687#89716#0" expanded="true" />
+            <element signature="e#100926#100960#0" expanded="true" />
+            <element signature="e#102405#102432#0" expanded="true" />
+            <element signature="e#103068#103095#0" expanded="true" />
+            <element signature="e#108077#108139#0" expanded="true" />
+            <element signature="e#108903#108965#0" expanded="true" />
+            <element signature="e#119601#119657#0" expanded="true" />
+            <element signature="e#119692#119748#0" expanded="true" />
+            <element signature="e#119786#119847#0" expanded="true" />
+            <element signature="e#120005#120076#0" expanded="true" />
+            <element signature="e#126474#126531#0" expanded="true" />
+            <element signature="e#126585#126642#0" expanded="true" />
+            <element signature="e#126702#126763#0" expanded="true" />
+            <element signature="e#126972#127043#0" expanded="true" />
+            <element signature="e#138824#138884#0" expanded="true" />
+            <element signature="e#138902#138963#0" expanded="true" />
+            <element signature="e#149305#149365#0" expanded="true" />
+            <element signature="e#149387#149448#0" expanded="true" />
+            <element signature="e#150104#150150#0" expanded="true" />
+            <element signature="e#200040#200073#0" expanded="true" />
+            <element signature="e#200180#200213#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfigCajon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="145" selection-start="3364" selection-end="3364" vertical-scroll-proportion="0.0" vertical-offset="1127" max-vertical-offset="6086">
+          <folding>
+            <element signature="e#2582#2631#0" expanded="true" />
+            <element signature="e#2826#2875#0" expanded="true" />
+            <element signature="e#3072#3122#0" expanded="true" />
+            <element signature="e#3581#3630#0" expanded="true" />
+            <element signature="e#3825#3874#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fraggel/launcher/LauncherProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="459" column="0" selection-start="18061" selection-end="18061" vertical-scroll-proportion="0.0" vertical-offset="6628" max-vertical-offset="24956">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/xml/default_workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="1876" selection-end="1876" vertical-scroll-proportion="0.0" vertical-offset="61" max-vertical-offset="425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-xhdpi/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1921">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-hdpi/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="37" selection-start="4571" selection-end="4571" vertical-scroll-proportion="0.0" vertical-offset="1226" max-vertical-offset="1921">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="35" selection-start="4990" selection-end="4990" vertical-scroll-proportion="0.0" vertical-offset="1226" max-vertical-offset="1921">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/xml-xhdpi/default_workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="54" selection-start="0" selection-end="2901" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/xml-hdpi/default_workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="38" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.46703297" vertical-offset="0" max-vertical-offset="425">
+          <folding />
         </state>
       </provider>
     </entry>

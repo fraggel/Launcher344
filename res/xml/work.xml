@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <favorites
-  xmlns:launcher="http://schemas.android.com/apk/res/com.android.launcher">
+  xmlns:launcher="http://schemas.android.com/apk/res/com.fraggel.launcher">
     <scene launcher:scene="work" />
     <wallpaper launcher:wallpaper="wallpaper_work" />
     <appwidget launcher:className="com.android.browser.widget.BookmarkThumbnailWidgetProvider" launcher:packageName="com.android.browser" launcher:screen="1" launcher:x="1" launcher:y="0" launcher:spanX="3" launcher:spanY="2" />

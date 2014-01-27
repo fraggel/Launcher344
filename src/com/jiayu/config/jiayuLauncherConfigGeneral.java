@@ -20,7 +20,7 @@ import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
 
-import com.android.launcher.R;
+import com.fraggel.launcher.R;
 
 import java.util.ArrayList;
 import java.util.Collections;

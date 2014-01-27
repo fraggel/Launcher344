@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.android.launcher.R;
+import com.fraggel.launcher.R;
 
 /**
  * Created by Fraggel on 16/11/13.

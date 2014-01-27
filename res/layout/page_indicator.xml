@@ -13,9 +13,9 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<com.android.launcher2.PageIndicator
+<com.fraggel.launcher.PageIndicator
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:launcher="http://schemas.android.com/apk/res-auto/com.android.launcher2"
+    xmlns:launcher="http://schemas.android.com/apk/res-auto/com.fraggel.launcher"
     android:animateLayoutChanges="true"
     launcher:windowSize="@integer/config_maxNumberOfPageIndicatorsToShow">
-</com.android.launcher2.PageIndicator>
+</com.fraggel.launcher.PageIndicator>

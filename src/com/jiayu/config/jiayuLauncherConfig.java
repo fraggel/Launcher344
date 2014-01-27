@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.android.launcher.R;
+import com.fraggel.launcher.R;
 
 /**
  * Created by Fraggel on 16/11/13.
