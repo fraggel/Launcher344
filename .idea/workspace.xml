@@ -16,153 +16,40 @@
     <option name="TOOL_WINDOW_LOG_LEVEL" value="ERROR" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25c6fd96-9691-4356-a157-a2ad0904d627" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Launcher3.apk" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/Thumbs.db" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/AccessibleTabView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/AddAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/Alarm.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/AllAppsList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/AppFilter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/AppInfo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/AppWidgetResizeFrame.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/AppsCustomizeCellLayout.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/AppsCustomizePagedView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/AppsCustomizeTabHost.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/glrenderer/BasicTexture.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/photos/BitmapRegionTileSource.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/glrenderer/BitmapTexture.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/common/BitmapUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/photos/views/BlockingGLTextureView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/BubbleTextView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gen/com/fraggel/launcher/BuildConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/ButtonDropTarget.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/exif/ByteBufferInputStream.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/CellLayout.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/CheckLongPressHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/CheckableFrameLayout.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/Cling.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/exif/CountedDataInputStream.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/CropView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/CustomView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/DeferredHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/DeleteDropTarget.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/DragController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/DragLayer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/DragScroller.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/DragSource.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/DragView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/DrawableStateProxyView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/DropTarget.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/DynamicGrid.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/exif/ExifData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/exif/ExifInterface.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/exif/ExifInvalidFormatException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/exif/ExifModifier.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/exif/ExifOutputStream.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/exif/ExifParser.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/exif/ExifReader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/exif/ExifTag.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/FastBitmapDrawable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/FirstFrameAnimatorHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/FocusHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/FocusOnlyTabWidget.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/Folder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/FolderAutoScrollHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/FolderEditText.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/FolderIcon.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/FolderInfo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/glrenderer/GLCanvas.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/glrenderer/GLES20Canvas.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/glrenderer/GLES20IdImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/glrenderer/GLId.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/glrenderer/GLPaint.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/HideFromAccessibilityHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/HolographicImageView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/HolographicLinearLayout.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/HolographicOutlineHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/HolographicViewHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/Hotseat.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/IconCache.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/exif/IfdData.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/exif/IfdId.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/InfoDropTarget.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/Insettable.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/InstallShortcutHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/InstallShortcutReceiver.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/InstallWidgetReceiver.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/util/IntArray.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/InterruptibleInOutAnimator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/ItemInfo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/exif/JpegHeader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/Launcher.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/LauncherAnimUtils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/LauncherAnimatorUpdateListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/LauncherAppState.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/LauncherAppWidgetHost.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/LauncherAppWidgetHostView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/LauncherAppWidgetInfo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/LauncherApplication.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/LauncherBackupAgentHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/LauncherBackupHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/LauncherModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/LauncherProvider.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/LauncherSettings.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/LauncherViewPropertyAnimator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/LiveWallpaperListAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/MTKAppIcon.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/MTKShortcut.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/MTKUnreadLoader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gen/com/fraggel/launcher/Manifest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/MemoryDumpActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/MemoryTracker.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/exif/OrderedDataOutputStream.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/PackageChangedReceiver.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/PageIndicator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/PageIndicatorMarker.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/PagedView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/PagedViewCellLayout.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/PagedViewCellLayoutChildren.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/PagedViewGridLayout.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/PagedViewIcon.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/PagedViewIconCache.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/PagedViewWidget.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/PagedViewWidgetImageView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/PagedViewWithDraggableItems.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/PendingAddItemInfo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/PreloadReceiver.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/config/ProviderConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gen/com/fraggel/launcher/R.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/RampUpScroller.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/exif/Rational.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/glrenderer/RawTexture.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/SavedWallpaperImages.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/ScrimView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/SearchDropTargetBar.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/ShortcutAndWidgetContainer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/ShortcutInfo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/SmoothPagedView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/SpringLoadedDragController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/Stats.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/glrenderer/Texture.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/ThirdPartyWallpaperPickerListAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/photos/views/TiledImageRenderer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/photos/views/TiledImageView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/ToggleWeightWatcher.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/UninstallShortcutReceiver.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/glrenderer/UploadedTexture.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/UserInitializeReceiver.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/Utilities.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/common/Utils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/Utils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/WallpaperCropActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/WallpaperPickerActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/WallpaperRootView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/WeightWatcher.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/WidgetAdder.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/WidgetPreviewLoader.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/Workspace.java" />
+    <list default="true" id="25c6fd96-9691-4356-a157-a2ad0904d627" name="Default" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;src/com/android/launcher2/AppsCustomizePagedView.java&#10;&#9;src/com/jiayu/config/jiayuLauncherConfigCajon.java&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\fraggel\gallery3d\common\BitmapUtils.java" afterPath="$PROJECT_DIR$/src/com/android/gallery3d/common/BitmapUtils.java" />
+      <change type="MOVED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\fraggel\gallery3d\common\Utils.java" afterPath="$PROJECT_DIR$/src/com/android/gallery3d/common/Utils.java" />
+      <change type="MOVED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\fraggel\gallery3d\exif\ByteBufferInputStream.java" afterPath="$PROJECT_DIR$/src/com/android/gallery3d/exif/ByteBufferInputStream.java" />
+      <change type="MOVED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\fraggel\gallery3d\exif\CountedDataInputStream.java" afterPath="$PROJECT_DIR$/src/com/android/gallery3d/exif/CountedDataInputStream.java" />
+      <change type="MOVED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\fraggel\gallery3d\exif\ExifData.java" afterPath="$PROJECT_DIR$/src/com/android/gallery3d/exif/ExifData.java" />
+      <change type="MOVED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\fraggel\gallery3d\exif\ExifInterface.java" afterPath="$PROJECT_DIR$/src/com/android/gallery3d/exif/ExifInterface.java" />
+      <change type="MOVED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\fraggel\gallery3d\exif\ExifInvalidFormatException.java" afterPath="$PROJECT_DIR$/src/com/android/gallery3d/exif/ExifInvalidFormatException.java" />
+      <change type="MOVED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\fraggel\gallery3d\exif\ExifModifier.java" afterPath="$PROJECT_DIR$/src/com/android/gallery3d/exif/ExifModifier.java" />
+      <change type="MOVED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\fraggel\gallery3d\exif\ExifOutputStream.java" afterPath="$PROJECT_DIR$/src/com/android/gallery3d/exif/ExifOutputStream.java" />
+      <change type="MOVED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\fraggel\gallery3d\exif\ExifParser.java" afterPath="$PROJECT_DIR$/src/com/android/gallery3d/exif/ExifParser.java" />
+      <change type="MOVED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\fraggel\gallery3d\exif\ExifReader.java" afterPath="$PROJECT_DIR$/src/com/android/gallery3d/exif/ExifReader.java" />
+      <change type="MOVED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\fraggel\gallery3d\exif\ExifTag.java" afterPath="$PROJECT_DIR$/src/com/android/gallery3d/exif/ExifTag.java" />
+      <change type="MOVED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\fraggel\gallery3d\exif\IfdData.java" afterPath="$PROJECT_DIR$/src/com/android/gallery3d/exif/IfdData.java" />
+      <change type="MOVED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\fraggel\gallery3d\exif\IfdId.java" afterPath="$PROJECT_DIR$/src/com/android/gallery3d/exif/IfdId.java" />
+      <change type="MOVED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\fraggel\gallery3d\exif\JpegHeader.java" afterPath="$PROJECT_DIR$/src/com/android/gallery3d/exif/JpegHeader.java" />
+      <change type="MOVED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\fraggel\gallery3d\exif\OrderedDataOutputStream.java" afterPath="$PROJECT_DIR$/src/com/android/gallery3d/exif/OrderedDataOutputStream.java" />
+      <change type="MOVED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\fraggel\gallery3d\exif\Rational.java" afterPath="$PROJECT_DIR$/src/com/android/gallery3d/exif/Rational.java" />
+      <change type="MOVED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\fraggel\gallery3d\glrenderer\BasicTexture.java" afterPath="$PROJECT_DIR$/src/com/android/gallery3d/glrenderer/BasicTexture.java" />
+      <change type="MOVED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\fraggel\gallery3d\glrenderer\BitmapTexture.java" afterPath="$PROJECT_DIR$/src/com/android/gallery3d/glrenderer/BitmapTexture.java" />
+      <change type="MOVED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\fraggel\gallery3d\glrenderer\GLCanvas.java" afterPath="$PROJECT_DIR$/src/com/android/gallery3d/glrenderer/GLCanvas.java" />
+      <change type="MOVED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\fraggel\gallery3d\glrenderer\GLES20Canvas.java" afterPath="$PROJECT_DIR$/src/com/android/gallery3d/glrenderer/GLES20Canvas.java" />
+      <change type="MOVED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\fraggel\gallery3d\glrenderer\GLES20IdImpl.java" afterPath="$PROJECT_DIR$/src/com/android/gallery3d/glrenderer/GLES20IdImpl.java" />
+      <change type="MOVED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\fraggel\gallery3d\glrenderer\GLId.java" afterPath="$PROJECT_DIR$/src/com/android/gallery3d/glrenderer/GLId.java" />
+      <change type="MOVED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\fraggel\gallery3d\glrenderer\GLPaint.java" afterPath="$PROJECT_DIR$/src/com/android/gallery3d/glrenderer/GLPaint.java" />
+      <change type="MOVED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\fraggel\gallery3d\glrenderer\RawTexture.java" afterPath="$PROJECT_DIR$/src/com/android/gallery3d/glrenderer/RawTexture.java" />
+      <change type="MOVED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\fraggel\gallery3d\glrenderer\Texture.java" afterPath="$PROJECT_DIR$/src/com/android/gallery3d/glrenderer/Texture.java" />
+      <change type="MOVED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\fraggel\gallery3d\glrenderer\UploadedTexture.java" afterPath="$PROJECT_DIR$/src/com/android/gallery3d/glrenderer/UploadedTexture.java" />
+      <change type="MOVED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\fraggel\gallery3d\util\IntArray.java" afterPath="$PROJECT_DIR$/src/com/android/gallery3d/util/IntArray.java" />
+      <change type="MOVED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\fraggel\photos\BitmapRegionTileSource.java" afterPath="$PROJECT_DIR$/src/com/android/photos/BitmapRegionTileSource.java" />
+      <change type="MOVED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\fraggel\photos\views\BlockingGLTextureView.java" afterPath="$PROJECT_DIR$/src/com/android/photos/views/BlockingGLTextureView.java" />
+      <change type="MOVED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\fraggel\photos\views\TiledImageRenderer.java" afterPath="$PROJECT_DIR$/src/com/android/photos/views/TiledImageRenderer.java" />
+      <change type="MOVED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\fraggel\photos\views\TiledImageView.java" afterPath="$PROJECT_DIR$/src/com/android/photos/views/TiledImageView.java" />
     </list>
     <ignored path="android_packages_apps_Launcher3-somex-4.4.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -227,57 +114,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Launcher.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/fraggel/launcher/Launcher.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1354" column="118" selection-start="54836" selection-end="54836" vertical-scroll-proportion="0.0" vertical-offset="20439" max-vertical-offset="81447">
-              <folding>
-                <element signature="e#21810#21861#0" expanded="true" />
-                <element signature="e#22018#22069#0" expanded="true" />
-                <element signature="e#22170#22221#0" expanded="true" />
-                <element signature="e#22378#22429#0" expanded="true" />
-                <element signature="e#22532#22581#0" expanded="true" />
-                <element signature="e#22734#22783#0" expanded="true" />
-                <element signature="e#22886#22935#0" expanded="true" />
-                <element signature="e#23088#23137#0" expanded="true" />
-                <element signature="e#23286#23336#0" expanded="true" />
-                <element signature="e#23760#23812#0" expanded="true" />
-                <element signature="e#24387#24437#0" expanded="true" />
-                <element signature="e#24596#24648#0" expanded="true" />
-                <element signature="e#73293#73322#0" expanded="true" />
-                <element signature="e#73325#73346#0" expanded="true" />
-                <element signature="e#88567#88620#0" expanded="true" />
-                <element signature="e#89107#89149#0" expanded="true" />
-                <element signature="e#89687#89716#0" expanded="true" />
-                <element signature="e#100926#100960#0" expanded="true" />
-                <element signature="e#102405#102432#0" expanded="true" />
-                <element signature="e#103068#103095#0" expanded="true" />
-                <element signature="e#108077#108139#0" expanded="true" />
-                <element signature="e#108903#108965#0" expanded="true" />
-                <element signature="e#119601#119657#0" expanded="true" />
-                <element signature="e#119692#119748#0" expanded="true" />
-                <element signature="e#119786#119847#0" expanded="true" />
-                <element signature="e#120005#120076#0" expanded="true" />
-                <element signature="e#126474#126531#0" expanded="true" />
-                <element signature="e#126585#126642#0" expanded="true" />
-                <element signature="e#126702#126763#0" expanded="true" />
-                <element signature="e#126972#127043#0" expanded="true" />
-                <element signature="e#138824#138884#0" expanded="true" />
-                <element signature="e#138902#138963#0" expanded="true" />
-                <element signature="e#149305#149365#0" expanded="true" />
-                <element signature="e#149387#149448#0" expanded="true" />
-                <element signature="e#150104#150150#0" expanded="true" />
-                <element signature="e#200040#200073#0" expanded="true" />
-                <element signature="e#200180#200213#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="config.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/values/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="35" selection-start="4990" selection-end="4990" vertical-scroll-proportion="0.0" vertical-offset="1226" max-vertical-offset="1921">
+            <state line="103" column="35" selection-start="4990" selection-end="4990" vertical-scroll-proportion="0.0" vertical-offset="1751" max-vertical-offset="1921">
               <folding />
             </state>
           </provider>
@@ -286,7 +126,7 @@
       <file leaf-file-name="default_workspace.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/xml-xhdpi/default_workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="54" selection-start="0" selection-end="2901" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+            <state line="9" column="54" selection-start="0" selection-end="2901" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="425">
               <folding />
             </state>
           </provider>
@@ -295,7 +135,7 @@
       <file leaf-file-name="config.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/values-hdpi/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="94" column="37" selection-start="4571" selection-end="4571" vertical-scroll-proportion="0.0" vertical-offset="1481" max-vertical-offset="1921">
+            <state line="94" column="37" selection-start="4571" selection-end="4571" vertical-scroll-proportion="0.0" vertical-offset="1598" max-vertical-offset="1921">
               <folding />
             </state>
           </provider>
@@ -310,10 +150,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default_workspace.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="default_workspace.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/res/xml-hdpi/default_workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="38" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.3794643" vertical-offset="0" max-vertical-offset="448">
+            <state line="10" column="38" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="425">
               <folding />
             </state>
           </provider>
@@ -322,40 +162,34 @@
       <file leaf-file-name="LauncherProvider.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/fraggel/launcher/LauncherProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="459" column="0" selection-start="18061" selection-end="18061" vertical-scroll-proportion="0.0" vertical-offset="6628" max-vertical-offset="24956">
+            <state line="459" column="0" selection-start="18061" selection-end="18061" vertical-scroll-proportion="0.0" vertical-offset="7803" max-vertical-offset="26010">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Workspace.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/fraggel/launcher/Workspace.java">
+      <file leaf-file-name="WallpaperCropActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/fraggel/launcher/WallpaperCropActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1103" column="133" selection-start="43326" selection-end="43326" vertical-scroll-proportion="0.0" vertical-offset="17255" max-vertical-offset="79713">
-              <folding>
-                <element signature="e#12611#12679#0" expanded="true" />
-                <element signature="e#12742#12808#0" expanded="true" />
-                <element signature="e#12853#12913#0" expanded="true" />
-                <element signature="e#12941#12988#0" expanded="true" />
-                <element signature="e#78180#78245#0" expanded="true" />
-                <element signature="e#78335#78401#0" expanded="true" />
-                <element signature="e#78443#78519#0" expanded="true" />
-                <element signature="e#84702#84799#0" expanded="true" />
-                <element signature="e#84892#84989#0" expanded="true" />
-                <element signature="e#130121#130182#0" expanded="true" />
-                <element signature="e#130197#130258#0" expanded="true" />
-                <element signature="e#153906#153958#0" expanded="true" />
-                <element signature="e#189699#189754#0" expanded="true" />
-                <element signature="e#190130#190186#0" expanded="true" />
-              </folding>
+            <state line="44" column="18" selection-start="1489" selection-end="1496" vertical-scroll-proportion="0.3325893" vertical-offset="361" max-vertical-offset="12393">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WallpaperCropActivity.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/fraggel/launcher/WallpaperCropActivity.java">
+      <file leaf-file-name="Utils.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/android/gallery3d/common/Utils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="116" column="163" selection-start="4408" selection-end="4422" vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="11781">
+            <state line="31" column="13" selection-start="1056" selection-end="1056" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5457">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BitmapUtils.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/android/gallery3d/common/BitmapUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="13" selection-start="1092" selection-end="1092" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4080">
               <folding />
             </state>
           </provider>
@@ -364,7 +198,7 @@
       <file leaf-file-name="jiayuLauncherConfigCajon.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfigCajon.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="145" selection-start="3364" selection-end="3364" vertical-scroll-proportion="0.0" vertical-offset="1127" max-vertical-offset="6086">
+            <state line="82" column="145" selection-start="3364" selection-end="3364" vertical-scroll-proportion="0.0" vertical-offset="1394" max-vertical-offset="6205">
               <folding>
                 <marker date="1390861889365" expanded="true" signature="3964:4013" placeholder="3" />
               </folding>
@@ -422,7 +256,6 @@
         <option value="$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfig.java" />
         <option value="$PROJECT_DIR$/src/com/fraggel/launcher/DynamicGrid.java" />
         <option value="$PROJECT_DIR$/src/com/fraggel/launcher/Workspace.java" />
-        <option value="$PROJECT_DIR$/src/com/fraggel/launcher/WallpaperCropActivity.java" />
         <option value="$PROJECT_DIR$/res/values/config720.xml" />
         <option value="$PROJECT_DIR$/res/values-ldpi/config.xml" />
         <option value="$PROJECT_DIR$/src/com/fraggel/launcher/Launcher.java" />
@@ -431,6 +264,7 @@
         <option value="$PROJECT_DIR$/res/values-mdpi/config.xml" />
         <option value="$PROJECT_DIR$/res/xml-mdpi/default_workspace.xml" />
         <option value="$PROJECT_DIR$/res/xml-hdpi/default_workspace.xml" />
+        <option value="$PROJECT_DIR$/src/com/fraggel/launcher/WallpaperCropActivity.java" />
       </list>
     </option>
   </component>
@@ -466,7 +300,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -502,8 +336,26 @@
               <option name="myItemId" value="com" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="android_packages_apps_Launcher3-somex-4.4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Launcher344" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -525,7 +377,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fraggel" />
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gallery3d" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -547,11 +403,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="fraggel" />
+              <option name="myItemId" value="android" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="launcher" />
+              <option name="myItemId" value="gallery3d" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -566,164 +426,12 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fraggel" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="launcher" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Launcher.java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android_packages_apps_Launcher3-somex-4.4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Launcher344" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android_packages_apps_Launcher3-somex-4.4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Launcher344" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xml-xhdpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android_packages_apps_Launcher3-somex-4.4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Launcher344" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android_packages_apps_Launcher3-somex-4.4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Launcher344" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xml-hdpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android_packages_apps_Launcher3-somex-4.4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Launcher344" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xml" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android_packages_apps_Launcher3-somex-4.4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Launcher344" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values-xhdpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android_packages_apps_Launcher3-somex-4.4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Launcher344" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values-hdpi" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android_packages_apps_Launcher3-somex-4.4" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Launcher344" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="values" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -770,12 +478,13 @@
       <recent name="D:\Programacion\androidsuiteworkspace\Launcher344\res\values-mdpi" />
       <recent name="D:\Programacion\androidsuiteworkspace\Launcher344\res\values" />
     </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Programacion\androidsuiteworkspace\Launcher344\res\values-ldpi" />
       <recent name="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher3\settings" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.android" />
+      <recent name="" />
     </key>
   </component>
   <component name="RunManager" selected="Android Application.android_packages_apps_Launcher3-somex-4.4">
@@ -807,19 +516,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -845,6 +541,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1037,7 +746,11 @@
       <created>1390861822634</created>
       <updated>1390861822634</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;src/com/android/launcher2/AppsCustomizePagedView.java&#10;&#9;src/com/jiayu/config/jiayuLauncherConfigCajon.java&#10;">
+      <created>1390861915229</created>
+      <updated>1390861915229</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1069,7 +782,6 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32732317" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40360612" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -1091,6 +803,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6720297" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32732317" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1113,47 +826,26 @@
     <MESSAGE value="Version Final 1" />
     <MESSAGE value="Version Final 1 Falta la parte de la config" />
     <MESSAGE value="Version Final 1 Falta la parte de la config&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version Final 1 Falta la parte de la config&#10;" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;src/com/android/launcher2/AppsCustomizePagedView.java&#10;&#9;src/com/jiayu/config/jiayuLauncherConfigCajon.java&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;src/com/android/launcher2/AppsCustomizePagedView.java&#10;&#9;src/com/jiayu/config/jiayuLauncherConfigCajon.java&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/../../android-sdk/platforms/android-17/android.jar!/android/os/Handler.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="16" selection-start="564" selection-end="564" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="1428">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../android-sdk/platforms/android-17/android.jar!/android/os/Looper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="16" selection-start="712" selection-end="712" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="612">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/xml/default_workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="1873" selection-end="1873" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="425">
-          <folding />
-        </state>
+        <state line="14" column="0" selection-start="1873" selection-end="1873" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="425" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="170" column="0" selection-start="8302" selection-end="8302" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="8942">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
+        <state line="170" column="0" selection-start="8302" selection-end="8302" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="8942" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/spinnerrow.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="18" selection-start="446" selection-end="446" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="561">
-          <folding />
-        </state>
+        <state line="14" column="18" selection-start="446" selection-end="446" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="561" />
       </provider>
       <provider editor-type-id="android-designer">
         <state />
@@ -1161,30 +853,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/xml/default_toppackage.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238" />
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/../../android-sdk/platforms/android-17/android.jar!/android/app/Instrumentation.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="16" selection-start="5963" selection-end="5963" vertical-scroll-proportion="0.0" vertical-offset="1904" max-vertical-offset="2703">
-          <folding />
-        </state>
+        <state line="112" column="16" selection-start="5963" selection-end="5963" vertical-scroll-proportion="0.0" vertical-offset="1904" max-vertical-offset="2703" />
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/../../android-sdk/platforms/android-17/android.jar!/android/os/Handler.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="16" selection-start="564" selection-end="564" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="1428">
-          <folding />
-        </state>
+        <state line="17" column="16" selection-start="564" selection-end="564" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="1428" />
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/../../android-sdk/platforms/android-17/android.jar!/android/os/Looper.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="16" selection-start="712" selection-end="712" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="612">
-          <folding />
-        </state>
+        <state line="23" column="16" selection-start="712" selection-end="712" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="612" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
@@ -1196,11 +880,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="234" column="17" selection-start="11319" selection-end="11319" vertical-scroll-proportion="0.0" vertical-offset="3961" max-vertical-offset="8432">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
+        <state line="234" column="17" selection-start="11319" selection-end="11319" vertical-scroll-proportion="0.0" vertical-offset="3961" max-vertical-offset="8432" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/workspace_screen.xml">
@@ -1268,37 +948,27 @@
     </entry>
     <entry file="jar://$PROJECT_DIR$/../../android-sdk/platforms/android-17/android.jar!/android/app/Instrumentation.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="16" selection-start="5963" selection-end="5963" vertical-scroll-proportion="0.0" vertical-offset="1757" max-vertical-offset="2686">
-          <folding />
-        </state>
+        <state line="112" column="16" selection-start="5963" selection-end="5963" vertical-scroll-proportion="0.0" vertical-offset="1757" max-vertical-offset="2686" />
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/../../android-sdk/platforms/android-17/android.jar!/android/os/Handler.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="16" selection-start="564" selection-end="564" vertical-scroll-proportion="0.0" vertical-offset="138" max-vertical-offset="1411">
-          <folding />
-        </state>
+        <state line="17" column="16" selection-start="564" selection-end="564" vertical-scroll-proportion="0.0" vertical-offset="138" max-vertical-offset="1411" />
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/../../android-sdk/platforms/android-17/android.jar!/android/os/Looper.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="16" selection-start="712" selection-end="712" vertical-scroll-proportion="0.0" vertical-offset="191" max-vertical-offset="595">
-          <folding />
-        </state>
+        <state line="23" column="16" selection-start="712" selection-end="712" vertical-scroll-proportion="0.0" vertical-offset="191" max-vertical-offset="595" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/xml/default_toppackage.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="682">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="682" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/spinnerrow.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="18" selection-start="446" selection-end="446" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="561">
-          <folding />
-        </state>
+        <state line="14" column="18" selection-start="446" selection-end="446" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="561" />
       </provider>
       <provider editor-type-id="android-designer">
         <state />
@@ -1320,10 +990,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/drawable-hdpi/bg_appwidget_error.9.png">
-      <provider editor-type-id="images">
+      <provider selected="true" editor-type-id="ninepatcheditor">
         <state />
       </provider>
-      <provider selected="true" editor-type-id="ninepatcheditor">
+      <provider editor-type-id="images">
         <state />
       </provider>
     </entry>
@@ -1334,11 +1004,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="38" selection-start="628" selection-end="628" vertical-scroll-proportion="-0.36074272" vertical-offset="510" max-vertical-offset="901">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
+        <state line="22" column="38" selection-start="628" selection-end="628" vertical-scroll-proportion="-0.36074272" vertical-offset="510" max-vertical-offset="901" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/fraggel/launcher/AppsCustomizePagedView.java">
@@ -1364,16 +1030,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfigGeneral.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="15" selection-start="3811" selection-end="3811" vertical-scroll-proportion="0.0" vertical-offset="991" max-vertical-offset="4267">
-          <folding />
-        </state>
+        <state line="92" column="15" selection-start="3811" selection-end="3811" vertical-scroll-proportion="0.0" vertical-offset="991" max-vertical-offset="4267" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfigInferior.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="38" selection-start="1154" selection-end="1154" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="4097">
-          <folding />
-        </state>
+        <state line="43" column="38" selection-start="1154" selection-end="1154" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="4097" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/fraggel/launcher/CustomView.java">
@@ -1401,89 +1063,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfigEscritorio.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="111" selection-start="2437" selection-end="2452" vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="4760">
-          <folding />
-        </state>
+        <state line="69" column="111" selection-start="2437" selection-end="2452" vertical-scroll-proportion="0.0" vertical-offset="816" max-vertical-offset="4760" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/fraggel/launcher/Workspace.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1103" column="133" selection-start="43326" selection-end="43326" vertical-scroll-proportion="0.0" vertical-offset="17255" max-vertical-offset="79713">
-          <folding>
-            <element signature="e#12611#12679#0" expanded="true" />
-            <element signature="e#12742#12808#0" expanded="true" />
-            <element signature="e#12853#12913#0" expanded="true" />
-            <element signature="e#12941#12988#0" expanded="true" />
-            <element signature="e#78180#78245#0" expanded="true" />
-            <element signature="e#78335#78401#0" expanded="true" />
-            <element signature="e#78443#78519#0" expanded="true" />
-            <element signature="e#84702#84799#0" expanded="true" />
-            <element signature="e#84892#84989#0" expanded="true" />
-            <element signature="e#130121#130182#0" expanded="true" />
-            <element signature="e#130197#130258#0" expanded="true" />
-            <element signature="e#153906#153958#0" expanded="true" />
-            <element signature="e#189699#189754#0" expanded="true" />
-            <element signature="e#190130#190186#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/fraggel/launcher/WallpaperCropActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="116" column="163" selection-start="4408" selection-end="4422" vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="11781">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/../../android-sdk/platforms/android-17/android.jar!/android/view/ContextThemeWrapper.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="41" selection-start="594" selection-end="674" vertical-scroll-proportion="0.42825112" vertical-offset="47" max-vertical-offset="493">
-          <folding />
-        </state>
+        <state line="15" column="41" selection-start="594" selection-end="674" vertical-scroll-proportion="0.42825112" vertical-offset="47" max-vertical-offset="493" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/fraggel/launcher/Launcher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1354" column="118" selection-start="54836" selection-end="54836" vertical-scroll-proportion="0.0" vertical-offset="20439" max-vertical-offset="81447">
-          <folding>
-            <element signature="e#21810#21861#0" expanded="true" />
-            <element signature="e#22018#22069#0" expanded="true" />
-            <element signature="e#22170#22221#0" expanded="true" />
-            <element signature="e#22378#22429#0" expanded="true" />
-            <element signature="e#22532#22581#0" expanded="true" />
-            <element signature="e#22734#22783#0" expanded="true" />
-            <element signature="e#22886#22935#0" expanded="true" />
-            <element signature="e#23088#23137#0" expanded="true" />
-            <element signature="e#23286#23336#0" expanded="true" />
-            <element signature="e#23760#23812#0" expanded="true" />
-            <element signature="e#24387#24437#0" expanded="true" />
-            <element signature="e#24596#24648#0" expanded="true" />
-            <element signature="e#73293#73322#0" expanded="true" />
-            <element signature="e#73325#73346#0" expanded="true" />
-            <element signature="e#88567#88620#0" expanded="true" />
-            <element signature="e#89107#89149#0" expanded="true" />
-            <element signature="e#89687#89716#0" expanded="true" />
-            <element signature="e#100926#100960#0" expanded="true" />
-            <element signature="e#102405#102432#0" expanded="true" />
-            <element signature="e#103068#103095#0" expanded="true" />
-            <element signature="e#108077#108139#0" expanded="true" />
-            <element signature="e#108903#108965#0" expanded="true" />
-            <element signature="e#119601#119657#0" expanded="true" />
-            <element signature="e#119692#119748#0" expanded="true" />
-            <element signature="e#119786#119847#0" expanded="true" />
-            <element signature="e#120005#120076#0" expanded="true" />
-            <element signature="e#126474#126531#0" expanded="true" />
-            <element signature="e#126585#126642#0" expanded="true" />
-            <element signature="e#126702#126763#0" expanded="true" />
-            <element signature="e#126972#127043#0" expanded="true" />
-            <element signature="e#138824#138884#0" expanded="true" />
-            <element signature="e#138902#138963#0" expanded="true" />
-            <element signature="e#149305#149365#0" expanded="true" />
-            <element signature="e#149387#149448#0" expanded="true" />
-            <element signature="e#150104#150150#0" expanded="true" />
-            <element signature="e#200040#200073#0" expanded="true" />
-            <element signature="e#200180#200213#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1505,9 +1103,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/xml/default_workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="1876" selection-end="1876" vertical-scroll-proportion="0.0" vertical-offset="61" max-vertical-offset="425">
-          <folding />
-        </state>
+        <state line="14" column="0" selection-start="1876" selection-end="1876" vertical-scroll-proportion="0.0" vertical-offset="61" max-vertical-offset="425" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/values-xhdpi/config.xml">
@@ -1540,7 +1136,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/xml-hdpi/default_workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="38" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.3794643" vertical-offset="0" max-vertical-offset="448">
+        <state line="10" column="38" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/android/gallery3d/common/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="13" selection-start="1056" selection-end="1056" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5457">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/android/gallery3d/common/BitmapUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="13" selection-start="1092" selection-end="1092" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4080">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/fraggel/launcher/WallpaperCropActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="18" selection-start="1489" selection-end="1496" vertical-scroll-proportion="0.3325893" vertical-offset="361" max-vertical-offset="12393">
           <folding />
         </state>
       </provider>
