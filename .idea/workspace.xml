@@ -17,221 +17,152 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25c6fd96-9691-4356-a157-a2ad0904d627" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values-hdpi/config.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/values-xhdpi/config.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/xml-hdpi/default_workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/xml-xhdpi/default_workspace.xml" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\gen\com\android\launcher\BuildConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\gen\com\android\launcher\Manifest.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\gen\com\android\launcher\R.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\common\BitmapUtils.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\common\Utils.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\exif\ByteBufferInputStream.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\exif\CountedDataInputStream.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\exif\ExifData.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\exif\ExifInterface.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\exif\ExifInvalidFormatException.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\exif\ExifModifier.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\exif\ExifOutputStream.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\exif\ExifParser.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\exif\ExifReader.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\exif\ExifTag.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\exif\IfdData.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\exif\IfdId.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\exif\JpegHeader.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\exif\OrderedDataOutputStream.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\exif\Rational.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\glrenderer\BasicTexture.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\glrenderer\BitmapTexture.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\glrenderer\GLCanvas.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\glrenderer\GLES20Canvas.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\glrenderer\GLES20IdImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\glrenderer\GLId.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\glrenderer\GLPaint.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\glrenderer\RawTexture.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\glrenderer\Texture.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\glrenderer\UploadedTexture.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\gallery3d\util\IntArray.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\AccessibleTabView.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\AddAdapter.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\Alarm.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\AllAppsList.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\AppFilter.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\AppInfo.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\AppWidgetResizeFrame.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\AppsCustomizeCellLayout.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\AppsCustomizePagedView.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\AppsCustomizeTabHost.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\BubbleTextView.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\ButtonDropTarget.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\CellLayout.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\CheckLongPressHelper.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\CheckableFrameLayout.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\Cling.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\CropView.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\CustomView.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\DeferredHandler.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\DeleteDropTarget.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\DragController.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\DragLayer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\DragScroller.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\DragSource.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\DragView.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\DrawableStateProxyView.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\DropTarget.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\DynamicGrid.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\FastBitmapDrawable.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\FirstFrameAnimatorHelper.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\FocusHelper.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\FocusOnlyTabWidget.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\Folder.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\FolderAutoScrollHelper.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\FolderEditText.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\FolderIcon.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\FolderInfo.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\HideFromAccessibilityHelper.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\HolographicImageView.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\HolographicLinearLayout.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\HolographicOutlineHelper.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\HolographicViewHelper.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\Hotseat.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\IconCache.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\InfoDropTarget.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\Insettable.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\InstallShortcutHelper.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\InstallShortcutReceiver.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\InstallWidgetReceiver.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\InterruptibleInOutAnimator.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\ItemInfo.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\Launcher.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\LauncherAnimUtils.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\LauncherAnimatorUpdateListener.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\LauncherAppState.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\LauncherAppWidgetHost.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\LauncherAppWidgetHostView.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\LauncherAppWidgetInfo.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\LauncherApplication.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\LauncherBackupAgentHelper.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\LauncherBackupHelper.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\LauncherModel.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\LauncherProvider.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\LauncherSettings.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\LauncherViewPropertyAnimator.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\LiveWallpaperListAdapter.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\MTKAppIcon.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\MTKShortcut.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\MTKUnreadLoader.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\MemoryDumpActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\MemoryTracker.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\PackageChangedReceiver.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\PageIndicator.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\PageIndicatorMarker.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\PagedView.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\PagedViewCellLayout.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\PagedViewCellLayoutChildren.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\PagedViewGridLayout.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\PagedViewIcon.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\PagedViewIconCache.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\PagedViewWidget.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\PagedViewWidgetImageView.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\PagedViewWithDraggableItems.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\PendingAddItemInfo.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\PreloadReceiver.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\RampUpScroller.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\SavedWallpaperImages.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\ScrimView.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\SearchDropTargetBar.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\ShortcutAndWidgetContainer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\ShortcutInfo.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\SmoothPagedView.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\SpringLoadedDragController.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\Stats.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\ThirdPartyWallpaperPickerListAdapter.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\ToggleWeightWatcher.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\UninstallShortcutReceiver.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\UserInitializeReceiver.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\Utilities.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\Utils.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\WallpaperCropActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\WallpaperPickerActivity.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\WallpaperRootView.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\WeightWatcher.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\WidgetAdder.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\WidgetPreviewLoader.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\Workspace.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\launcher2\config\ProviderConfig.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\photos\BitmapRegionTileSource.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\photos\views\BlockingGLTextureView.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\photos\views\TiledImageRenderer.java" afterPath="" />
-      <change type="DELETED" beforePath="D:\Programacion\androidsuiteworkspace\Launcher344\src\com\android\photos\views\TiledImageView.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-land/all_apps_cling.xml" afterPath="$PROJECT_DIR$/res/layout-land/all_apps_cling.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-port/all_apps_cling.xml" afterPath="$PROJECT_DIR$/res/layout-port/all_apps_cling.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-sw600dp-port/all_apps_cling.xml" afterPath="$PROJECT_DIR$/res/layout-sw600dp-port/all_apps_cling.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-sw720dp/all_apps_cling.xml" afterPath="$PROJECT_DIR$/res/layout-sw720dp/all_apps_cling.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/application.xml" afterPath="$PROJECT_DIR$/res/layout/application.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/apps_customize_application.xml" afterPath="$PROJECT_DIR$/res/layout/apps_customize_application.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/apps_customize_pane.xml" afterPath="$PROJECT_DIR$/res/layout/apps_customize_pane.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/apps_customize_widget.xml" afterPath="$PROJECT_DIR$/res/layout/apps_customize_widget.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/colors.xml" afterPath="$PROJECT_DIR$/res/values/colors.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/config.xml" afterPath="$PROJECT_DIR$/res/values/config.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/custom_content_page_indicator_marker.xml" afterPath="$PROJECT_DIR$/res/layout/custom_content_page_indicator_marker.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/custom_workspace_cling.xml" afterPath="$PROJECT_DIR$/res/layout/custom_workspace_cling.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml/default_toppackage.xml" afterPath="$PROJECT_DIR$/res/xml/default_toppackage.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml/default_workspace.xml" afterPath="$PROJECT_DIR$/res/xml/default_workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml-sw600dp/default_workspace.xml" afterPath="$PROJECT_DIR$/res/xml-sw600dp/default_workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml-sw720dp/default_workspace.xml" afterPath="$PROJECT_DIR$/res/xml-sw720dp/default_workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/drop_target_bar.xml" afterPath="$PROJECT_DIR$/res/layout/drop_target_bar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-land/first_run_cling.xml" afterPath="$PROJECT_DIR$/res/layout-land/first_run_cling.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-port/first_run_cling.xml" afterPath="$PROJECT_DIR$/res/layout-port/first_run_cling.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-land/folder_cling.xml" afterPath="$PROJECT_DIR$/res/layout-land/folder_cling.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-port/folder_cling.xml" afterPath="$PROJECT_DIR$/res/layout-port/folder_cling.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-sw600dp-port/folder_cling.xml" afterPath="$PROJECT_DIR$/res/layout-sw600dp-port/folder_cling.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-sw720dp-port/folder_cling.xml" afterPath="$PROJECT_DIR$/res/layout-sw720dp-port/folder_cling.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/folder_icon.xml" afterPath="$PROJECT_DIR$/res/layout/folder_icon.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/hotseat.xml" afterPath="$PROJECT_DIR$/res/layout/hotseat.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfig.java" afterPath="$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfigCajon.java" afterPath="$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfigCajon.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfigEscritorio.java" afterPath="$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfigEscritorio.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfigGeneral.java" afterPath="$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfigGeneral.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfigInferior.java" afterPath="$PROJECT_DIR$/src/com/jiayu/config/jiayuLauncherConfigInferior.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/jiayu_launcher_config_cajon.xml" afterPath="$PROJECT_DIR$/res/layout/jiayu_launcher_config_cajon.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/jiayu_launcher_config_escritorio.xml" afterPath="$PROJECT_DIR$/res/layout/jiayu_launcher_config_escritorio.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/jiayu_launcher_config_general.xml" afterPath="$PROJECT_DIR$/res/layout/jiayu_launcher_config_general.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/jiayu_launcher_config_inferior.xml" afterPath="$PROJECT_DIR$/res/layout/jiayu_launcher_config_inferior.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/jiayu_launcher_config_main.xml" afterPath="$PROJECT_DIR$/res/layout/jiayu_launcher_config_main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-land/launcher.xml" afterPath="$PROJECT_DIR$/res/layout-land/launcher.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-port/launcher.xml" afterPath="$PROJECT_DIR$/res/layout-port/launcher.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-sw720dp/launcher.xml" afterPath="$PROJECT_DIR$/res/layout-sw720dp/launcher.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-land/launcher22.xml" afterPath="$PROJECT_DIR$/res/layout-land/launcher22.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-port/launcher22.xml" afterPath="$PROJECT_DIR$/res/layout-port/launcher22.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml/mota_update.xml" afterPath="$PROJECT_DIR$/res/xml/mota_update.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-land/mtk_application.xml" afterPath="$PROJECT_DIR$/res/layout-land/mtk_application.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-port/mtk_application.xml" afterPath="$PROJECT_DIR$/res/layout-port/mtk_application.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-land/mtk_apps_customize_application.xml" afterPath="$PROJECT_DIR$/res/layout-land/mtk_apps_customize_application.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-port/mtk_apps_customize_application.xml" afterPath="$PROJECT_DIR$/res/layout-port/mtk_apps_customize_application.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/page_indicator.xml" afterPath="$PROJECT_DIR$/res/layout/page_indicator.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/page_indicator_marker.xml" afterPath="$PROJECT_DIR$/res/layout/page_indicator_marker.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/qsb_bar.xml" afterPath="$PROJECT_DIR$/res/layout/qsb_bar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-land/search_bar.xml" afterPath="$PROJECT_DIR$/res/layout-land/search_bar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-port/search_bar.xml" afterPath="$PROJECT_DIR$/res/layout-port/search_bar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-sw720dp/search_bar.xml" afterPath="$PROJECT_DIR$/res/layout-sw720dp/search_bar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/styles.xml" afterPath="$PROJECT_DIR$/res/values/styles.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/tab_widget_indicator.xml" afterPath="$PROJECT_DIR$/res/layout/tab_widget_indicator.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml/unread_support_shortcuts.xml" afterPath="$PROJECT_DIR$/res/xml/unread_support_shortcuts.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml/update_workspace.xml" afterPath="$PROJECT_DIR$/res/xml/update_workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/user_folder.xml" afterPath="$PROJECT_DIR$/res/layout/user_folder.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/wallpaper_cropper.xml" afterPath="$PROJECT_DIR$/res/layout/wallpaper_cropper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/wallpaper_picker.xml" afterPath="$PROJECT_DIR$/res/layout/wallpaper_picker.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/wallpaper_picker_image_picker_item.xml" afterPath="$PROJECT_DIR$/res/layout/wallpaper_picker_image_picker_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/wallpaper_picker_item.xml" afterPath="$PROJECT_DIR$/res/layout/wallpaper_picker_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/wallpaper_picker_live_wallpaper_item.xml" afterPath="$PROJECT_DIR$/res/layout/wallpaper_picker_live_wallpaper_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/wallpaper_picker_third_party_item.xml" afterPath="$PROJECT_DIR$/res/layout/wallpaper_picker_third_party_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/xml/work.xml" afterPath="$PROJECT_DIR$/res/xml/work.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Launcher3.apk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/res/drawable-hdpi/Thumbs.db" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/AccessibleTabView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/AddAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/Alarm.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/AllAppsList.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/AppFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/AppInfo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/AppWidgetResizeFrame.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/AppsCustomizeCellLayout.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/AppsCustomizePagedView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/AppsCustomizeTabHost.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/glrenderer/BasicTexture.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/photos/BitmapRegionTileSource.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/glrenderer/BitmapTexture.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/common/BitmapUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/photos/views/BlockingGLTextureView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/BubbleTextView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gen/com/fraggel/launcher/BuildConfig.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/ButtonDropTarget.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/exif/ByteBufferInputStream.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/CellLayout.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/CheckLongPressHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/CheckableFrameLayout.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/Cling.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/exif/CountedDataInputStream.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/CropView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/CustomView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/DeferredHandler.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/DeleteDropTarget.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/DragController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/DragLayer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/DragScroller.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/DragSource.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/DragView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/DrawableStateProxyView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/DropTarget.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/DynamicGrid.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/exif/ExifData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/exif/ExifInterface.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/exif/ExifInvalidFormatException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/exif/ExifModifier.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/exif/ExifOutputStream.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/exif/ExifParser.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/exif/ExifReader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/exif/ExifTag.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/FastBitmapDrawable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/FirstFrameAnimatorHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/FocusHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/FocusOnlyTabWidget.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/Folder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/FolderAutoScrollHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/FolderEditText.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/FolderIcon.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/FolderInfo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/glrenderer/GLCanvas.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/glrenderer/GLES20Canvas.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/glrenderer/GLES20IdImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/glrenderer/GLId.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/glrenderer/GLPaint.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/HideFromAccessibilityHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/HolographicImageView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/HolographicLinearLayout.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/HolographicOutlineHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/HolographicViewHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/Hotseat.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/IconCache.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/exif/IfdData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/exif/IfdId.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/InfoDropTarget.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/Insettable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/InstallShortcutHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/InstallShortcutReceiver.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/InstallWidgetReceiver.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/util/IntArray.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/InterruptibleInOutAnimator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/ItemInfo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/exif/JpegHeader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/Launcher.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/LauncherAnimUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/LauncherAnimatorUpdateListener.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/LauncherAppState.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/LauncherAppWidgetHost.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/LauncherAppWidgetHostView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/LauncherAppWidgetInfo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/LauncherApplication.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/LauncherBackupAgentHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/LauncherBackupHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/LauncherModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/LauncherProvider.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/LauncherSettings.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/LauncherViewPropertyAnimator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/LiveWallpaperListAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/MTKAppIcon.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/MTKShortcut.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/MTKUnreadLoader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gen/com/fraggel/launcher/Manifest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/MemoryDumpActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/MemoryTracker.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/exif/OrderedDataOutputStream.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/PackageChangedReceiver.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/PageIndicator.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/PageIndicatorMarker.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/PagedView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/PagedViewCellLayout.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/PagedViewCellLayoutChildren.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/PagedViewGridLayout.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/PagedViewIcon.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/PagedViewIconCache.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/PagedViewWidget.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/PagedViewWidgetImageView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/PagedViewWithDraggableItems.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/PendingAddItemInfo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/PreloadReceiver.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/config/ProviderConfig.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gen/com/fraggel/launcher/R.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/RampUpScroller.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/exif/Rational.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/glrenderer/RawTexture.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/SavedWallpaperImages.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/ScrimView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/SearchDropTargetBar.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/ShortcutAndWidgetContainer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/ShortcutInfo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/SmoothPagedView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/SpringLoadedDragController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/Stats.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/glrenderer/Texture.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/ThirdPartyWallpaperPickerListAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/photos/views/TiledImageRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/photos/views/TiledImageView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/ToggleWeightWatcher.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/UninstallShortcutReceiver.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/glrenderer/UploadedTexture.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/UserInitializeReceiver.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/Utilities.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/gallery3d/common/Utils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/Utils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/WallpaperCropActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/WallpaperPickerActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/WallpaperRootView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/WeightWatcher.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/WidgetAdder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/WidgetPreviewLoader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/fraggel/launcher/Workspace.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-land/workspace_cling.xml" afterPath="$PROJECT_DIR$/res/layout-land/workspace_cling.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout-port/workspace_cling.xml" afterPath="$PROJECT_DIR$/res/layout-port/workspace_cling.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/workspace_screen.xml" afterPath="$PROJECT_DIR$/res/layout/workspace_screen.xml" />
     </list>
     <ignored path="android_packages_apps_Launcher3-somex-4.4.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -382,7 +313,7 @@
       <file leaf-file-name="default_workspace.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/res/xml-hdpi/default_workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="38" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.46703297" vertical-offset="0" max-vertical-offset="425">
+            <state line="10" column="38" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.3794643" vertical-offset="0" max-vertical-offset="448">
               <folding />
             </state>
           </provider>
@@ -435,11 +366,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="82" column="145" selection-start="3364" selection-end="3364" vertical-scroll-proportion="0.0" vertical-offset="1127" max-vertical-offset="6086">
               <folding>
-                <element signature="e#2582#2631#0" expanded="true" />
-                <element signature="e#2826#2875#0" expanded="true" />
-                <element signature="e#3072#3122#0" expanded="true" />
-                <element signature="e#3581#3630#0" expanded="true" />
-                <element signature="e#3825#3874#0" expanded="true" />
+                <marker date="1390861889365" expanded="true" signature="3964:4013" placeholder="3" />
               </folding>
             </state>
           </provider>
@@ -1106,7 +1033,11 @@
       <created>1390003038296</created>
       <updated>1390003038296</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Version Final 1 Falta la parte de la config&#10;">
+      <created>1390861822634</created>
+      <updated>1390861822634</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1131,10 +1062,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32454923" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32454923" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
@@ -1145,7 +1076,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32732317" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32454923" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4410541" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4410541" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897863" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1181,7 +1112,8 @@
     <MESSAGE value="Version WidgetIncluido, ahora la configuración" />
     <MESSAGE value="Version Final 1" />
     <MESSAGE value="Version Final 1 Falta la parte de la config" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version Final 1 Falta la parte de la config" />
+    <MESSAGE value="Version Final 1 Falta la parte de la config&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version Final 1 Falta la parte de la config&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1559,11 +1491,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="82" column="145" selection-start="3364" selection-end="3364" vertical-scroll-proportion="0.0" vertical-offset="1127" max-vertical-offset="6086">
           <folding>
-            <element signature="e#2582#2631#0" expanded="true" />
-            <element signature="e#2826#2875#0" expanded="true" />
-            <element signature="e#3072#3122#0" expanded="true" />
-            <element signature="e#3581#3630#0" expanded="true" />
-            <element signature="e#3825#3874#0" expanded="true" />
+            <marker date="1390861889365" expanded="true" signature="3964:4013" placeholder="3" />
           </folding>
         </state>
       </provider>
@@ -1612,7 +1540,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/res/xml-hdpi/default_workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="38" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.46703297" vertical-offset="0" max-vertical-offset="425">
+        <state line="10" column="38" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.3794643" vertical-offset="0" max-vertical-offset="448">
           <folding />
         </state>
       </provider>
