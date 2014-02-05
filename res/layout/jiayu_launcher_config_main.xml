@@ -1,30 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="horizontal"
+    android:background="@color/transparent8">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/transparent8">
 
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Ajustes generales"
-        android:id="@+id/btnGenerales" />
+        android:id="@+id/btnGenerales"
+        style="@style/ButtonTextGreen"
+        android:background="@drawable/btn_green"/>
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Ajustes cajón/widgets"
-        android:id="@+id/btnCajon" />
+        android:id="@+id/btnCajon"
+        style="@style/ButtonTextGreen"
+        android:background="@drawable/btn_green"/>
 
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Ajustes escritorio"
-        android:id="@+id/btnEscritorio" />
+        android:id="@+id/btnEscritorio"
+        style="@style/ButtonTextGreen"
+        android:background="@drawable/btn_green"/>
 
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Ajustes inferiores"
-        android:id="@+id/btnInferiores" />
+        android:id="@+id/btnInferiores"
+        style="@style/ButtonTextGreen"
+        android:background="@drawable/btn_green"/>
 
 </LinearLayout>
+    </ScrollView>

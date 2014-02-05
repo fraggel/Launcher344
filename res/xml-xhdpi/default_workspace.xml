@@ -8,6 +8,8 @@
     <appwidget launcher:className="es.jiayu.datawidgetjiayu.NewAppWidget" launcher:packageName="es.jiayu.datawidgetjiayu" launcher:screen="0" launcher:x="1" launcher:y="1" launcher:spanX="1" launcher:spanY="1" />
     <favorite launcher:className="es.jiayu.jiayuid.Inicio" launcher:packageName="es.jiayu.jiayuid" launcher:screen="0" launcher:x="3" launcher:y="2" />
     <favorite launcher:className="com.android.vending.AssetBrowserActivity" launcher:packageName="com.android.vending" launcher:screen="0" launcher:x="4" launcher:y="3" />
+    <favorite launcher:className="com.marginz.camera.CameraLauncher" launcher:packageName="com.marginz.snap" launcher:screen="0" launcher:x="0" launcher:y="4" />
+    <favorite launcher:className="com.marginz.snap.app.Gallery" launcher:packageName="com.marginz.snap" launcher:screen="0" launcher:x="1" launcher:y="4" />
     <favorite launcher:className="com.android.camera.Camera" launcher:packageName="com.android.gallery3d" launcher:screen="0" launcher:x="0" launcher:y="4" />
     <favorite launcher:className="com.android.gallery3d.app.Gallery" launcher:packageName="com.android.gallery3d" launcher:screen="0" launcher:x="1" launcher:y="4" />
     <favorite launcher:className="com.jrummy.apps.root.browser.activities.RootBrowserActivity" launcher:packageName="com.jrummy.root.browserfree" launcher:screen="0" launcher:x="3" launcher:y="4" />
