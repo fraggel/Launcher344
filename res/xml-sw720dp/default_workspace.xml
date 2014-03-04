@@ -37,16 +37,14 @@
         launcher:spanX="2"
         launcher:spanY="2" />
     <favorite
-        launcher:packageName="com.android.camera"
-        launcher:className="com.android.camera.Camera"
+        launcher:className="com.android.camera.CameraLauncher" launcher:packageName="com.android.camera2"
         launcher:screen="2"
         launcher:x="0"
         launcher:y="3" />
 
     <!-- Right screen [3] -->
     <favorite
-        launcher:packageName="com.android.gallery3d"
-        launcher:className="com.android.gallery3d.app.Gallery"
+        launcher:className="com.android.gallery3d.app.GalleryActivity" launcher:packageName="com.google.android.gallery3d"
         launcher:screen="3"
         launcher:x="1"
         launcher:y="3" />
