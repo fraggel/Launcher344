@@ -3251,9 +3251,9 @@ public class Launcher extends Activity
                      boolean resetPageToZero) {
         if (mState != State.WORKSPACE) return;
 
-        if (resetPageToZero) {
+        /*if (resetPageToZero) {
             mAppsCustomizeTabHost.reset();
-        }
+        }*/
         mWorkspace.startCovered(mWorkspace.getCurrentPage());
         showAppsCustomizeHelper(animated, false, contentType);
         mAppsCustomizeTabHost.requestFocus();

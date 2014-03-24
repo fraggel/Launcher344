@@ -19,11 +19,13 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.fraggel.launcher.R;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 
@@ -40,7 +42,8 @@ public class jiayuLauncherConfigGeneral extends Activity implements  View.OnClic
     HashMap<String,String> componentListPackName = new HashMap<String, String>();
     String[] listaStringComponent=null;
     List<String> componentListString=new ArrayList<String>();
-    Drawable[] packageIcons=null;
+    HashMap<String,Drawable> componentListIcons=new HashMap<String,Drawable>();
+    //Drawable[] packageIcons=null;
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.jiayu_launcher_config_general);
@@ -73,12 +76,14 @@ public class jiayuLauncherConfigGeneral extends Activity implements  View.OnClic
         try {
             componentListString.clear();
             componentListPack.clear();
+            componentListIcons.clear();
             componentListPackName.clear();
             allow_rotation.setChecked(Utils.getSharedPreferencesBoolean(getApplicationContext(), "allow_rotation", false));
             show_google_bar.setChecked(Utils.getSharedPreferencesBoolean(getApplicationContext(), "show_google_bar", true));
             show_customcontent.setChecked(Utils.getSharedPreferencesBoolean(getApplicationContext(), "show_customcontent", false));
 
             getInstalledComponentList();
+            reordenarLista();
             listaStringComponent=new String[componentListString.size()];
             for(int x=0;x<componentListString.size();x++){
                 listaStringComponent[x]=componentListString.get(x);
@@ -121,17 +126,18 @@ public class jiayuLauncherConfigGeneral extends Activity implements  View.OnClic
                 componentListPack.put(name,ri.activityInfo.packageName+"/"+ri.activityInfo.name);
                 componentListPackName.put(ri.activityInfo.packageName+"/"+ri.activityInfo.name,name);
                 componentListString.add(name);
+                componentListIcons.put(name,ri.activityInfo.loadIcon(getPackageManager()));
 
             }
         }
-        packageIcons=new Drawable[componentListString.size()];
+        /*packageIcons=new Drawable[componentListString.size()];
         int x=0;
         for (ResolveInfo ri : ril) {
             if (ri.activityInfo != null) {
                 packageIcons[x]=ri.activityInfo.loadIcon(getPackageManager());
             }
             x++;
-        }
+        }*/
         //componentListString=burbujaOrdenar(componentListString,componentListPack,componentListPackName);
     }
 
@@ -157,9 +163,14 @@ public class jiayuLauncherConfigGeneral extends Activity implements  View.OnClic
 
         return id;
     }
-    private List<String> reordenarLista(List<String> listaEntrada){
-        Collections.sort(listaEntrada);
-        return listaEntrada;
+    private void reordenarLista(){
+        //Collections.sort(componentListString);
+        Collections.sort(componentListString, new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return o1.compareToIgnoreCase(o2);
+            }
+        });
     }
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -262,7 +273,7 @@ public class jiayuLauncherConfigGeneral extends Activity implements  View.OnClic
             label.setText(listaStringComponent[position]);
 
             ImageView icon=(ImageView)row.findViewById(R.id.imageView1);
-            icon.setImageDrawable(packageIcons[position]);
+            icon.setImageDrawable(componentListIcons.get(listaStringComponent[position]));
 
             return row;
         }

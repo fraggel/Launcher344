@@ -120,5 +120,5 @@
     <string name="custom_workspace_cling_description_2" msgid="8097921091798539310"></string>
     <string name="widget_button_text" msgid="2880537293434387943">"Widgetit"</string>
     <string name="wallpaper_button_text" msgid="8404103075899945851">"Taustakuvat"</string>
-    <string name="settings_button_text" msgid="8119458837558863227">"Asetukset"</string>
+    <string name="settings_button_text" msgid="8119458837558863227">"Launcher Asetukset"</string>
 </resources>
