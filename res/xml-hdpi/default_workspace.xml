@@ -8,8 +8,8 @@
     <appwidget launcher:className="es.jiayu.datawidgetjiayu.NewAppWidget" launcher:packageName="es.jiayu.datawidgetjiayu" launcher:screen="0" launcher:x="1" launcher:y="1" launcher:spanX="1" launcher:spanY="1" />
     <favorite launcher:className="es.jiayu.jiayuid.Inicio" launcher:packageName="es.jiayu.jiayuid" launcher:screen="0" launcher:x="2" launcher:y="1" />
     <favorite launcher:className="com.android.vending.AssetBrowserActivity" launcher:packageName="com.android.vending" launcher:screen="0" launcher:x="3" launcher:y="2" />
-    <favorite launcher:className="com.android.camera.CameraLauncher" launcher:packageName="com.google.android.gallery3d" launcher:screen="0" launcher:x="0" launcher:y="3" />
-    <favorite launcher:className="com.android.gallery3d.app.Gallery" launcher:packageName="com.android.gallery3d" launcher:screen="0" launcher:x="1" launcher:y="3" />
+    <favorite launcher:className="com.android.camera.CameraLauncher" launcher:packageName="com.lenovo.scg" launcher:screen="0" launcher:x="0" launcher:y="3" />
+    <favorite launcher:className="com.lenovo.scg.app.Gallery" launcher:packageName="com.lenovo.scg" launcher:screen="0" launcher:x="1" launcher:y="3" />
     <favorite launcher:className="com.jrummy.apps.root.browser.activities.RootBrowserActivity" launcher:packageName="com.jrummy.root.browserfree" launcher:screen="0" launcher:x="2" launcher:y="3" />
     <favorite launcher:className="com.android.settings.Settings" launcher:packageName="com.android.settings" launcher:screen="0" launcher:x="3" launcher:y="3" />
     <appwidget launcher:className="com.mediatek.weather3dwidget.WeatherWidget" launcher:packageName="com.mediatek.weather3dwidget" launcher:screen="1" launcher:x="0" launcher:y="0" launcher:spanX="4" launcher:spanY="4" />

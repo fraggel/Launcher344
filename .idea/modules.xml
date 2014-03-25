@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/android_packages_apps_Launcher3-somex-4.4.iml" filepath="$PROJECT_DIR$/android_packages_apps_Launcher3-somex-4.4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Launcher344.iml" filepath="$PROJECT_DIR$/Launcher344.iml" />
       <module fileurl="file://$PROJECT_DIR$/ext/ext.iml" filepath="$PROJECT_DIR$/ext/ext.iml" />
     </modules>
   </component>
